@@ -1,11 +1,11 @@
 author="Schwerer Konigstiger";
-OnLoadName = "Chernarus Zeus DDC";
-OnLoadMission = "Welcome to a Zeus Mission"; //Text in the mission screen
-overviewText = "Zeus Mission"; //Mission Overview in mission select screen
+OnLoadName = "Operation Pincer Effect";
+OnLoadMission = "Assault the salt flats as an armoured division, then crush the Russians against the bay at their nearby military base."; //Text in the mission screen
+overviewText = "Assault the salt flats as an armoured division, then crush the Russians against the bay at their nearby military base."; //Mission Overview in mission select screen
 overviewPicture = "DDC.paa"; //Picture in mission select screen, must be a .paa
 loadScreen = "DDC.paa"; //Picture in load screen, must be a .paa
 
-onLoadIntro = "Welcome to a Zeus Map!";
+onLoadIntro = "Operation Pincer Effect";
 onLoadIntroTIme = 1; //Time & Date for intro loading 1/0
 onLoadMissionTime =1; //Time and Date for mission loading
 
@@ -29,23 +29,3 @@ disabledAI = 1; // Disable AI from taking player slots
 disableChannels[] = {2,3,4,5,6} //0 - Global, 1 - Side, 2 - Command, 3 - Group, 4 - Vehicle, 5 - Direct, 6 - System
 aiKills = 0; //disable AI score
 joinUnassigned = 1; //if set to 0, players join the side with the lowest number of people
-
-//Mission Params
-class Params {
-	//Day-Night
-	class Daytime{
-		title = "Time";
-		texts[] = {"Dawn","Morning","Day","Evening","Dusk,""Night"}
-		values[] = {4,6,12,18,20,0}
-		default = 12;
-		function = "BIS_fnc_paramDaytime"
-		isGlobal = 1;
-	};
-	//Weather Status
-	class Weather{
-		title = "Weather"
-		texts[] = {"Random","Clear","Partly Cloudy","Cloudy","Overcast","Stormy"};
-		values[] = {2,0,3,0.5,0.75,1};
-		default = 2;
-	};
-};
