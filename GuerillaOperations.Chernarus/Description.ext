@@ -1,0 +1,28 @@
+//////////////////////////////////////////////////////////////////
+// Description file for Armed Assault
+// Created by: Schwerer Konigstiger
+//////////////////////////////////////////////////////////////////
+author="Schwerer Konigstiger";
+OnLoadName = "Guerilla Operations"; // Displayed in SB
+//////////////////////////////////////////////////////////////////
+class Header
+{
+	gameType = Coop; //Game Type - Displayed in SB
+	minplayers = 1; //Minimum players to start mission
+	maxplayers = 21;// Maximum number of players allowed, does not correspond with maximum slots! All extra players are spectators!
+	playerCountMultipleOf = 1;//Multiply active player count by value, depreciated now
+};
+
+respawn = "BASE";  // this means base which is a marker named respawn_west
+respawndelay = 15;  // this is time from death to new life
+OnLoadMission = "Your main objective is to disable all 3 airbases held by Occupying Forces. Steal supplies, arms, gear, and even vehicles from them to acccomplish your objective."; //Literally says this text in the mission load screen
+enableDebugConsole = 1; // Enable Debug Console in game for Admins Only
+disabledAI = 1; // Disable AI from taking player slots - always set to 1!
+
+
+#include "VVS\menu.h"
+#include "R3F_LOG\desc_include.h"
+class CfgFunctions
+{
+	#include "VVS\Functions.h"
+};
