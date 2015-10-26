@@ -60,7 +60,10 @@ class Mission
 		"alive_sup_combatsupport",
 		"alive_sup_transport",
 		"alive_sup_cas",
-		"alive_sup_artillery"
+		"alive_sup_artillery",
+		"acre_sys_antenna",
+		"A3_Structures_F_Walls",
+		"A3_Structures_F_Mil_BagFence"
 	};
 	addOnsAuto[]=
 	{
@@ -121,6 +124,9 @@ class Mission
 		"aia_misc3_config",
 		"A3_Supplies_F_Heli_CargoNets",
 		"A3_Structures_F_EPB_Civ_Camping",
+		"acre_sys_antenna",
+		"A3_Structures_F_Walls",
+		"A3_Structures_F_Mil_BagFence",
 		"aia_takistan_config"
 	};
 	randomSeed=436629;
@@ -145,7 +151,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=69;
+		items=70;
 		class Item0
 		{
 			side="LOGIC";
@@ -946,7 +952,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={5944.7637,83.040001,11895.429};
+					position[]={5947.7339,83.040001,11898.412};
 					azimut=-125.104;
 					id=18;
 					side="WEST";
@@ -2847,7 +2853,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={5828.5562,83.040001,11541.71};
+					position[]={5905.8145,83.040001,11540.735};
 					class args
 					{
 						items=17;
@@ -3139,7 +3145,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={5828.4883,83.040001,11557.025};
+					position[]={5905.7466,83.040001,11556.051};
 					class args
 					{
 						items=9;
@@ -3217,7 +3223,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={5828.4868,83.040001,11573.676};
+					position[]={5905.7451,83.040001,11572.701};
 					class args
 					{
 						items=10;
@@ -3505,7 +3511,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={5898.1909,83.040001,11652.68};
+					position[]={5863.1133,83.040001,11505.771};
 					azimut=228.54201;
 					id=71;
 					side="WEST";
@@ -3585,7 +3591,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={5906.8418,83.040001,11657.575};
+					position[]={5871.7642,83.040001,11510.666};
 					azimut=-216.45915;
 					id=75;
 					side="WEST";
@@ -3625,7 +3631,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={5814.541,83.040001,11556.951};
+					position[]={5891.7993,83.040001,11555.977};
 					class args
 					{
 						items=16;
@@ -4026,7 +4032,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					syncId=9;
-					synchronizations[]={8,11,10};
+					synchronizations[]={8,11,10,12};
 				};
 			};
 		};
@@ -4087,8 +4093,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={6062.1763,83.040001,11806.895};
-					azimut=-140.57764;
+					position[]={5873.271,83.040001,11407.795};
+					azimut=-45.604229;
 					class args
 					{
 						items=4;
@@ -4208,21 +4214,60 @@ class Mission
 				};
 			};
 		};
+		class Item69
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6059.2188,83.040001,11800.153};
+					azimut=218.75301;
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="HAWK ONE";
+							parentCls="ALiVE_sup_cas";
+							typeName="cas_callsign";
+						};
+						class Item1
+						{
+							value="B_Plane_CAS_01_F";
+							parentCls="ALiVE_sup_cas";
+							typeName="cas_type";
+						};
+						class Item2
+						{
+							value="";
+							parentCls="ALiVE_sup_cas";
+							typeName="cas_height";
+						};
+						class Item3
+						{
+							value="";
+							parentCls="ALiVE_sup_cas";
+							typeName="cas_code";
+						};
+					};
+					id=87;
+					side="LOGIC";
+					vehicle="ALiVE_sup_cas";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=12;
+					synchronizations[]={9,12};
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
-		items=12;
+		items=22;
 		class Item0
-		{
-			position[]={5955.8687,83.040001,11901.156};
-			azimut=-125.10357;
-			id=87;
-			side="EMPTY";
-			vehicle="ACE_Rallypoint_West_Base";
-			skill=0.60000002;
-			description="Odin [HQ]";
-		};
-		class Item1
 		{
 			position[]={5972.5205,83.040001,11523.793};
 			azimut=-132.55157;
@@ -4233,7 +4278,7 @@ class Mission
 			text="rep";
 			description="Repair";
 		};
-		class Item2
+		class Item1
 		{
 			position[]={5939.7021,83.040001,11506.78};
 			azimut=-128.78999;
@@ -4244,7 +4289,7 @@ class Mission
 			init="this addAction [""Open Virtual Arsenal"", {[""Open"",true] spawn BIS_fnc_arsenal}]; this allowDamage false; ";
 			description="Repair";
 		};
-		class Item3
+		class Item2
 		{
 			position[]={5947.6382,83.040001,11893.11};
 			azimut=-125.10357;
@@ -4256,7 +4301,7 @@ class Mission
 			init="nul = [this, -1, west, ""MEDIUM""] execVM ""R3F_LOG\USER_FUNCT\init_creation_factory.sqf""; this addAction [""Open Virtual Arsenal"", {[""Open"",true] spawn BIS_fnc_arsenal}]; ";
 			description="Repair";
 		};
-		class Item4
+		class Item3
 		{
 			position[]={5942.2979,83.040001,11503.681};
 			azimut=-218.00101;
@@ -4266,7 +4311,7 @@ class Mission
 			skill=0.60000002;
 			description="Repair";
 		};
-		class Item5
+		class Item4
 		{
 			position[]={5937.4224,83.040001,11510.063};
 			azimut=-218.00101;
@@ -4276,7 +4321,7 @@ class Mission
 			skill=0.60000002;
 			description="Repair";
 		};
-		class Item6
+		class Item5
 		{
 			position[]={5974.7329,83.040001,11514.029};
 			azimut=-132.55157;
@@ -4286,7 +4331,7 @@ class Mission
 			skill=0.60000002;
 			description="Repair";
 		};
-		class Item7
+		class Item6
 		{
 			position[]={5963.0146,83.040001,11526.424};
 			azimut=-132.55157;
@@ -4296,7 +4341,7 @@ class Mission
 			skill=0.60000002;
 			description="Repair";
 		};
-		class Item8
+		class Item7
 		{
 			position[]={5982.8687,83.040001,11524.98};
 			azimut=-132.55157;
@@ -4306,7 +4351,7 @@ class Mission
 			skill=0.60000002;
 			description="Repair";
 		};
-		class Item9
+		class Item8
 		{
 			position[]={5972.7471,83.040001,11534.28};
 			azimut=-132.55157;
@@ -4316,7 +4361,7 @@ class Mission
 			skill=0.60000002;
 			description="Repair";
 		};
-		class Item10
+		class Item9
 		{
 			position[]={5952.7749,83.040001,11891.072};
 			azimut=-125.10357;
@@ -4326,7 +4371,7 @@ class Mission
 			skill=0.60000002;
 			description="Repair";
 		};
-		class Item11
+		class Item10
 		{
 			position[]={5943.4224,83.040001,11897.282};
 			azimut=-125.10357;
@@ -4336,13 +4381,110 @@ class Mission
 			skill=0.60000002;
 			description="Repair";
 		};
+		class Item11
+		{
+			position[]={6014.1841,83.040001,11822.565};
+			id=99;
+			side="EMPTY";
+			vehicle="ACRE_OE_303";
+			skill=0.60000002;
+		};
+		class Item12
+		{
+			position[]={6014.5991,83.040001,11813.462};
+			id=100;
+			side="EMPTY";
+			vehicle="ACRE_OE_303";
+			skill=0.60000002;
+		};
+		class Item13
+		{
+			position[]={5963.6792,83.040001,11836.794};
+			azimut=-112.09647;
+			id=101;
+			side="EMPTY";
+			vehicle="Land_CncWall4_F";
+			skill=0.60000002;
+		};
+		class Item14
+		{
+			position[]={5973.1333,83.040001,11840.689};
+			azimut=-112.09647;
+			id=102;
+			side="EMPTY";
+			vehicle="Land_CncWall4_F";
+			skill=0.60000002;
+		};
+		class Item15
+		{
+			position[]={5961.708,83.040001,11841.659};
+			azimut=-112.09647;
+			id=103;
+			side="EMPTY";
+			vehicle="Land_CncWall4_F";
+			skill=0.60000002;
+		};
+		class Item16
+		{
+			position[]={5971.1782,83.040001,11845.537};
+			azimut=-112.09647;
+			id=104;
+			side="EMPTY";
+			vehicle="Land_CncWall4_F";
+			skill=0.60000002;
+		};
+		class Item17
+		{
+			position[]={5967.4937,83.040001,11846.217};
+			azimut=-22.947166;
+			id=105;
+			side="EMPTY";
+			vehicle="Land_CncWall4_F";
+			skill=0.60000002;
+		};
+		class Item18
+		{
+			position[]={5963.9429,83.040001,11844.101};
+			azimut=160.14838;
+			id=106;
+			side="EMPTY";
+			vehicle="Land_BagFence_Long_F";
+			skill=0.60000002;
+		};
+		class Item19
+		{
+			position[]={5962.731,83.040001,11844.65};
+			azimut=160.14838;
+			id=107;
+			side="EMPTY";
+			vehicle="Land_BagFence_Long_F";
+			skill=0.60000002;
+		};
+		class Item20
+		{
+			position[]={5964.4404,83.040001,11847.152};
+			azimut=245.3385;
+			id=108;
+			side="EMPTY";
+			vehicle="Land_BagFence_Long_F";
+			skill=0.60000002;
+		};
+		class Item21
+		{
+			position[]={5962.9858,83.040001,11846.265};
+			azimut=160.14838;
+			id=109;
+			side="EMPTY";
+			vehicle="Land_BagFence_Long_F";
+			skill=0.60000002;
+		};
 	};
 	class Markers
 	{
-		items=22;
+		items=23;
 		class Item0
 		{
-			position[]={5936.6953,83.040001,11897.34};
+			position[]={5933.8257,83.040001,11897.331};
 			name="respawn_west";
 			text="NATO Base";
 			type="Faction_CUP_NATO";
@@ -4374,7 +4516,7 @@ class Mission
 		};
 		class Item3
 		{
-			position[]={1927.6251,139.00073,11900.836};
+			position[]={8245.8994,296.04001,2071.6626};
 			name="c1_2";
 			markerType="RECTANGLE";
 			type="Empty";
@@ -4382,7 +4524,7 @@ class Mission
 			fillName="Grid";
 			a=300;
 			b=650;
-			angle=26.383101;
+			angle=54.785526;
 		};
 		class Item4
 		{
@@ -4577,16 +4719,24 @@ class Mission
 		};
 		class Item20
 		{
-			position[]={-46.02486,481.91907,9007.6904};
+			position[]={24.732025,169.05595,12320.437};
 			name="ALiVE_SUP_MULTISPAWN_INSERTION_BLU_F";
 			type="hd_start";
 			colorName="ColorWEST";
 		};
 		class Item21
 		{
-			position[]={5934.4023,83.040001,11899.856};
-			name="ALiVE_SUP_MULTISPAWN_DESTINATION_%FACTION%";
+			position[]={5935.0942,83.040001,11896.379};
+			name="ALiVE_SUP_MULTISPAWN_DESTINATION_BLU_F";
 			type="mil_end";
+			colorName="ColorWEST";
+		};
+		class Item22
+		{
+			position[]={5967.8203,83.040001,11840.524};
+			name="D";
+			text="Detention Center";
+			type="hd_join";
 			colorName="ColorWEST";
 		};
 	};

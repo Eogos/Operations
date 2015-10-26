@@ -8,7 +8,7 @@
 // init line:
 // null = [] execVM "minedetector.sqf";
 /*Definable Start*/
-MDMineDetectorAction = 0; //1 means player has to use an addaction to use the minedetector otherwise it won't work, 0 = player doesnt need an addaction and it is always on
+MDMineDetectorAction = 1; //1 means player has to use an addaction to use the minedetector otherwise it won't work, 0 = player doesnt need an addaction and it is always on
 MDMineDetectorWalkOnly = 1; //Requires MDMineDetectorAction = 1, Forces when the addAction is on that the player will be forced to work (if is already forced walk then the action will not un force walk the player)
 MDMineDetectorVisualiseDetector = 1; //Requires MDMineDetectorAction =1, Makes the player hold a minedetector when using it
 /*Definable End*/
