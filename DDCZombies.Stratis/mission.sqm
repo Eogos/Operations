@@ -41,8 +41,12 @@ class Mission
 		"a3_characters_f",
 		"A3_Air_F_Beta_Heli_Transport_01",
 		"A3_Structures_F_Civ_Camping",
-		"A3_Props_F_Exp_A_Military_Equipment",
-		"A3_Air_F_Beta_Heli_Transport_02"
+		"A3_Air_F_Beta_Heli_Transport_02",
+		"A3_Soft_F_Offroad_01",
+		"A3_Structures_F_Mil_Helipads",
+		"A3_Structures_F_Wrecks",
+		"Ryanzombies",
+		"A3_Characters_F_Gamma"
 	};
 	addOnsAuto[]=
 	{
@@ -78,13 +82,16 @@ class Mission
 		"tpwcas",
 		"cba_main",
 		"A3_Modules_F_Curator_Intel",
-		"ryanzombiesfunctions",
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
+		"ryanzombiesfunctions",
+		"Ryanzombies",
+		"A3_Characters_F_Gamma",
 		"A3_Air_F_Beta_Heli_Transport_01",
-		"A3_Structures_F_Civ_Camping",
-		"A3_Props_F_Exp_A_Military_Equipment",
 		"A3_Air_F_Beta_Heli_Transport_02",
+		"A3_Soft_F_Offroad_01",
+		"A3_Structures_F_Mil_Helipads",
+		"A3_Structures_F_Wrecks",
 		"a3_map_stratis"
 	};
 	randomSeed=13841330;
@@ -93,24 +100,37 @@ class Mission
 		briefingName="Z-Zombies?!?";
 		overviewText="Zombies have taken hold of the island of Stratis!";
 		resistanceWest=0;
-		startWeather=0.29999998;
+		timeOfChanges=28800;
+		startWeather=0.84999996;
+		startFog=0.20999999;
 		startWind=0.099999994;
+		startWindDir=35;
+		startRain=0.31999999;
+		startLightnings=0.23999999;
 		startWaves=0.099999994;
-		forecastWeather=0.29999998;
+		startGust=0.34;
+		forecastWeather=0.84999996;
+		forecastFog=0.16;
 		forecastWind=0.099999994;
 		forecastWaves=0.099999994;
-		forecastLightnings=0.099999994;
-		year=2035;
-		month=1;
-		day=6;
-		hour=18;
-		minute=45;
+		forecastRain=0.26999998;
+		forecastLightnings=0.20999999;
+		forecastGust=0.22999999;
+		forecastWindDir=155;
+		rainForced=1;
+		lightningsForced=1;
+		wavesForced=1;
+		windForced=1;
+		year=2047;
+		month=10;
+		day=31;
+		hour=21;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
 	};
 	class Groups
 	{
-		items=76;
+		items=109;
 		class Item0
 		{
 			side="LOGIC";
@@ -2025,2248 +2045,6 @@ class Mission
 		};
 		class Item44
 		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={4325.4258,177.25272,4371.7725};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.85";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.55";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="0";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=44;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item45
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={2175.647,5.9656553,5756.6924};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.85";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.55";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=45;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item46
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={2155.7444,8.7318144,5359.2739};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.85";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.55";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=46;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item47
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={5008.4946,208.36557,5905.1411};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.85";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.55";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=47;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item48
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={6436.0073,7.8980103,5396.3979};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.85";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.55";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=48;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item49
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={6587.5688,24.205132,5324.209};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.85";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.55";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=49;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item50
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={6064.2334,17.660004,5634.7998};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.85";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.55";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=50;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item51
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={4358.3423,234.22,3872.4951};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.85";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.55";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=51;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item52
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={4379.2568,225.01315,3755.7725};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.85";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.55";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=52;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item53
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={2982.1262,171.39999,1874.2632};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.85";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.55";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=53;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item54
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={1985.0781,2.5719824,3522.7124};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.85";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.55";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=54;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item55
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={4499.606,105.62263,6800.5308};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.75";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.6";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=55;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item56
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={1884.5087,5.6351295,5744.7715};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.75";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.6";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=56;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item57
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={2055.0159,5.600163,2709.4399};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.75";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.6";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=57;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item58
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={3078.9019,167.73897,2150.3447};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.75";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.6";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=58;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item59
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={2780.0029,143.6674,1747.5688};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.75";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.6";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=59;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item60
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={3283.5574,229.17999,2933.9072};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.85";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.55";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=60;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item61
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={3391.7168,212.52441,3001.1514};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.85";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.55";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=61;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item62
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={2984.3794,3.1857617,6040.854};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.8";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.65";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=62;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item63
-		{
 			side="WEST";
 			class Vehicles
 			{
@@ -4275,7 +2053,7 @@ class Mission
 				{
 					position[]={2613.959,64.17524,621.67169};
 					azimut=-216.94299;
-					id=63;
+					id=44;
 					side="WEST";
 					vehicle="B_officer_F";
 					player="PLAYER COMMANDER";
@@ -4287,7 +2065,7 @@ class Mission
 				};
 			};
 		};
-		class Item64
+		class Item45
 		{
 			side="WEST";
 			class Vehicles
@@ -4297,7 +2075,7 @@ class Mission
 				{
 					position[]={2618.0032,64.220085,625.99426};
 					azimut=145;
-					id=64;
+					id=45;
 					side="WEST";
 					vehicle="B_Soldier_SL_F";
 					player="PLAY CDG";
@@ -4311,7 +2089,7 @@ class Mission
 				{
 					position[]={2610.0198,64.008835,627.73651};
 					azimut=145;
-					id=65;
+					id=46;
 					side="WEST";
 					vehicle="B_medic_F";
 					player="PLAY CDG";
@@ -4324,7 +2102,7 @@ class Mission
 				{
 					position[]={2614.7583,64.024101,631.81299};
 					azimut=145;
-					id=66;
+					id=47;
 					side="WEST";
 					vehicle="B_soldier_exp_F";
 					player="PLAY CDG";
@@ -4337,7 +2115,7 @@ class Mission
 				{
 					position[]={2614.8105,64.126175,627.18188};
 					azimut=145;
-					id=67;
+					id=48;
 					side="WEST";
 					vehicle="B_Soldier_A_F";
 					player="PLAY CDG";
@@ -4348,7 +2126,7 @@ class Mission
 				{
 					position[]={2617.6846,64.147598,629.37006};
 					azimut=145;
-					id=68;
+					id=49;
 					side="WEST";
 					vehicle="B_soldier_AR_F";
 					player="PLAY CDG";
@@ -4360,7 +2138,7 @@ class Mission
 				{
 					position[]={2611.3601,64.00161,629.59979};
 					azimut=145;
-					id=69;
+					id=50;
 					side="WEST";
 					vehicle="B_soldier_exp_F";
 					player="PLAY CDG";
@@ -4373,7 +2151,7 @@ class Mission
 				{
 					position[]={2616.4924,64.132004,632.31268};
 					azimut=145;
-					id=70;
+					id=51;
 					side="WEST";
 					vehicle="B_soldier_LAT_F";
 					player="PLAY CDG";
@@ -4385,7 +2163,7 @@ class Mission
 				{
 					position[]={2614.3938,64.074806,629.63757};
 					azimut=145;
-					id=71;
+					id=52;
 					side="WEST";
 					vehicle="B_soldier_AA_F";
 					player="PLAY CDG";
@@ -4397,7 +2175,7 @@ class Mission
 				{
 					position[]={2613.1038,63.998032,631.25671};
 					azimut=145;
-					id=72;
+					id=53;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
@@ -4407,7 +2185,7 @@ class Mission
 				};
 			};
 		};
-		class Item65
+		class Item46
 		{
 			side="WEST";
 			class Vehicles
@@ -4417,7 +2195,7 @@ class Mission
 				{
 					position[]={2609.157,64.186615,616.11621};
 					azimut=143.745;
-					id=73;
+					id=54;
 					side="WEST";
 					vehicle="B_Soldier_SL_F";
 					player="PLAY CDG";
@@ -4431,7 +2209,7 @@ class Mission
 				{
 					position[]={2603.0435,63.863659,618.47327};
 					azimut=143.745;
-					id=74;
+					id=55;
 					side="WEST";
 					vehicle="B_medic_F";
 					player="PLAY CDG";
@@ -4444,7 +2222,7 @@ class Mission
 				{
 					position[]={2604.2935,63.982327,623.48163};
 					azimut=143.745;
-					id=75;
+					id=56;
 					side="WEST";
 					vehicle="B_soldier_exp_F";
 					player="PLAY CDG";
@@ -4457,7 +2235,7 @@ class Mission
 				{
 					position[]={2605.1277,63.950718,616.87708};
 					azimut=143.745;
-					id=76;
+					id=57;
 					side="WEST";
 					vehicle="B_Soldier_A_F";
 					player="PLAY CDG";
@@ -4468,7 +2246,7 @@ class Mission
 				{
 					position[]={2607.9546,64.174301,619.11023};
 					azimut=143.745;
-					id=77;
+					id=58;
 					side="WEST";
 					vehicle="B_soldier_AR_F";
 					player="PLAY CDG";
@@ -4480,7 +2258,7 @@ class Mission
 				{
 					position[]={2601.5491,63.897091,621.51965};
 					azimut=143.745;
-					id=78;
+					id=59;
 					side="WEST";
 					vehicle="B_soldier_exp_F";
 					player="PLAY CDG";
@@ -4493,7 +2271,7 @@ class Mission
 				{
 					position[]={2607.5386,64.106438,622.38892};
 					azimut=143.745;
-					id=79;
+					id=60;
 					side="WEST";
 					vehicle="B_soldier_LAT_F";
 					player="PLAY CDG";
@@ -4505,7 +2283,7 @@ class Mission
 				{
 					position[]={2605.4583,64.109032,619.78577};
 					azimut=143.745;
-					id=80;
+					id=61;
 					side="WEST";
 					vehicle="B_soldier_AA_F";
 					player="PLAY CDG";
@@ -4517,7 +2295,7 @@ class Mission
 				{
 					position[]={2604.1531,64.039284,621.27014};
 					azimut=143.745;
-					id=81;
+					id=62;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
@@ -4527,7 +2305,7 @@ class Mission
 				};
 			};
 		};
-		class Item66
+		class Item47
 		{
 			side="WEST";
 			class Vehicles
@@ -4537,7 +2315,7 @@ class Mission
 				{
 					position[]={2607.5762,64.006958,625.92139};
 					azimut=121.602;
-					id=82;
+					id=63;
 					side="WEST";
 					vehicle="B_Pilot_F";
 					player="PLAY CDG";
@@ -4550,7 +2328,7 @@ class Mission
 				{
 					position[]={2607.7214,63.97945,626.87952};
 					azimut=121.602;
-					id=83;
+					id=64;
 					side="WEST";
 					vehicle="B_Pilot_F";
 					player="PLAY CDG";
@@ -4560,7 +2338,7 @@ class Mission
 				};
 			};
 		};
-		class Item67
+		class Item48
 		{
 			side="LOGIC";
 			class Vehicles
@@ -4568,361 +2346,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={2019.3721,6.6980901,2773.9946};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.75";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.6";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=84;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item68
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={2163.4045,2.8586915,1893.3438};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.75";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.6";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=85;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item69
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={2419.179,3.1960413,1166.5322};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.75";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.6";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=86;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item70
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={1111.7412,0.069776833,1703.1304};
+					position[]={1230.5024,-0.01108104,5554.0195};
 					class args
 					{
 						items=7;
@@ -4940,13 +2364,13 @@ class Mission
 						};
 						class Item2
 						{
-							value="Acquire Intel";
+							value="Survive and Escape";
 							parentCls="ModuleTaskCreate_F";
 							typeName="Title";
 						};
 						class Item3
 						{
-							value="Acquire vital Intel on Zombies";
+							value="Survive and Escape";
 							parentCls="ModuleTaskCreate_F";
 							typeName="Description";
 						};
@@ -4969,7 +2393,7 @@ class Mission
 							typeName="State";
 						};
 					};
-					id=87;
+					id=65;
 					side="LOGIC";
 					vehicle="ModuleTaskCreate_F";
 					leader=1;
@@ -4978,125 +2402,7 @@ class Mission
 				};
 			};
 		};
-		class Item71
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={2452.6187,74.007614,5678.0845};
-					class args
-					{
-						items=16;
-						class Item0
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="0.85";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type";
-						};
-						class Item2
-						{
-							value="0.55";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type2";
-						};
-						class Item3
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type3";
-						};
-						class Item4
-						{
-							value="";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Type4";
-						};
-						class Item5
-						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation";
-						};
-						class Item6
-						{
-							value="0.1";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation2";
-						};
-						class Item7
-						{
-							value="0.9";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Activation3";
-						};
-						class Item8
-						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="ActivationRadius";
-						};
-						class Item9
-						{
-							value="100";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="AliveAmount";
-						};
-						class Item10
-						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="TotalAmount";
-						};
-						class Item11
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Start";
-						};
-						class Item12
-						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Frequency";
-						};
-						class Item13
-						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Delay";
-						};
-						class Item14
-						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="Density";
-						};
-						class Item15
-						{
-							value="14";
-							parentCls="RyanZM_ModuleSpawn";
-							typeName="HordeSize";
-						};
-					};
-					id=88;
-					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item72
+		class Item49
 		{
 			side="LOGIC";
 			class Vehicles
@@ -5116,7 +2422,7 @@ class Mission
 						};
 						class Item1
 						{
-							value="1000";
+							value="500";
 							parentCls="RyanZM_ModuleZombieDeletion";
 							typeName="DeletionRadius";
 						};
@@ -5128,12 +2434,12 @@ class Mission
 						};
 						class Item3
 						{
-							value="1000";
+							value="500";
 							parentCls="RyanZM_ModuleZombieDeletion";
 							typeName="DeletionRadiusDemons";
 						};
 					};
-					id=89;
+					id=66;
 					side="LOGIC";
 					vehicle="RyanZM_ModuleZombieDeletion";
 					leader=1;
@@ -5142,7 +2448,7 @@ class Mission
 				};
 			};
 		};
-		class Item73
+		class Item50
 		{
 			side="LOGIC";
 			class Vehicles
@@ -5150,24 +2456,24 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={799.93103,-61.34539,5725.6611};
+					position[]={735.51666,0.0015749435,5734.0112};
 					class args
 					{
 						items=2;
 						class Item0
 						{
-							value="0.5";
+							value="0.7";
 							parentCls="RyanZM_ModuleZombieHealth";
 							typeName="ZombieMaxHealth";
 						};
 						class Item1
 						{
-							value="0.5";
+							value="0.7";
 							parentCls="RyanZM_ModuleZombieHealth";
 							typeName="DemonMaxHealth";
 						};
 					};
-					id=90;
+					id=67;
 					side="LOGIC";
 					vehicle="RyanZM_ModuleZombieHealth";
 					leader=1;
@@ -5176,7 +2482,7 @@ class Mission
 				};
 			};
 		};
-		class Item74
+		class Item51
 		{
 			side="LOGIC";
 			class Vehicles
@@ -5184,7 +2490,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={914.78339,-52.966778,5773.186};
+					position[]={783.1145,-0.00021855067,5735.9722};
 					class args
 					{
 						items=3;
@@ -5207,12 +2513,2796 @@ class Mission
 							typeName="Uniform";
 						};
 					};
-					id=91;
+					id=68;
 					side="LOGIC";
 					vehicle="RyanZM_ModuleInfection";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+				};
+			};
+		};
+		class Item52
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={894.20325,0.004860288,5651.3076};
+					class args
+					{
+						items=24;
+						class Item0
+						{
+							value="ACE_fieldDressing,ACE_packingBandage,ACE_elasticBandage,ACE_quikclot,ACE_tourniquet,ACE_morphine,ACE_epinephrine,ACE_personalAidKit";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="Items";
+						};
+						class Item1
+						{
+							value="50";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="Itemschance";
+						};
+						class Item2
+						{
+							value="1";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="Itemsamountmin";
+						};
+						class Item3
+						{
+							value="5";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="Itemsamountmax";
+						};
+						class Item4
+						{
+							value="30Rnd_9x21_Mag,6Rnd_45ACP_Cylinder";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="Magazines";
+						};
+						class Item5
+						{
+							value="75";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="Magazineschance";
+						};
+						class Item6
+						{
+							value="1";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="Magazinesamountmin";
+						};
+						class Item7
+						{
+							value="5";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="Magazinesamountmax";
+						};
+						class Item8
+						{
+							value="hgun_Rook40_F,SMG_02_ACO_F,hgun_Pistol_heavy_02_F";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="Weapons";
+						};
+						class Item9
+						{
+							value="50";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="Weaponschance";
+						};
+						class Item10
+						{
+							value="1";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="Weaponsamountmin";
+						};
+						class Item11
+						{
+							value="1";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="Weaponsamountmax";
+						};
+						class Item12
+						{
+							value="ACE_fieldDressing,ACE_packingBandage,ACE_elasticBandage,ACE_quikclot,ACE_tourniquet,ACE_morphine,ACE_epinephrine,ACE_personalAidKit";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="ItemsSoldier";
+						};
+						class Item13
+						{
+							value="75";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="ItemschanceSoldier";
+						};
+						class Item14
+						{
+							value="1";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="ItemsamountminSoldier";
+						};
+						class Item15
+						{
+							value="5";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="ItemsamountmaxSoldier";
+						};
+						class Item16
+						{
+							value="30Rnd_556x45_Stanag,30Rnd_65x39_caseless_mag,16Rnd_9x21_Mag,30Rnd_9x21_Mag,6Rnd_45ACP_Cylinder,20Rnd_762x51_Mag,30Rnd_65x39_caseless_green";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="MagazinesSoldier";
+						};
+						class Item17
+						{
+							value="100";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="MagazineschanceSoldier";
+						};
+						class Item18
+						{
+							value="1";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="MagazinesamountminSoldier";
+						};
+						class Item19
+						{
+							value="5";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="MagazinesamountmaxSoldier";
+						};
+						class Item20
+						{
+							value="arifle_Mk20_MRCO_pointer_F,arifle_MX_ACO_F,srifle_EBR_F,arifle_Katiba_C_F,arifle_TRG20_Holo_F";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="WeaponsSoldier";
+						};
+						class Item21
+						{
+							value="100";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="WeaponschanceSoldier";
+						};
+						class Item22
+						{
+							value="1";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="WeaponsamountminSoldier";
+						};
+						class Item23
+						{
+							value="2";
+							parentCls="RyanZM_ModuleLootSettings";
+							typeName="WeaponsamountmaxSoldier";
+						};
+					};
+					id=69;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleLootSettings";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item53
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2776.1355,143.5394,1747.417};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=70;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_2";
+				};
+			};
+		};
+		class Item54
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2071.8867,9.4108105,2688.2637};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=71;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_3";
+				};
+			};
+		};
+		class Item55
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2049.0508,5.7712741,2779.333};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=72;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_4";
+				};
+			};
+		};
+		class Item56
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2831.3149,42.153481,3727.3589};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=73;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_5";
+				};
+			};
+		};
+		class Item57
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4275.0347,3.7947462,2687.7715};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=74;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_6";
+				};
+			};
+		};
+		class Item58
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3081.1025,168.22543,2128.877};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=75;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_7";
+				};
+			};
+		};
+		class Item59
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2421.7771,3.6429577,1175.7578};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=76;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_8";
+				};
+			};
+		};
+		class Item60
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6561.4385,49.573689,5067.0879};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=77;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_9";
+				};
+			};
+		};
+		class Item61
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4504.7046,105.56788,6799.7095};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=78;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_10";
+				};
+			};
+		};
+		class Item62
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2892.1235,3.49,5974.9917};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=79;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_11";
+				};
+			};
+		};
+		class Item63
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2949.5984,3.3499999,6028.5698};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=80;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_12";
+				};
+			};
+		};
+		class Item64
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2898.0203,4.3369689,6089.4849};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=81;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_13";
+				};
+			};
+		};
+		class Item65
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2957.6912,28.37537,6198.3081};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=82;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_14";
+				};
+			};
+		};
+		class Item66
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2951.9524,28.31362,6213.5908};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=83;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_15";
+				};
+			};
+		};
+		class Item67
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2961.3445,28.396725,6215.3281};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=84;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_16";
+				};
+			};
+		};
+		class Item68
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2947.2283,28.302948,6195.7334};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=85;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_17";
+				};
+			};
+		};
+		class Item69
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6592.873,24.321533,5328.3584};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=86;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_18";
+				};
+			};
+		};
+		class Item70
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2980.0068,171.39999,1864.8745};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=87;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="mil_1";
+				};
+			};
+		};
+		class Item71
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3285.5471,229.18893,2939.1689};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=88;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="mil_2";
+				};
+			};
+		};
+		class Item72
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3390.3237,212.79994,2996.0708};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=89;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="mil_3";
+				};
+			};
+		};
+		class Item73
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4345.1821,234.22,3870.5562};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=90;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="mil_4";
+				};
+			};
+		};
+		class Item74
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4363.4131,224.85388,3758.7314};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=91;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="mil_5";
 				};
 			};
 		};
@@ -5224,84 +5314,3447 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={1279.1425,0.014764134,6280.1211};
+					position[]={1978.3651,2.0099411,3495.4058};
 					class args
 					{
-						items=9;
+						items=16;
 						class Item0
 						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawner";
-							typeName="Amount";
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
 						};
 						class Item1
 						{
-							value="10000";
-							parentCls="RyanZM_ModuleSpawner";
-							typeName="TotalAmount";
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
 						};
 						class Item2
 						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawner";
-							typeName="Start";
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
 						};
 						class Item3
 						{
-							value="60";
-							parentCls="RyanZM_ModuleSpawner";
-							typeName="Frequency";
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
 						};
 						class Item4
 						{
-							value="0.5";
-							parentCls="RyanZM_ModuleSpawner";
-							typeName="Delay";
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
 						};
 						class Item5
 						{
-							value="5";
-							parentCls="RyanZM_ModuleSpawner";
-							typeName="Density";
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
 						};
 						class Item6
 						{
-							value="0.7";
-							parentCls="RyanZM_ModuleSpawner";
-							typeName="Activation";
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
 						};
 						class Item7
 						{
-							value="150";
-							parentCls="RyanZM_ModuleSpawner";
-							typeName="ActivationRadius";
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
 						};
 						class Item8
 						{
-							value="15";
-							parentCls="RyanZM_ModuleSpawner";
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
 							typeName="HordeSize";
 						};
 					};
 					id=92;
 					side="LOGIC";
-					vehicle="RyanZM_ModuleSpawner";
+					vehicle="RyanZM_ModuleSpawn";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+					text="mil_6";
+				};
+			};
+		};
+		class Item76
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6405.7246,7.9749165,5392.646};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=93;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="mil_7";
+				};
+			};
+		};
+		class Item77
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6061.0288,17.566139,5638.8516};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=94;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="mil_8";
+				};
+			};
+		};
+		class Item78
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5012.8579,208.53195,5912.6738};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=95;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="mil_9";
+				};
+			};
+		};
+		class Item79
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3272.4231,5.0530329,5805.1035};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=96;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="mil_10";
+				};
+			};
+		};
+		class Item80
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2151.5642,6,5659.9248};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=97;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="mil_11";
+				};
+			};
+		};
+		class Item81
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2088.4705,6.122911,5714.4146};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=98;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="mil_12";
+				};
+			};
+		};
+		class Item82
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2155.531,6,5594.6382};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=99;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="mil_13";
+				};
+			};
+		};
+		class Item83
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2071.9221,6.6401944,5500.7554};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=100;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="mil_14";
+				};
+			};
+		};
+		class Item84
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2085.9954,5.53267,5883.3096};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=101;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="mil_15";
+				};
+			};
+		};
+		class Item85
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2449.469,73.605133,5670.2969};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=102;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="mil_16";
+				};
+			};
+		};
+		class Item86
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3448.2004,9.8302164,5696.6729};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=103;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="mil_17";
+				};
+			};
+		};
+		class Item87
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3712.6519,12.571306,5552.8018};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=104;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="mil_18";
+				};
+			};
+		};
+		class Item88
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2544.1194,42.885986,4557.3071};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=105;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_19";
+				};
+			};
+		};
+		class Item89
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3470.6194,143.21114,2642.3101};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=106;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_20";
+				};
+			};
+		};
+		class Item90
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4000.7502,198.57004,3450.0361};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=107;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_21";
+				};
+			};
+		};
+		class Item91
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2286.0122,56.39743,2164.5703};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=108;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_22";
+				};
+			};
+		};
+		class Item92
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3808.7039,189.61932,4696.437};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=109;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_23";
+				};
+			};
+		};
+		class Item93
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4456.1831,190.3009,4285.6226};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=110;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_24";
+				};
+			};
+		};
+		class Item94
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5032.2163,178.7366,4504.4263};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=111;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_25";
+				};
+			};
+		};
+		class Item95
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5251.0186,192.22813,5317.124};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=112;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_26";
+				};
+			};
+		};
+		class Item96
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4795.5508,151.63661,6308.4365};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=113;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_27";
+				};
+			};
+		};
+		class Item97
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3683.6731,58.824615,6768.3701};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=114;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_28";
+				};
+			};
+		};
+		class Item98
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4058.7644,121.41176,6339.6943};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.6";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.75";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=115;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="civvie_29";
+				};
+			};
+		};
+		class Item99
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4322.543,177.26154,4369.248};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=116;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="mil_19";
+				};
+			};
+		};
+		class Item100
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5204.4365,223.01584,5003.7598};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=117;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="mil_9_1";
+				};
+			};
+		};
+		class Item101
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4592.8843,128.61221,5301.8809};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="0.55";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type2";
+						};
+						class Item3
+						{
+							value="0.85";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type3";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Type4";
+						};
+						class Item5
+						{
+							value="0.7";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation";
+						};
+						class Item6
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation2";
+						};
+						class Item7
+						{
+							value="0.9";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Activation3";
+						};
+						class Item8
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="ActivationRadius";
+						};
+						class Item9
+						{
+							value="100";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="AliveAmount";
+						};
+						class Item10
+						{
+							value="10000";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="TotalAmount";
+						};
+						class Item11
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Start";
+						};
+						class Item12
+						{
+							value="180";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Frequency";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Delay";
+						};
+						class Item14
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="Density";
+						};
+						class Item15
+						{
+							value="10";
+							parentCls="RyanZM_ModuleSpawn";
+							typeName="HordeSize";
+						};
+					};
+					id=118;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSpawn";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="mil_9_2";
+				};
+			};
+		};
+		class Item102
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4607.5576,129.8429,5293.8125};
+					azimut=-587.22302;
+					special="NONE";
+					id=119;
+					side="WEST";
+					vehicle="B_Pilot_F";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="unit playMoveNow ""AmovPpneMstpSnonWnonDnon_injured"";  ";
+				};
+			};
+		};
+		class Item103
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=6;
+				class Item0
+				{
+					position[]={321.97421,0.23253086,706.89404};
+					azimut=-587.22302;
+					special="NONE";
+					id=120;
+					side="GUER";
+					vehicle="RyanZombieCrawler1";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+				};
+				class Item1
+				{
+					position[]={324.14902,0.1964222,706.51367};
+					azimut=-587.22302;
+					special="NONE";
+					id=121;
+					side="GUER";
+					vehicle="RyanZombieC_man_1";
+					rank="LIEUTENANT";
+					skill=0.60000002;
+				};
+				class Item2
+				{
+					position[]={321.35605,0.24238002,704.62549};
+					azimut=-587.22302;
+					special="NONE";
+					id=122;
+					side="GUER";
+					vehicle="RyanZombieSpider1";
+					rank="LIEUTENANT";
+					skill=0.60000002;
+				};
+				class Item3
+				{
+					position[]={324.60214,0.20718139,704.17285};
+					azimut=-587.22302;
+					special="NONE";
+					id=123;
+					side="GUER";
+					vehicle="RyanZombieboss1";
+					rank="LIEUTENANT";
+					skill=0.60000002;
+				};
+				class Item4
+				{
+					position[]={322.26474,0.23566478,705.62158};
+					azimut=-587.22302;
+					special="NONE";
+					id=124;
+					side="GUER";
+					vehicle="RyanZombieC_man_1slow";
+					rank="LIEUTENANT";
+					skill=0.60000002;
+				};
+				class Item5
+				{
+					position[]={323.15341,0.22076878,706.00195};
+					azimut=-587.22302;
+					special="NONE";
+					id=125;
+					side="GUER";
+					vehicle="RyanZombieC_man_1medium";
+					rank="LIEUTENANT";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item104
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={2444.8145,73.944717,5682.1245};
+					id=126;
+					side="WEST";
+					vehicle="B_G_Soldier_GL_F";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item1
+				{
+					position[]={2449.8145,73.904564,5677.1245};
+					id=127;
+					side="WEST";
+					vehicle="B_G_Soldier_F";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item105
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={2966.092,170.95265,1882.5762};
+					id=128;
+					side="WEST";
+					vehicle="B_G_Soldier_GL_F";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item1
+				{
+					position[]={2971.092,171.32954,1877.5762};
+					id=129;
+					side="WEST";
+					vehicle="B_G_Soldier_F";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item106
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={2782.8416,144.02438,1753.0015};
+					id=130;
+					side="WEST";
+					vehicle="B_G_Soldier_GL_F";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item1
+				{
+					position[]={2787.8416,143.89847,1748.0015};
+					id=131;
+					side="WEST";
+					vehicle="B_G_Soldier_F";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item107
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={6576.9434,23.908819,5333.5435};
+					id=132;
+					side="WEST";
+					vehicle="B_G_Soldier_GL_F";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item1
+				{
+					position[]={6581.9434,24.130999,5328.5435};
+					id=133;
+					side="WEST";
+					vehicle="B_G_Soldier_F";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item108
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={6413.3008,7.4900389,5422.0137};
+					id=134;
+					side="WEST";
+					vehicle="B_G_Soldier_GL_F";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item1
+				{
+					position[]={6418.3008,7.5614405,5417.0137};
+					id=135;
+					side="WEST";
+					vehicle="B_G_Soldier_F";
+					skill=0.40000001;
 				};
 			};
 		};
 	};
 	class Vehicles
 	{
-		items=4;
+		items=7;
 		class Item0
 		{
 			position[]={2625.7935,64.695549,605.93066};
 			azimut=21.770599;
 			special="NONE";
-			id=93;
+			id=136;
 			side="EMPTY";
 			vehicle="B_Heli_Transport_01_F";
 			lock="LOCKED";
@@ -5314,41 +8767,73 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={2626.0417,64.725983,606.58105};
-			azimut=-41.472698;
-			id=94;
-			side="EMPTY";
-			vehicle="Campfire_burning_F";
-			skill=0.60000002;
-			init="this allowDamage false;";
-		};
-		class Item2
-		{
-			position[]={6074.9902,16.908989,5653.3384};
-			azimut=17.3274;
-			special="NONE";
-			id=95;
-			side="EMPTY";
-			vehicle="Land_DataTerminal_01_F";
-			lock="UNLOCKED";
-			skill=0.20179118;
-			text="box";
-		};
-		class Item3
-		{
-			position[]={1899.6599,5.5,5903.0742};
+			position[]={1912.5544,5.5,5902.1851};
 			azimut=-121.51561;
 			special="NONE";
-			id=96;
+			id=137;
 			side="EMPTY";
 			vehicle="I_Heli_Transport_02_F";
 			lock="UNLOCKED";
 			skill=0.20179118;
 		};
+		class Item2
+		{
+			presence=0.50252455;
+			position[]={2619.4983,60.588097,713.5614};
+			azimut=-324.74301;
+			special="NONE";
+			id=138;
+			side="EMPTY";
+			vehicle="C_Offroad_01_F";
+			skill=0.60000002;
+		};
+		class Item3
+		{
+			position[]={2625.615,60.183659,716.60461};
+			azimut=-471.04401;
+			special="NONE";
+			id=139;
+			side="EMPTY";
+			vehicle="C_Offroad_01_F";
+			skill=0.60000002;
+			init="this setDamage 0.5;";
+		};
+		class Item4
+		{
+			position[]={2626.0813,64.737617,606.83154};
+			azimut=-516.44897;
+			special="NONE";
+			id=140;
+			side="EMPTY";
+			vehicle="Land_HelipadEmpty_F";
+			skill=0.60000002;
+			init="this = ""test_EmptyObjectForFireBig"" createVehicle position this;";
+		};
+		class Item5
+		{
+			position[]={4610.4351,129.81557,5301.3198};
+			azimut=-471.04401;
+			special="NONE";
+			id=141;
+			side="EMPTY";
+			vehicle="Land_Wreck_Heli_Attack_01_F";
+			skill=0.60000002;
+		};
+		class Item6
+		{
+			position[]={4609.918,129.763,5302.085};
+			azimut=-516.44897;
+			special="NONE";
+			id=142;
+			side="EMPTY";
+			vehicle="Land_HelipadEmpty_F";
+			skill=0.60000002;
+			init="this = ""test_EmptyObjectForFireBig"" createVehicle position this;";
+		};
 	};
 	class Markers
 	{
-		items=10;
+		items=1;
 		class Item0
 		{
 			position[]={2619.4258,64.234337,615.91327};
@@ -5358,85 +8843,13 @@ class Mission
 			colorName="ColorWEST";
 			angle=-0.140035;
 		};
-		class Item1
-		{
-			position[]={2981.8704,171.39999,1868.3105};
-			name="i";
-			text="Possible Intel Location";
-			type="mil_warning";
-			colorName="ColorWEST";
-		};
-		class Item2
-		{
-			position[]={3290.5474,229.17999,2935.4526};
-			name="i_1";
-			text="Possible Intel Location";
-			type="mil_warning";
-			colorName="ColorWEST";
-		};
-		class Item3
-		{
-			position[]={2031.6146,2.7736042,2745.8804};
-			name="i_2";
-			text="Possible Intel Location";
-			type="mil_warning";
-			colorName="ColorWEST";
-		};
-		class Item4
-		{
-			position[]={4368.957,226.93086,3820.8833};
-			name="i_3";
-			text="Possible Intel Location";
-			type="mil_warning";
-			colorName="ColorWEST";
-		};
-		class Item5
-		{
-			position[]={2033.4606,6.3255601,5623.6372};
-			name="i_4";
-			text="Possible Intel Location";
-			type="mil_warning";
-			colorName="ColorWEST";
-		};
-		class Item6
-		{
-			position[]={2950.8081,3.3499999,6039.4263};
-			name="i_5";
-			text="Possible Intel Location";
-			type="mil_warning";
-			colorName="ColorWEST";
-		};
-		class Item7
-		{
-			position[]={5010.8389,208.53497,5916.7598};
-			name="i_6";
-			text="Possible Intel Location";
-			type="mil_warning";
-			colorName="ColorWEST";
-		};
-		class Item8
-		{
-			position[]={6428.6689,7.7438035,5413.5171};
-			name="i_7";
-			text="Possible Intel Location";
-			type="mil_warning";
-			colorName="ColorWEST";
-		};
-		class Item9
-		{
-			position[]={1898.1064,5.5,5901.6797};
-			name="t";
-			text="Acquire transport for evac";
-			type="mil_circle";
-			colorName="ColorRed";
-		};
 	};
 	class Sensors
 	{
 		items=3;
 		class Item0
 		{
-			position[]={2623.5251,64.490601,608.63721};
+			position[]={2624.0537,64.49437,609.1665};
 			activationBy="WEST";
 			activationType="NOT PRESENT";
 			timeoutMin=20;
@@ -5460,21 +8873,22 @@ class Mission
 			age="UNKNOWN";
 			class Effects
 			{
-				track="LeadTrack04_F_EPC";
+				track="LeadTrack04_F_EPB";
 			};
 		};
 		class Item2
 		{
-			position[]={6073.1338,17.173162,5647.2349};
-			a=10;
-			b=10;
-			activationBy="WEST";
-			repeating=1;
+			position[]={4617.8813,130.48973,5293.4976};
+			a=750;
+			b=750;
 			interruptable=1;
 			age="UNKNOWN";
-			expActiv="box addAction [""Acquire Intel"", [t1 setTaskState ""Succeeded""]];";
+			expActiv="hint ""You've stumbled upon some crashed pilots! Find and help them! Check out LZ Baldy!"";";
 			class Effects
 			{
+				voice="isReinforcement_generic";
+				track="LeadTrack01_F";
+				titleEffect="PLAIN DOWN";
 			};
 		};
 	};
