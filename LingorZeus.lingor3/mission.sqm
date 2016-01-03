@@ -38,7 +38,8 @@ class Mission
 		"pook_cram",
 		"A3_Modules_F",
 		"BWA3_AmmoBoxes",
-		"a3_map_lingor3"
+		"a3_map_lingor3",
+		"A3_Structures_F_Heli_Items_Luggage"
 	};
 	addOnsAuto[]=
 	{
@@ -76,7 +77,7 @@ class Mission
 		"a3_characters_f",
 		"pook_cram",
 		"A3_Modules_F",
-		"BWA3_AmmoBoxes",
+		"A3_Structures_F_Heli_Items_Luggage",
 		"a3_map_lingor3"
 	};
 	randomSeed=9793274;
@@ -683,7 +684,7 @@ class Mission
 						items=1;
 						class Item0
 						{
-							value="1";
+							value="0";
 							parentCls="ace_nightvision_ModuleSettings";
 							typeName="disableNVGsWithSights";
 						};
@@ -1994,14 +1995,15 @@ class Mission
 				class Item0
 				{
 					position[]={9718.6787,1.6882941,8546.0654};
-					azimut=-361.85361;
+					azimut=-361.854;
 					special="NONE";
 					id=59;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
 					skill=0.60000002;
-					init="null=[] execVM ""cos/cosInit.sqf"";";
+					text="SERVER";
+					init="null=[] execVM ""cos\cosInit.sqf"";";
 					description="a";
 				};
 			};
@@ -2012,14 +2014,15 @@ class Mission
 		items=1;
 		class Item0
 		{
-			position[]={9181.7305,10.898122,8273.5654};
-			azimut=212.15376;
+			position[]={9181.1055,10.87136,8273.6963};
+			azimut=212.15401;
 			special="NONE";
 			id=60;
 			side="EMPTY";
-			vehicle="BWA3_Box_VA_Net";
+			vehicle="Land_MetalCase_01_large_F";
 			leader=1;
 			skill=0.60000002;
+			init="this addAction [""Open Virtual Arsenal"", {[""Open"",true] spawn BIS_fnc_arsenal}]; nul = [this, -1, west, ""MEDIUM""] execVM ""R3F_LOG\USER_FUNCT\init_creation_factory.sqf"";";
 			description="a";
 		};
 	};
