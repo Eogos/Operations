@@ -1,0 +1,50 @@
+author="Schwerer Konigstiger";
+OnLoadName = "Panthera Zeus - DDC";
+OnLoadMission = "A blank Zeus mission"; //Text in the mission screen
+overviewText = "A blank Zeus mission"; //Mission Overview in mission select screen
+overviewPicture = "DDC.paa"; //Picture in mission select screen, must be a .paa
+loadScreen = "DDC.paa"; //Picture in load screen, must be a .paa
+
+onLoadIntro = "A blank Zeus mission";
+onLoadIntroTIme = 1; //Time & Date for intro loading 1/0
+onLoadMissionTime =1; //Time and Date for mission loading
+
+//Game Info
+class Header
+{
+	gameType = COOP; //Game Type:  COOP, DM, TDM, CTF, SC, CTI, RPG, Sandbox, Seize, Defend.
+	minplayers = 1;
+	maxplayers = 21;
+};
+
+//Inclusions
+#include "R3F_LOG\desc_include.h" //R3F Logistics & Factory//Respawn
+respawn = "BASE";  //NONE = No  Respawn, BIRD = Seagull, INSTANT = where you died, BASE = Marker called respawn_west/respawn_east, etc
+respawndelay = 15;  // Respawn Delay Timer
+
+//Server
+enableDebugConsole = 1; // Enable Debug Console in game for Admins Only
+disabledAI = 1; // Disable AI from taking player slots
+disableChannels[] = {2,3,4,5,6}; //0 - Global, 1 - Side, 2 - Command, 3 - Group, 4 - Vehicle, 5 - Direct, 6 - System
+aiKills = 0; //disable AI score
+joinUnassigned = 1; //if set to 0, players join the side with the lowest number of people
+
+//Mission Params
+class Params {
+	//Day-Night
+	class Daytime{
+		title = "Time";
+		texts[] = {"Dawn","Morning","Day","Evening","Dusk,","Night"};
+		values[] = {4,6,12,18,20,0};
+		default = 12;
+		function = "BIS_fnc_paramDaytime";
+		isGlobal = 1;
+	};
+	//Weather Status
+	class Weather{
+		title = "Weather";
+		texts[] = {"Random","Clear","Partly Cloudy","Cloudy","Overcast","Stormy"};
+		values[] = {2,0,3,0.5,0.75,1};
+		default = 2;
+	};
+};
