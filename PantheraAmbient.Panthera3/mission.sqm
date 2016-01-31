@@ -49,7 +49,13 @@ class Mission
 		"alive_civ_placement",
 		"alive_sys_aiskill",
 		"alive_mil_logistics",
-		"alive_mil_placement"
+		"alive_mil_placement",
+		"alive_mil_ied",
+		"alive_mil_cqb",
+		"alive_sys_data",
+		"alive_sup_artillery",
+		"alive_sup_cas",
+		"alive_sup_transport"
 	};
 	addOnsAuto[]=
 	{
@@ -87,6 +93,8 @@ class Mission
 		"alive_sys_profile",
 		"alive_sys_weather",
 		"alive_sup_combatsupport",
+		"alive_sup_cas",
+		"alive_sup_transport",
 		"alive_sup_multispawn",
 		"alive_sup_player_resupply",
 		"alive_mil_c2istar",
@@ -98,6 +106,10 @@ class Mission
 		"alive_sys_aiskill",
 		"alive_mil_logistics",
 		"alive_mil_placement",
+		"alive_mil_ied",
+		"alive_mil_cqb",
+		"alive_sys_data",
+		"alive_sup_artillery",
 		"A3_Structures_F_Heli_Items_Luggage",
 		"a3_map_panthera3"
 	};
@@ -122,7 +134,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=32;
+		items=36;
 		class Item0
 		{
 			side="LOGIC";
@@ -1956,7 +1968,7 @@ class Mission
 						};
 						class Item1
 						{
-							value="false";
+							value="true";
 							parentCls="ALiVE_sys_profile";
 							typeName="persistent";
 						};
@@ -2069,16 +2081,16 @@ class Mission
 			side="LOGIC";
 			class Vehicles
 			{
-				items=1;
+				items=3;
 				class Item0
 				{
-					position[]={3498.1875,0.13586852,941.51794};
+					position[]={2521.3374,8,510.67993};
 					class args
 					{
 						items=5;
 						class Item0
 						{
-							value="ACRE_PRC152";
+							value="ALiVE_Tablet";
 							parentCls="ALiVE_sup_combatsupport";
 							typeName="combatsupport_item";
 						};
@@ -2113,6 +2125,82 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+					syncId=0;
+					synchronizations[]={9,10};
+				};
+				class Item1
+				{
+					position[]={2007.2944,8,544.36951};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="Hawkeye One";
+							parentCls="ALiVE_sup_cas";
+							typeName="cas_callsign";
+						};
+						class Item1
+						{
+							value="UK3CB_BAF_Apache_AH1";
+							parentCls="ALiVE_sup_cas";
+							typeName="cas_type";
+						};
+						class Item2
+						{
+							value="0";
+							parentCls="ALiVE_sup_cas";
+							typeName="cas_height";
+						};
+						class Item3
+						{
+							value="";
+							parentCls="ALiVE_sup_cas";
+							typeName="cas_code";
+						};
+					};
+					id=60;
+					side="LOGIC";
+					vehicle="ALiVE_sup_cas";
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+				class Item2
+				{
+					position[]={2049.1626,8,545.07385};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="Relay One";
+							parentCls="ALiVE_SUP_TRANSPORT";
+							typeName="transport_callsign";
+						};
+						class Item1
+						{
+							value="CUP_B_UH60L_FFV_US";
+							parentCls="ALiVE_SUP_TRANSPORT";
+							typeName="transport_type";
+						};
+						class Item2
+						{
+							value="0";
+							parentCls="ALiVE_SUP_TRANSPORT";
+							typeName="transport_height";
+						};
+						class Item3
+						{
+							value="";
+							parentCls="ALiVE_SUP_TRANSPORT";
+							typeName="transport_code";
+						};
+					};
+					id=61;
+					side="LOGIC";
+					vehicle="ALiVE_SUP_TRANSPORT";
+					lock="UNLOCKED";
+					skill=0.60000002;
 				};
 			};
 		};
@@ -2124,7 +2212,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3354.4976,0.14090721,937.41638};
+					position[]={3433.0835,0.14439078,658.26172};
 					class args
 					{
 						items=4;
@@ -2153,7 +2241,7 @@ class Mission
 							typeName="spawningnearenemiesallowed";
 						};
 					};
-					id=60;
+					id=62;
 					side="LOGIC";
 					vehicle="ALiVE_sup_multispawn";
 					leader=1;
@@ -2170,13 +2258,13 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3426.9519,0.1387538,940.755};
+					position[]={3023.468,0.13960849,533.75183};
 					class args
 					{
 						items=7;
 						class Item0
 						{
-							value="ACRE_PRC152";
+							value="ALiVE_Tablet";
 							parentCls="ALiVE_SUP_PLAYER_RESUPPLY";
 							typeName="pr_item";
 						};
@@ -2217,7 +2305,7 @@ class Mission
 							typeName="pr_restrictionWhitelist";
 						};
 					};
-					id=61;
+					id=63;
 					side="LOGIC";
 					vehicle="ALiVE_SUP_PLAYER_RESUPPLY";
 					leader=1;
@@ -2234,7 +2322,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3334.2341,0.13617785,524.63196};
+					position[]={3093.8252,-0.15134966,524.63196};
 					class args
 					{
 						items=29;
@@ -2246,7 +2334,7 @@ class Mission
 						};
 						class Item1
 						{
-							value="ACRE_PRC152";
+							value="ALiVE_Tablet";
 							parentCls="ALiVE_MIL_C2ISTAR";
 							typeName="c2_item";
 						};
@@ -2258,7 +2346,7 @@ class Mission
 						};
 						class Item3
 						{
-							value="false";
+							value="true";
 							parentCls="ALiVE_MIL_C2ISTAR";
 							typeName="persistent";
 						};
@@ -2276,7 +2364,7 @@ class Mission
 						};
 						class Item6
 						{
-							value="OPF_F";
+							value="IND_F";
 							parentCls="ALiVE_MIL_C2ISTAR";
 							typeName="autoGenerateBluforEnemyFaction";
 						};
@@ -2312,7 +2400,7 @@ class Mission
 						};
 						class Item12
 						{
-							value="OPF_F";
+							value="BLU_F";
 							parentCls="ALiVE_MIL_C2ISTAR";
 							typeName="autoGenerateIndforEnemyFaction";
 						};
@@ -2413,7 +2501,7 @@ class Mission
 							typeName="runEvery";
 						};
 					};
-					id=62;
+					id=64;
 					side="LOGIC";
 					vehicle="ALiVE_MIL_C2ISTAR";
 					leader=1;
@@ -2495,7 +2583,7 @@ class Mission
 							typeName="ALiVE_GC_INDIVIDUALTYPES";
 						};
 					};
-					id=63;
+					id=65;
 					side="LOGIC";
 					vehicle="ALiVE_require";
 					leader=1;
@@ -2560,7 +2648,7 @@ class Mission
 						};
 						class Item7
 						{
-							value="false";
+							value="true";
 							parentCls="ALiVE_SYS_playeroptions";
 							typeName="enablePlayerPersistence";
 						};
@@ -2578,13 +2666,13 @@ class Mission
 						};
 						class Item10
 						{
-							value="false";
+							value="true";
 							parentCls="ALiVE_SYS_playeroptions";
 							typeName="allowDiffClass";
 						};
 						class Item11
 						{
-							value="false";
+							value="true";
 							parentCls="ALiVE_SYS_playeroptions";
 							typeName="saveLoadout";
 						};
@@ -2602,7 +2690,7 @@ class Mission
 						};
 						class Item14
 						{
-							value="false";
+							value="true";
 							parentCls="ALiVE_SYS_playeroptions";
 							typeName="savePosition";
 						};
@@ -2614,7 +2702,7 @@ class Mission
 						};
 						class Item16
 						{
-							value="false";
+							value="true";
 							parentCls="ALiVE_SYS_playeroptions";
 							typeName="storeToDB";
 						};
@@ -2727,7 +2815,7 @@ class Mission
 							typeName="playertags_thisgroupcolour_setting";
 						};
 					};
-					id=64;
+					id=66;
 					side="LOGIC";
 					vehicle="ALiVE_SYS_playeroptions";
 					leader=1;
@@ -2747,7 +2835,7 @@ class Mission
 					position[]={2331.1599,8,613.50378};
 					azimut=-287.1611;
 					special="NONE";
-					id=65;
+					id=67;
 					side="WEST";
 					vehicle="pook_CRAM_US";
 					leader=1;
@@ -2769,7 +2857,7 @@ class Mission
 					position[]={2446.6536,8,1064.481};
 					azimut=-287.1611;
 					special="NONE";
-					id=66;
+					id=68;
 					side="WEST";
 					vehicle="pook_CRAM_US";
 					leader=1;
@@ -2791,7 +2879,7 @@ class Mission
 					position[]={284.19653,9.0950241,1435.6367};
 					azimut=-287.1611;
 					special="NONE";
-					id=67;
+					id=69;
 					side="WEST";
 					vehicle="pook_CRAM_US";
 					leader=1;
@@ -2813,7 +2901,7 @@ class Mission
 					position[]={1365.6486,8.4942389,578.99084};
 					azimut=-287.1611;
 					special="NONE";
-					id=68;
+					id=70;
 					side="WEST";
 					vehicle="pook_CRAM_US";
 					leader=1;
@@ -2832,7 +2920,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={2185.1169,8,590.56458};
+					position[]={2203.6311,8,578.66272};
 					class args
 					{
 						items=10;
@@ -2844,7 +2932,7 @@ class Mission
 						};
 						class Item1
 						{
-							value="false";
+							value="true";
 							parentCls="ALiVE_mil_OPCOM";
 							typeName="persistent";
 						};
@@ -2897,18 +2985,18 @@ class Mission
 							typeName="factions";
 						};
 					};
-					id=69;
+					id=71;
 					side="LOGIC";
 					vehicle="ALiVE_mil_OPCOM";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=0;
-					synchronizations[]={1,2};
+					syncId=1;
+					synchronizations[]={3,4,8,6};
 				};
 				class Item1
 				{
-					position[]={2169.3787,9.2518826,644.46228};
+					position[]={2076.8633,8,586.97693};
 					class args
 					{
 						items=18;
@@ -2920,13 +3008,13 @@ class Mission
 						};
 						class Item1
 						{
-							value="";
+							value="c_1,c_2,c_3,c_4,c_5,c_6,c_7,c_8,c_9,c_10,c_11,c_12,c_13,c_14,c_15,c_16,c_17,c_18,c_19,c_20,c_21,c_22,c_23,c_24,c_25,c_26,c_27,c_28,c_29,c_30,c_31,c_32,c_33,c_34,c_35,c_36,c_37";
 							parentCls="ALiVE_civ_placement";
 							typeName="taor";
 						};
 						class Item2
 						{
-							value="";
+							value="base,opbase";
 							parentCls="ALiVE_civ_placement";
 							typeName="blacklist";
 						};
@@ -3021,11 +3109,13 @@ class Mission
 							typeName="faction";
 						};
 					};
-					id=70;
+					id=72;
 					side="LOGIC";
 					vehicle="ALiVE_civ_placement";
 					lock="UNLOCKED";
 					skill=0.60000002;
+					syncId=2;
+					synchronizations[]={5};
 				};
 			};
 		};
@@ -3037,7 +3127,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3593.5452,0.14345939,946.0791};
+					position[]={3563.0493,0.14180794,665.75134};
 					class args
 					{
 						items=18;
@@ -3150,7 +3240,7 @@ class Mission
 							typeName="customSkillGeneral";
 						};
 					};
-					id=71;
+					id=73;
 					side="LOGIC";
 					vehicle="ALiVE_sys_aiskill";
 					leader=1;
@@ -3167,7 +3257,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={2108.7617,8,538.10059};
+					position[]={2139.0525,8,568.39111};
 					class args
 					{
 						items=10;
@@ -3179,7 +3269,7 @@ class Mission
 						};
 						class Item1
 						{
-							value="false";
+							value="true";
 							parentCls="ALiVE_mil_logistics";
 							typeName="persistent";
 						};
@@ -3232,14 +3322,14 @@ class Mission
 							typeName="allowPlaneReinforcement";
 						};
 					};
-					id=72;
+					id=74;
 					side="LOGIC";
 					vehicle="ALiVE_mil_logistics";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=1;
-					synchronizations[]={0};
+					syncId=3;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -3251,7 +3341,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={2247.6008,8,554.63745};
+					position[]={2342.3613,8,567.21252};
 					class args
 					{
 						items=20;
@@ -3263,7 +3353,7 @@ class Mission
 						};
 						class Item1
 						{
-							value="";
+							value="base,m_1,m_2,m_3,m_4,m_5,m_6,m_7,m_8,m_9,m_10,m_11,m_12,m_13,m_14,m_15,m_16,m_17,m_18,m_19,m_20,m_21,m_22,m_23";
 							parentCls="ALiVE_mil_placement";
 							typeName="taor";
 						};
@@ -3376,14 +3466,14 @@ class Mission
 							typeName="ambientVehicleAmount";
 						};
 					};
-					id=73;
+					id=75;
 					side="LOGIC";
 					vehicle="ALiVE_mil_placement";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=2;
-					synchronizations[]={0};
+					syncId=4;
+					synchronizations[]={1,5};
 				};
 			};
 		};
@@ -3395,7 +3485,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={4574.7754,3.0899999,7561.2524};
+					position[]={4550.7861,3.0899999,7541.877};
 					class args
 					{
 						items=10;
@@ -3407,7 +3497,7 @@ class Mission
 						};
 						class Item1
 						{
-							value="false";
+							value="true";
 							parentCls="ALiVE_mil_OPCOM";
 							typeName="persistent";
 						};
@@ -3460,18 +3550,18 @@ class Mission
 							typeName="factions";
 						};
 					};
-					id=74;
+					id=76;
 					side="LOGIC";
 					vehicle="ALiVE_mil_OPCOM";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=3;
-					synchronizations[]={4,5};
+					syncId=5;
+					synchronizations[]={7,8,4,2};
 				};
 				class Item1
 				{
-					position[]={4500.9741,3.0899999,7554.9102};
+					position[]={4730.3218,3.0899999,7565.0713};
 					class args
 					{
 						items=18;
@@ -3483,13 +3573,13 @@ class Mission
 						};
 						class Item1
 						{
-							value="";
+							value="c_1,c_2,c_3,c_4,c_5,c_6,c_7,c_8,c_9,c_10,c_11,c_12,c_13,c_14,c_15,c_16,c_17,c_18,c_19,c_20,c_21,c_22,c_23,c_24,c_25,c_26,c_27,c_28,c_29,c_30,c_31,c_32,c_33,c_34,c_35,c_36,c_37";
 							parentCls="ALiVE_civ_placement";
 							typeName="taor";
 						};
 						class Item2
 						{
-							value="";
+							value="base,opbase";
 							parentCls="ALiVE_civ_placement";
 							typeName="blacklist";
 						};
@@ -3584,11 +3674,13 @@ class Mission
 							typeName="faction";
 						};
 					};
-					id=75;
+					id=77;
 					side="LOGIC";
 					vehicle="ALiVE_civ_placement";
 					lock="UNLOCKED";
 					skill=0.60000002;
+					syncId=6;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -3600,7 +3692,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={4637.771,3.0899999,7616.9297};
+					position[]={4576.8052,3.0899999,7651.041};
 					class args
 					{
 						items=10;
@@ -3612,7 +3704,7 @@ class Mission
 						};
 						class Item1
 						{
-							value="false";
+							value="true";
 							parentCls="ALiVE_mil_logistics";
 							typeName="persistent";
 						};
@@ -3665,14 +3757,14 @@ class Mission
 							typeName="allowPlaneReinforcement";
 						};
 					};
-					id=76;
+					id=78;
 					side="LOGIC";
 					vehicle="ALiVE_mil_logistics";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=4;
-					synchronizations[]={3};
+					syncId=7;
+					synchronizations[]={5};
 				};
 			};
 		};
@@ -3684,7 +3776,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={4574.8418,3.9926465,7494.8418};
+					position[]={4413.7178,3.0899999,7596.4512};
 					class args
 					{
 						items=20;
@@ -3696,13 +3788,13 @@ class Mission
 						};
 						class Item1
 						{
-							value="";
+							value="opbase,m_1,m_2,m_3,m_4,m_5,m_6,m_7,m_8,m_9,m_10,m_11,m_12,m_13,m_14,m_15,m_16,m_17,m_18,m_19,m_20,m_21,m_22,m_23";
 							parentCls="ALiVE_mil_placement";
 							typeName="taor";
 						};
 						class Item2
 						{
-							value="";
+							value="base";
 							parentCls="ALiVE_mil_placement";
 							typeName="blacklist";
 						};
@@ -3809,14 +3901,438 @@ class Mission
 							typeName="ambientVehicleAmount";
 						};
 					};
-					id=77;
+					id=79;
 					side="LOGIC";
 					vehicle="ALiVE_mil_placement";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=5;
-					synchronizations[]={3};
+					syncId=8;
+					synchronizations[]={5,1};
+				};
+			};
+		};
+		class Item32
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={4220.7227,0.13444558,1073.1};
+					class args
+					{
+						items=14;
+						class Item0
+						{
+							value="0";
+							parentCls="ALiVE_mil_ied";
+							typeName="debug";
+						};
+						class Item1
+						{
+							value="m_1,m_2,m_3,m_4,m_5,m_6,m_7,m_8,m_9,m_10,m_11,m_12,m_13,m_14,m_15,m_16,m_17,m_18,m_19,m_20,m_21,m_22,m_23";
+							parentCls="ALiVE_mil_ied";
+							typeName="taor";
+						};
+						class Item2
+						{
+							value="base,opbase";
+							parentCls="ALiVE_mil_ied";
+							typeName="blacklist";
+						};
+						class Item3
+						{
+							value="100";
+							parentCls="ALiVE_mil_ied";
+							typeName="IED_Threat";
+						};
+						class Item4
+						{
+							value="2";
+							parentCls="ALiVE_mil_ied";
+							typeName="IED_Detection";
+						};
+						class Item5
+						{
+							value="MINEDETECTOR";
+							parentCls="ALiVE_mil_ied";
+							typeName="IED_Detection_Device";
+						};
+						class Item6
+						{
+							value="30";
+							parentCls="ALiVE_mil_ied";
+							typeName="Bomber_Threat";
+						};
+						class Item7
+						{
+							value="";
+							parentCls="ALiVE_mil_ied";
+							typeName="Bomber_Type";
+						};
+						class Item8
+						{
+							value="20";
+							parentCls="ALiVE_mil_ied";
+							typeName="VB_IED_Threat";
+						};
+						class Item9
+						{
+							value="CIV";
+							parentCls="ALiVE_mil_ied";
+							typeName="VB_IED_Side";
+						};
+						class Item10
+						{
+							value="0";
+							parentCls="ALiVE_mil_ied";
+							typeName="Locs_IED";
+						};
+						class Item11
+						{
+							value="ALIVE_IEDUrbanSmall_Remote_Ammo,ALIVE_IEDLandSmall_Remote_Ammo,ALIVE_IEDUrbanBig_Remote_Ammo,ALIVE_IEDLandBig_Remote_Ammo";
+							parentCls="ALiVE_mil_ied";
+							typeName="roadIEDClasses";
+						};
+						class Item12
+						{
+							value="ALIVE_IEDUrbanSmall_Remote_Ammo,ALIVE_IEDUrbanBig_Remote_Ammo,Land_JunkPile_F,Land_GarbageContainer_closed_F,Land_GarbageBags_F,Land_Tyres_F,Land_GarbagePallet_F,Land_Basket_F,Land_Sack_F,Land_Sacks_goods_F,Land_Sacks_heap_F,Land_BarrelTrash_F";
+							parentCls="ALiVE_mil_ied";
+							typeName="urbanIEDClasses";
+						};
+						class Item13
+						{
+							value="Land_JunkPile_F,Land_GarbageContainer_closed_F,Land_GarbageBags_F,Land_Tyres_F,Land_GarbagePallet_F,Land_Basket_F,Land_Sack_F,Land_Sacks_goods_F,Land_Sacks_heap_F,Land_BarrelTrash_F";
+							parentCls="ALiVE_mil_ied";
+							typeName="clutterClasses";
+						};
+					};
+					id=80;
+					side="LOGIC";
+					vehicle="ALiVE_mil_ied";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+				class Item1
+				{
+					position[]={4231.0908,-29.77,992.21497};
+					class args
+					{
+						items=16;
+						class Item0
+						{
+							value="false";
+							parentCls="ALiVE_mil_cqb";
+							typeName="CQB_debug_setting";
+						};
+						class Item1
+						{
+							value="true";
+							parentCls="ALiVE_mil_cqb";
+							typeName="CQB_persistent";
+						};
+						class Item2
+						{
+							value="server";
+							parentCls="ALiVE_mil_cqb";
+							typeName="CQB_locality_setting";
+						};
+						class Item3
+						{
+							value="strategic";
+							parentCls="ALiVE_mil_cqb";
+							typeName="CQB_TYPE";
+						};
+						class Item4
+						{
+							value="towns";
+							parentCls="ALiVE_mil_cqb";
+							typeName="CQB_LOCATIONTYPE";
+						};
+						class Item5
+						{
+							value="0.4";
+							parentCls="ALiVE_mil_cqb";
+							typeName="CQB_spawn_setting";
+						};
+						class Item6
+						{
+							value="1000";
+							parentCls="ALiVE_mil_cqb";
+							typeName="CQB_DENSITY";
+						};
+						class Item7
+						{
+							value="5";
+							parentCls="ALiVE_mil_cqb";
+							typeName="CQB_amount";
+						};
+						class Item8
+						{
+							value="true";
+							parentCls="ALiVE_mil_cqb";
+							typeName="CQB_UseDominantFaction";
+						};
+						class Item9
+						{
+							value="Cross";
+							parentCls="ALiVE_mil_cqb";
+							typeName="CQB_TraceGrid";
+						};
+						class Item10
+						{
+							value="700";
+							parentCls="ALiVE_mil_cqb";
+							typeName="CQB_spawndistance";
+						};
+						class Item11
+						{
+							value="0";
+							parentCls="ALiVE_mil_cqb";
+							typeName="CQB_spawndistanceHeli";
+						};
+						class Item12
+						{
+							value="0";
+							parentCls="ALiVE_mil_cqb";
+							typeName="CQB_spawndistanceJet";
+						};
+						class Item13
+						{
+							value="OPF_F,BLU_F";
+							parentCls="ALiVE_mil_cqb";
+							typeName="CQB_FACTIONS";
+						};
+						class Item14
+						{
+							value="m_1,m_2,m_3,m_4,m_5,m_6,m_7,m_8,m_9,m_10,m_11,m_12,m_13,m_14,m_15,m_16,m_17,m_18,m_19,m_20,m_21,m_22,m_23";
+							parentCls="ALiVE_mil_cqb";
+							typeName="whitelist";
+						};
+						class Item15
+						{
+							value="base,opbase";
+							parentCls="ALiVE_mil_cqb";
+							typeName="blacklist";
+						};
+					};
+					id=81;
+					side="LOGIC";
+					vehicle="ALiVE_mil_cqb";
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item33
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3491.3953,-29.77,661.98792};
+					class args
+					{
+						items=8;
+						class Item0
+						{
+							value="false";
+							parentCls="ALiVE_sys_data";
+							typeName="debug";
+						};
+						class Item1
+						{
+							value="CouchDB";
+							parentCls="ALiVE_sys_data";
+							typeName="source";
+						};
+						class Item2
+						{
+							value="true";
+							parentCls="ALiVE_sys_data";
+							typeName="saveDateTime";
+						};
+						class Item3
+						{
+							value="false";
+							parentCls="ALiVE_sys_data";
+							typeName="disableStats";
+						};
+						class Item4
+						{
+							value="false";
+							parentCls="ALiVE_sys_data";
+							typeName="disableAAR";
+						};
+						class Item5
+						{
+							value="false";
+							parentCls="ALiVE_sys_data";
+							typeName="disablePerf";
+						};
+						class Item6
+						{
+							value="true";
+							parentCls="ALiVE_sys_data";
+							typeName="disablePerfMon";
+						};
+						class Item7
+						{
+							value="[['entities',150],['vehicles',300],['agents',450],['allDead',600],['objects',750],['triggers',900]]";
+							parentCls="ALiVE_sys_data";
+							typeName="customPerfMonCode";
+						};
+					};
+					id=82;
+					side="LOGIC";
+					vehicle="ALiVE_sys_data";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item34
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2388.697,8.4323902,1093.2361};
+					azimut=50.852093;
+					class args
+					{
+						items=11;
+						class Item0
+						{
+							value="Thor";
+							parentCls="ALiVE_sup_artillery";
+							typeName="artillery_callsign";
+						};
+						class Item1
+						{
+							value="B_MBT_01_arty_F";
+							parentCls="ALiVE_sup_artillery";
+							typeName="artillery_type";
+						};
+						class Item2
+						{
+							value="30000";
+							parentCls="ALiVE_sup_artillery";
+							typeName="artillery_he";
+						};
+						class Item3
+						{
+							value="30000";
+							parentCls="ALiVE_sup_artillery";
+							typeName="artillery_illum";
+						};
+						class Item4
+						{
+							value="30000";
+							parentCls="ALiVE_sup_artillery";
+							typeName="artillery_smoke";
+						};
+						class Item5
+						{
+							value="0";
+							parentCls="ALiVE_sup_artillery";
+							typeName="artillery_guided";
+						};
+						class Item6
+						{
+							value="0";
+							parentCls="ALiVE_sup_artillery";
+							typeName="artillery_cluster";
+						};
+						class Item7
+						{
+							value="30000";
+							parentCls="ALiVE_sup_artillery";
+							typeName="artillery_lg";
+						};
+						class Item8
+						{
+							value="0";
+							parentCls="ALiVE_sup_artillery";
+							typeName="artillery_mine";
+						};
+						class Item9
+						{
+							value="0";
+							parentCls="ALiVE_sup_artillery";
+							typeName="artillery_atmine";
+						};
+						class Item10
+						{
+							value="0";
+							parentCls="ALiVE_sup_artillery";
+							typeName="artillery_rockets";
+						};
+					};
+					id=83;
+					side="LOGIC";
+					vehicle="ALiVE_sup_artillery";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=9;
+					synchronizations[]={0};
+				};
+			};
+		};
+		class Item35
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2028.4484,8,525.91736};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="Relay Two";
+							parentCls="ALiVE_SUP_TRANSPORT";
+							typeName="transport_callsign";
+						};
+						class Item1
+						{
+							value="CUP_B_CH47F_USA";
+							parentCls="ALiVE_SUP_TRANSPORT";
+							typeName="transport_type";
+						};
+						class Item2
+						{
+							value="0";
+							parentCls="ALiVE_SUP_TRANSPORT";
+							typeName="transport_height";
+						};
+						class Item3
+						{
+							value="";
+							parentCls="ALiVE_SUP_TRANSPORT";
+							typeName="transport_code";
+						};
+					};
+					id=84;
+					side="LOGIC";
+					vehicle="ALiVE_SUP_TRANSPORT";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=10;
+					synchronizations[]={0};
 				};
 			};
 		};
@@ -3829,7 +4345,7 @@ class Mission
 			position[]={2395.1133,8,595.59937};
 			azimut=72.342415;
 			special="NONE";
-			id=78;
+			id=85;
 			side="EMPTY";
 			vehicle="Land_MetalCase_01_large_F";
 			leader=1;
@@ -3840,7 +4356,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=4;
+		items=65;
 		class Item0
 		{
 			position[]={2357.3572,8,598.66675};
@@ -3852,7 +4368,7 @@ class Mission
 		class Item1
 		{
 			position[]={4013.3848,0.14166614,956.80969};
-			name="c1";
+			name="c";
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorCIV";
@@ -3863,7 +4379,7 @@ class Mission
 		class Item2
 		{
 			position[]={4009.9319,0.13949911,663.22876};
-			name="m1";
+			name="m";
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorEAST";
@@ -3881,6 +4397,686 @@ class Mission
 			fillName="Grid";
 			a=1600;
 			b=1200;
+		};
+		class Item4
+		{
+			position[]={5887.2808,6.1599998,901.39099};
+			name="m_1";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=250;
+			b=250;
+		};
+		class Item5
+		{
+			position[]={7854.481,2.0599999,1350.6464};
+			name="m_2";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=200;
+			b=200;
+		};
+		class Item6
+		{
+			position[]={6905.9307,13.35,792.323};
+			name="m_3";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=75;
+			b=75;
+			angle=-225.66516;
+		};
+		class Item7
+		{
+			position[]={6669.9697,7.1900001,571.72791};
+			name="m_4";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=50;
+			b=50;
+			angle=-104.89467;
+		};
+		class Item8
+		{
+			position[]={8079.9785,8.9716158,2061.6099};
+			name="m_5";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=75;
+			b=350;
+			angle=231.744;
+		};
+		class Item9
+		{
+			position[]={7694.7173,49.077808,2529.9915};
+			name="m_6";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=40;
+			b=40;
+		};
+		class Item10
+		{
+			position[]={6503.0581,21.58,2069.7468};
+			name="m_7";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=75;
+			b=75;
+		};
+		class Item11
+		{
+			position[]={2281.3337,5.3314381,3409.0208};
+			name="m_8";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=450;
+			b=300;
+		};
+		class Item12
+		{
+			position[]={3352.959,11.172146,4873.2622};
+			name="m_9";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=50;
+			b=50;
+		};
+		class Item13
+		{
+			position[]={8867.8594,9.2399998,4519.6646};
+			name="m_10";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=600;
+			b=150;
+			angle=51.35379;
+		};
+		class Item14
+		{
+			position[]={8703.7471,24.542763,5169.1113};
+			name="m_11";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=50;
+			b=50;
+		};
+		class Item15
+		{
+			position[]={7780.6689,20.158831,4983.2334};
+			name="m_12";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=40;
+			b=40;
+		};
+		class Item16
+		{
+			position[]={4458.9897,3.0899999,7516.1294};
+			name="opbase";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorBrown";
+			fillName="FDiagonal";
+			a=400;
+			b=200;
+		};
+		class Item17
+		{
+			position[]={3538.8782,17.459999,8041.5723};
+			name="m_13";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item18
+		{
+			position[]={3880.1897,2.9674745,7529.6831};
+			name="m_14";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item19
+		{
+			position[]={5279.4844,0.34626132,7981.3569};
+			name="m_15";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item20
+		{
+			position[]={745.86005,12.544374,6004.5195};
+			name="m_16";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item21
+		{
+			position[]={1007.8826,44.794579,7744.0552};
+			name="m_17";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item22
+		{
+			position[]={1324.689,20.788734,7198.4805};
+			name="m_18";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item23
+		{
+			position[]={684.4657,13.36,9330.2275};
+			name="m_19";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=150;
+			b=475;
+		};
+		class Item24
+		{
+			position[]={9603.5293,46.169998,6971.0786};
+			name="m_20";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=50;
+			b=50;
+		};
+		class Item25
+		{
+			position[]={8865.7314,83.392624,7966.3125};
+			name="m_21";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=25;
+			b=25;
+		};
+		class Item26
+		{
+			position[]={8415.1514,0.13930309,8768.7422};
+			name="m_22";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item27
+		{
+			position[]={8340.1387,62.419785,8482.3633};
+			name="m_23";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="DiagGrid";
+			a=100;
+			b=50;
+		};
+		class Item28
+		{
+			position[]={6698.5176,6.1700001,442.87292};
+			name="c_1";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=75;
+			b=75;
+		};
+		class Item29
+		{
+			position[]={7024.126,23.629999,1110.7373};
+			name="c_2";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item30
+		{
+			position[]={7327.8916,5.1500001,1373.9307};
+			name="c_3";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item31
+		{
+			position[]={6745.332,4.1199999,1568.4644};
+			name="c_4";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item32
+		{
+			position[]={7899.04,3.0899999,1653.6145};
+			name="c_5";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item33
+		{
+			position[]={8735.1709,7.2399998,2012.0667};
+			name="c_6";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=400;
+			b=200;
+			angle=-6.3113256;
+		};
+		class Item34
+		{
+			position[]={8916.5,6.2727294,2676.0962};
+			name="c_7";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=400;
+			b=200;
+			angle=-215.60933;
+		};
+		class Item35
+		{
+			position[]={8393.5996,11.403384,3121.8872};
+			name="c_8";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item36
+		{
+			position[]={4786.5376,32.849998,1826.3959};
+			name="c_9";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item37
+		{
+			position[]={4658.1279,4.1199999,2599.0129};
+			name="c_10";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item38
+		{
+			position[]={3331.8857,4.1100001,3308.2068};
+			name="c_11";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item39
+		{
+			position[]={8352.0176,7.3714008,4711.1055};
+			name="c_12";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=200;
+			angle=-200.7722;
+		};
+		class Item40
+		{
+			position[]={7379.4814,14.484392,5772.1001};
+			name="c_13";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=50;
+			b=250;
+			angle=-63.931034;
+		};
+		class Item41
+		{
+			position[]={7749.8384,12.33,5558.6611};
+			name="c_14";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=150;
+			b=150;
+		};
+		class Item42
+		{
+			position[]={6406.0601,24.011225,6146.7422};
+			name="c_15";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item43
+		{
+			position[]={5058.1299,41.018345,6379.3481};
+			name="c_16";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item44
+		{
+			position[]={3322.5222,34.57737,6613.4463};
+			name="c_17";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item45
+		{
+			position[]={3157.2263,51.015724,5854.2944};
+			name="c_18";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item46
+		{
+			position[]={4319.6709,27.73,7238.9136};
+			name="c_19";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item47
+		{
+			position[]={5131.665,18.49,7268.0083};
+			name="c_20";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item48
+		{
+			position[]={4610.6133,3.0899999,7962.3008};
+			name="c_21";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=300;
+			b=300;
+		};
+		class Item49
+		{
+			position[]={1236.4126,6.3247519,5819.5508};
+			name="c_22";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item50
+		{
+			position[]={1084.5308,7.9899998,6449.9653};
+			name="c_23";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item51
+		{
+			position[]={737.97345,14.753615,7637.3262};
+			name="c_24";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item52
+		{
+			position[]={1638.985,6.3386812,7553.9834};
+			name="c_25";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item53
+		{
+			position[]={2260.7949,33.900002,7846.2832};
+			name="c_26";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item54
+		{
+			position[]={2260.7954,75.989998,9002.042};
+			name="c_27";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item55
+		{
+			position[]={1028.109,13.36,9357.4502};
+			name="c_28";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=200;
+			b=100;
+		};
+		class Item56
+		{
+			position[]={6229.9907,16.504135,3969.1296};
+			name="c_29";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=250;
+			b=75;
+			angle=-195.09068;
+		};
+		class Item57
+		{
+			position[]={6505.6255,11.3,3727.5081};
+			name="c_30";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item58
+		{
+			position[]={7729.4302,6.1700001,4828.895};
+			name="c_31";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=400;
+			b=400;
+		};
+		class Item59
+		{
+			position[]={9437.3418,25.469999,7551.21};
+			name="c_32";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=50;
+			b=50;
+		};
+		class Item60
+		{
+			position[]={8418.084,0.13930309,8770.1201};
+			name="c_33";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item61
+		{
+			position[]={8523.3223,23.687195,9111.9639};
+			name="c_34";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=75;
+			b=75;
+		};
+		class Item62
+		{
+			position[]={9126.8467,2.8829505,9843.6699};
+			name="c_35";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+		};
+		class Item63
+		{
+			position[]={5521.0889,28.667665,7227.6582};
+			name="c_36";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=40;
+			b=40;
+		};
+		class Item64
+		{
+			position[]={6412.1689,38.108112,7259.7295};
+			name="c_37";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorCIV";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
 		};
 	};
 };
