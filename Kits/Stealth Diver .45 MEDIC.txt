@@ -1,0 +1,48 @@
+If isServer then {
+comment "Exported from Arsenal by Floperator";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_B_Wetsuit";
+this addItemToUniform "ACE_EarPlugs";
+this addItemToUniform "ACE_Flashlight_XL50";
+for "_i" from 1 to 5 do {this addItemToUniform "ACE_CableTie";};
+for "_i" from 1 to 10 do {this addItemToUniform "ACE_packingBandage";};
+for "_i" from 1 to 10 do {this addItemToUniform "ACE_elasticBandage";};
+for "_i" from 1 to 2 do {this addItemToUniform "ACE_tourniquet";};
+for "_i" from 1 to 3 do {this addItemToUniform "ACE_salineIV";};
+for "_i" from 1 to 2 do {this addItemToUniform "30Rnd_45ACP_Mag_SMG_01";};
+this addVest "V_RebreatherB";
+this addBackpack "B_AssaultPack_blk";
+for "_i" from 1 to 6 do {this addItemToBackpack "ACE_personalAidKit";};
+for "_i" from 1 to 10 do {this addItemToBackpack "ACE_morphine";};
+for "_i" from 1 to 10 do {this addItemToBackpack "ACE_epinephrine";};
+for "_i" from 1 to 8 do {this addItemToBackpack "30Rnd_45ACP_Mag_SMG_01";};
+this addGoggles "G_B_Diving";
+
+comment "Add weapons";
+this addWeapon "SMG_01_F";
+this addPrimaryWeaponItem "muzzle_snds_acp";
+this addPrimaryWeaponItem "optic_Holosight_smg";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadioAcreFlagged";
+this linkItem "ItemGPS";
+this linkItem "ACE_NVG_Gen4";
+
+comment "Set identity";
+this setFace "GreekHead_A3_06";
+this setSpeaker "ACE_NoVoice";
+}
