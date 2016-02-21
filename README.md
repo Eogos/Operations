@@ -8,7 +8,6 @@ Missions are to follow a set template, outlined by the AltisZeus.Altis mission.
 
 Missions are to have a description.ext included, and all license files from media, scripts, and other content are to be included with the mission, even if it is duplicated elsewhere in the repository.
 
-Mission PBOs must *not* be binarized, and commmits with binarized PBOs will be *rejected*. 
 
 ####Scripts
 Scripts are from various authors, which are attributed either in the script itself, or within the script's license file. Please maintain attribution. If pushing a script to the repository, please ensure that there is some form of license included. Do not push scripts without permission from the original author.
