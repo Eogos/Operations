@@ -1,0 +1,222 @@
+version=51;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=5;
+	class ItemIDProvider
+	{
+		nextID=11;
+	};
+	class Camera
+	{
+		pos[]={15088,42.986229,17199};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Characters_F_Mark",
+	"a3_characters_f",
+	"MFFA_cgcsat",
+	"A3_Modules_F_Mark_Objectives",
+	"a3_modules_f_mp_mark"
+};
+randomSeed=3707797;
+class ScenarioData
+{
+	author="Eogos™";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Entities
+	{
+		items=4;
+		class Item0
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15077.545,17.911268,17214.75};
+					};
+					side="West";
+					flags=3;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=6;
+					type="B_HeavyGunner_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=5;
+		};
+		class Item1
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15088,17.987667,17224.051};
+					};
+					side="East";
+					flags=3;
+					class Attributes
+					{
+					};
+					id=8;
+					type="O_cg_cwp_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=7;
+		};
+		class Item2
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={15088,17.986229,17224};
+				angles[]={0,0,6.2822089};
+			};
+			id=9;
+			type="ModuleHvtSimpleObjective_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleHvtSimpleObjective_F_ImmediateDownload";
+					expression="_this setVariable ['ImmediateDownload',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleHvtSimpleObjective_F_TaskDescription";
+					expression="_this setVariable ['TaskDescription',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Kill the Soldier";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleHvtSimpleObjective_F_DownloadObject";
+					expression="_this setVariable ['DownloadObject',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="objNull";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleHvtSimpleObjective_F_DownloadRadius";
+					expression="_this setVariable ['DownloadRadius',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=10;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item3
+		{
+			dataType="Trigger";
+			position[]={15088,17.986,17224};
+			class Attributes
+			{
+				timeout[]={0,30,0};
+				interuptable=1;
+				activationType="NOT PRESENT";
+				activationBy="EAST";
+				type="END1";
+			};
+			id=10;
+			type="EmptyDetectorAreaR50";
+		};
+	};
+};
