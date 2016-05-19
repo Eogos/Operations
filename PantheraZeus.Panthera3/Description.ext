@@ -1,23 +1,18 @@
-author="Eogos";
-OnLoadName = "Panthera Zeus - ddc";
-OnLoadMission = "A blank Zeus mission"; //Text in the mission screen
-overviewText = "A blank Zeus mission"; //Mission Overview in mission select screen
-
-
-onLoadIntro = "A blank Zeus mission";
+author="Schwerer Konigstiger";
+OnLoadName = "Panthera Zeus";
+OnLoadMission = "This is an empty Zeus Template Mission."; //Text in the mission screen
+overviewText = "This is an empty Zeus Template Mission."; //Mission Overview in mission select screen
+onLoadIntro = "An empty Zeus Template";
 onLoadIntroTIme = 1; //Time & Date for intro loading 1/0
 onLoadMissionTime =1; //Time and Date for mission loading
-
 //Game Info
 class Header
 {
 	gameType = COOP; //Game Type:  COOP, DM, TDM, CTF, SC, CTI, RPG, Sandbox, Seize, Defend.
 	minplayers = 1;
-	maxplayers = 75;
+	maxplayers = 22;
 };
-
-//Inclusions
-#include "R3F_LOG\desc_include.h" //R3F Logistics & Factory//Respawn
+//Respawn
 respawn = "BASE";  //NONE = No  Respawn, BIRD = Seagull, INSTANT = where you died, BASE = Marker called respawn_west/respawn_east, etc
 respawndelay = 5;  // Respawn Delay Timer
 
@@ -27,10 +22,7 @@ disabledAI = 1; // Disable AI from taking player slots
 disableChannels[] = {2,3,4,5,6}; //0 - Global, 1 - Side, 2 - Command, 3 - Group, 4 - Vehicle, 5 - Direct, 6 - System
 aiKills = 0; //disable AI score
 joinUnassigned = 1; //if set to 0, players join the side with the lowest number of people
-
-
 class ACE_Settings {
-
 class ace_common_forceAllSettings {
     value = 0;
     typeName = "BOOL";
@@ -57,7 +49,7 @@ class ace_finger_enabled {
     force = 1;
 };
 class ace_finger_maxRange {
-    value = 10;
+    value = 4;
     typeName = "SCALAR";
     force = 1;
 };
@@ -67,7 +59,12 @@ class ace_frag_Enabled {
     force = 1;
 };
 class ace_frag_SpallEnabled {
-    value = 0;
+    value = 1;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_frag_ReflectionsEnabled {
+    value = 1;
     typeName = "BOOL";
     force = 1;
 };
@@ -122,11 +119,16 @@ class ace_map_BFT_Interval {
     force = 1;
 };
 class ace_map_BFT_Enabled {
-    value = 0;
+    value = 1;
     typeName = "BOOL";
     force = 1;
 };
 class ace_map_BFT_HideAiGroups {
+    value = 0;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_map_BFT_ShowPlayerNames {
     value = 0;
     typeName = "BOOL";
     force = 1;
@@ -152,12 +154,12 @@ class ace_map_mapLimitZoom {
     force = 1;
 };
 class ace_map_mapShowCursorCoordinates {
-    value = 1;
+    value = 0;
     typeName = "BOOL";
     force = 1;
 };
 class ace_map_DefaultChannel {
-    value = 1;
+    value = -1;
     typeName = "SCALAR";
     force = 1;
 };
@@ -167,7 +169,7 @@ class ace_map_gestures_enabled {
     force = 1;
 };
 class ace_map_gestures_maxRange {
-    value = 10;
+    value = 7;
     typeName = "SCALAR";
     force = 1;
 };
@@ -199,6 +201,11 @@ class ace_medical_level {
 class ace_medical_medicSetting {
     value = 2;
     typeName = "SCALAR";
+    force = 1;
+};
+class ace_medical_increaseTrainingInLocations {
+    value = 0;
+    typeName = "BOOL";
     force = 1;
 };
 class ace_medical_enableFor {
@@ -287,7 +294,7 @@ class ace_medical_amountOfReviveLives {
     force = 1;
 };
 class ace_medical_allowDeadBodyMovement {
-    value = 0;
+    value = 1;
     typeName = "BOOL";
     force = 1;
 };
@@ -297,7 +304,12 @@ class ace_medical_allowLitterCreation {
     force = 1;
 };
 class ace_medical_litterCleanUpDelay {
-    value = 1800;
+    value = 0;
+    typeName = "SCALAR";
+    force = 1;
+};
+class ace_medical_medicSetting_basicEpi {
+    value = 0;
     typeName = "SCALAR";
     force = 1;
 };
@@ -317,6 +329,11 @@ class ace_medical_consumeItem_PAK {
     force = 1;
 };
 class ace_medical_consumeItem_SurgicalKit {
+    value = 0;
+    typeName = "SCALAR";
+    force = 1;
+};
+class ace_medical_useLocation_basicEpi {
     value = 0;
     typeName = "SCALAR";
     force = 1;
@@ -366,6 +383,11 @@ class ace_medical_moveUnitsFromGroupOnUnconscious {
     typeName = "BOOL";
     force = 1;
 };
+class ace_medical_delayUnconCaptive {
+    value = 3;
+    typeName = "SCALAR";
+    force = 1;
+};
 class ace_medical_menu_allow {
     value = 1;
     typeName = "SCALAR";
@@ -396,13 +418,18 @@ class ace_mk6mortar_allowCompass {
     typeName = "BOOL";
     force = 1;
 };
+class ace_mk6mortar_useAmmoHandling {
+    value = 1;
+    typeName = "BOOL";
+    force = 1;
+};
 class ace_nametags_showCursorTagForVehicles {
     value = 0;
     typeName = "BOOL";
     force = 1;
 };
 class ace_nametags_playerNamesViewDistance {
-    value = 15;
+    value = 5;
     typeName = "SCALAR";
     force = 1;
 };
@@ -416,13 +443,28 @@ class ace_nightvision_disableNVGsWithSights {
     typeName = "BOOL";
     force = 1;
 };
+class ace_overheating_overheatingDispersion {
+    value = 1;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_overheating_unJamOnreload {
+    value = 0;
+    typeName = "BOOL";
+    force = 1;
+};
+class ace_overheating_unJamFailChance {
+    value = 0.1;
+    typeName = "SCALAR";
+    force = 1;
+};
 class ace_rearm_level {
     value = 2;
     typeName = "SCALAR";
     force = 1;
 };
 class ace_refuel_rate {
-    value = 10;
+    value = 1;
     typeName = "SCALAR";
     force = 1;
 };
@@ -472,7 +514,7 @@ class ace_repair_wheelRepairRequiredItems {
     force = 1;
 };
 class ace_respawn_SavePreDeathGear {
-    value = 1;
+    value = 0;
     typeName = "BOOL";
     force = 1;
 };
@@ -647,7 +689,7 @@ class ace_zeus_revealMines {
     force = 1;
 };
 class ace_zeus_autoAddObjects {
-    value = 0;
+    value = 1;
     typeName = "BOOL";
     force = 1;
 };
@@ -657,7 +699,7 @@ class ace_captives_allowHandcuffOwnSide {
     force = 1;
 };
 class ace_captives_requireSurrender {
-    value = 2;
+    value = 0;
     typeName = "SCALAR";
     force = 1;
 };
@@ -677,7 +719,7 @@ class ace_explosives_RequireSpecialist {
     force = 1;
 };
 class ace_explosives_PunishNonSpecialists {
-    value = 0;
+    value = 1;
     typeName = "BOOL";
     force = 1;
 };
@@ -707,7 +749,22 @@ class ace_hearing_enabledForZeusUnits {
     force = 1;
 };
 class ace_hearing_autoAddEarplugsToUnits {
+    value = 0;
+    typeName = "BOOL";
+    force = 1;
+};
+class tac_headless_Enabled {
     value = 1;
+    typeName = "BOOL";
+    force = 1;
+};
+class tac_headless_Delay {
+    value = 15;
+    typeName = "SCALAR";
+    force = 1;
+};
+class tac_headless_Log {
+    value = 0;
     typeName = "BOOL";
     force = 1;
 };
@@ -722,7 +779,7 @@ class ace_advanced_ballistics_simulateForSnipers {
     force = 1;
 };
 class ace_advanced_ballistics_simulateForGroupMembers {
-    value = 0;
+    value = 1;
     typeName = "BOOL";
     force = 1;
 };
@@ -732,7 +789,7 @@ class ace_advanced_ballistics_simulateForEveryone {
     force = 1;
 };
 class ace_advanced_ballistics_disabledInFullAutoMode {
-    value = 1;
+    value = 0;
     typeName = "BOOL";
     force = 1;
 };
@@ -760,5 +817,5 @@ class ace_advanced_ballistics_simulationRadius {
     value = 3000;
     typeName = "SCALAR";
     force = 1;
-	};
+};
 };
