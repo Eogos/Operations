@@ -8,14 +8,14 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=44;
+		nextID=46;
 	};
 	class Camera
 	{
-		pos[]={1903.8679,30.332882,5868.7583};
-		dir[]={-0.40602472,-0.9136585,-0.020046093};
-		up[]={-0.91254717,0.40648323,-0.045054145};
-		aside[]={-0.049310707,8.0436803e-007,0.99879873};
+		pos[]={1882.5795,24.464359,5831.2363};
+		dir[]={0.65602905,-0.36451274,0.66096479};
+		up[]={0.25681022,0.93118477,0.25874218};
+		aside[]={0.70978767,3.1059608e-007,-0.70449746};
 	};
 };
 binarizationWanted=0;
@@ -28,7 +28,9 @@ addons[]=
 	"A3_Modules_F_Curator_Intel",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Modules_F_Intel",
-	"A3_Modules_F_HC"
+	"A3_Modules_F_HC",
+	"OPTRE_Vehicles_HEV",
+	"OPTRE_Frigate"
 };
 randomSeed=11433421;
 class ScenarioData
@@ -66,7 +68,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="Stratis Zeus";
+		briefingName="Stratis Operation Trebuchet Zeus";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
@@ -86,7 +88,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=22;
+		items=24;
 		class Item0
 		{
 			dataType="Group";
@@ -3354,6 +3356,63 @@ class Mission
 			type="hd_flag";
 			colorName="ColorWEST";
 			id=43;
+		};
+		class Item22
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1894.9507,6.9491401,5867.3164};
+				angles[]={0,0.19424331,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this addaction [""Request Orbital Drop"", OPTRE_HEV_fnc_podCallSelf]; this allowDamage false;";
+			};
+			id=44;
+			type="OPTRE_HEV";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[1]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item23
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1601.6385,175.31393,5908.3955};
+				angles[]={0,0.27698743,0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=45;
+			type="OPTRE_Frigate_Final_Dawn";
+			atlOffset=203.89336;
 		};
 	};
 	class Connections
