@@ -24,3 +24,6 @@ All content here-in from Konigstiger or the DDC Community is licensed by [APL-SA
 All content from others,  including scripts, is licensed under their own license files, which can be found in the script folders. Scripts without licenses are licensed under APL-SA.
 
 In short: This material is *not* licensed for commercial use, you may *not* convert or transfer this material to be used in games other than ArmA. You *may* adapt, or build upon this material, only if you redistribute it under the same license and maintain author attribution.
+
+
+![DDC-Logo](https://github.com/DeathDeliveryCorps/Operations/blob/master/Logos/png/MulticamBlack.png)
