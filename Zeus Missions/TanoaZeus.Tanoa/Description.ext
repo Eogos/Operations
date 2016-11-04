@@ -1,20 +1,23 @@
-author="Schwerer Konigstiger & Eogos";
+author="Schwerer Konigstiger";
 OnLoadName = "Tanoa Zeus";
-OnLoadMission = "This is an empty Zeus Template Mission"; //Text in the mission screen
-overviewText = "This is an empty Zeus Template Mission"; //Mission Overview in mission select screen
-onLoadIntro = "An empty Zeus Template";
-onLoadIntroTime = 1; //Time & Date for intro loading 1/0
+OnLoadMission = "A Zeus Template Mission."; //Text in the mission screen
+overviewText = "A Zeus Template Mission"; //Mission Overview in mission select screen
+onLoadIntro = "Zeus Template Mission";
+onLoadIntroTIme = 1; //Time & Date for intro loading 1/0
 onLoadMissionTime =1; //Time and Date for mission loading
+
 //Game Info
 class Header
 {
 	gameType = COOP; //Game Type:  COOP, DM, TDM, CTF, SC, CTI, RPG, Sandbox, Seize, Defend.
 	minplayers = 1;
-	maxplayers = 25;
+	maxplayers = 31;
 };
+
 //Respawn
 respawn = "BASE";  //NONE = No  Respawn, BIRD = Seagull, INSTANT = where you died, BASE = Marker called respawn_west/respawn_east, etc
 respawndelay = 5;  // Respawn Delay Timer
+respawnTemplatesWest[] = {"MenuPosition"};//respawn on module positions
 
 //Server
 enableDebugConsole = 1; // Enable Debug Console in game for Admins Only
@@ -22,7 +25,15 @@ disabledAI = 1; // Disable AI from taking player slots
 disableChannels[] = {5,6}; //0 - Global, 1 - Side, 2 - Command, 3 - Group, 4 - Vehicle, 5 - Direct, 6 - System
 aiKills = 0; //disable AI score
 joinUnassigned = 1; //if set to 0, players join the side with the lowest number of people
+
+//ACE Settings Framework -- DO NOT MODIFY
+
 class ACE_Settings {
+	class ace_medical_blood_enabledFor {
+	    value = 2;
+	    typeName = "SCALAR";
+	    force = 1;
+	};
 	class ace_common_forceAllSettings {
 	    value = 0;
 	    typeName = "BOOL";
@@ -44,6 +55,16 @@ class ACE_Settings {
 	    force = 1;
 	};
 	class ace_cookoff_enable {
+	    value = 1;
+	    typeName = "BOOL";
+	    force = 1;
+	};
+	class ace_cookoff_enableAmmobox {
+	    value = 1;
+	    typeName = "BOOL";
+	    force = 1;
+	};
+	class ace_cookoff_enableAmmoCookoff {
 	    value = 1;
 	    typeName = "BOOL";
 	    force = 1;
@@ -89,7 +110,7 @@ class ACE_Settings {
 	    force = 1;
 	};
 	class ace_gforces_enabledFor {
-	    value = 2;
+	    value = 1;
 	    typeName = "SCALAR";
 	    force = 1;
 	};
@@ -106,6 +127,11 @@ class ACE_Settings {
 	class ace_interaction_enableTeamManagement {
 	    value = 1;
 	    typeName = "BOOL";
+	    force = 1;
+	};
+	class ace_laser_dispersionCount {
+	    value = 2;
+	    typeName = "SCALAR";
 	    force = 1;
 	};
 	class ace_laserpointer_enabled {
@@ -144,7 +170,7 @@ class ACE_Settings {
 	    force = 1;
 	};
 	class ace_map_BFT_ShowPlayerNames {
-	    value = 1;
+	    value = 0;
 	    typeName = "BOOL";
 	    force = 1;
 	};
@@ -274,7 +300,7 @@ class ACE_Settings {
 	    force = 1;
 	};
 	class ace_medical_enableUnconsciousnessAI {
-	    value = 2;
+	    value = 1;
 	    typeName = "SCALAR";
 	    force = 1;
 	};
@@ -364,7 +390,7 @@ class ACE_Settings {
 	    force = 1;
 	};
 	class ace_medical_useCondition_PAK {
-	    value = 0;
+	    value = 1;
 	    typeName = "SCALAR";
 	    force = 1;
 	};
@@ -379,7 +405,7 @@ class ACE_Settings {
 	    force = 1;
 	};
 	class ace_medical_healHitPointAfterAdvBandage {
-	    value = 1;
+	    value = 0;
 	    typeName = "BOOL";
 	    force = 1;
 	};
@@ -469,7 +495,7 @@ class ACE_Settings {
 	    force = 1;
 	};
 	class ace_overheating_unJamOnreload {
-	    value = 1;
+	    value = 0;
 	    typeName = "BOOL";
 	    force = 1;
 	};
@@ -556,11 +582,6 @@ class ACE_Settings {
 	class ace_respawn_bodyRemoveTimer {
 	    value = 0;
 	    typeName = "SCALAR";
-	    force = 1;
-	};
-	class ace_sitting_enable {
-	    value = 0;
-	    typeName = "BOOL";
 	    force = 1;
 	};
 	class ace_spectator_filterUnits {
@@ -734,12 +755,12 @@ class ACE_Settings {
 	    force = 1;
 	};
 	class acex_viewrestriction_mode {
-	    value = 0;
+	    value = 3;
 	    typeName = "SCALAR";
 	    force = 1;
 	};
 	class acex_viewrestriction_modeSelectiveFoot {
-	    value = 0;
+	    value = 1;
 	    typeName = "SCALAR";
 	    force = 1;
 	};
@@ -799,7 +820,7 @@ class ACE_Settings {
 	    force = 1;
 	};
 	class ace_captives_requireSurrender {
-	    value = 2;
+	    value = 1;
 	    typeName = "SCALAR";
 	    force = 1;
 	};
@@ -844,7 +865,7 @@ class ACE_Settings {
 	    force = 1;
 	};
 	class ace_hearing_enabledForZeusUnits {
-	    value = 1;
+	    value = 0;
 	    typeName = "BOOL";
 	    force = 1;
 	};
@@ -853,17 +874,22 @@ class ACE_Settings {
 	    typeName = "BOOL";
 	    force = 1;
 	};
-	class acex_headless_Enabled {
+	class acex_headless_enabled {
 	    value = 1;
 	    typeName = "BOOL";
 	    force = 1;
 	};
-	class acex_headless_Delay {
+	class acex_headless_delay {
 	    value = 15;
 	    typeName = "SCALAR";
 	    force = 1;
 	};
-	class acex_headless_Log {
+	class acex_headless_endMission {
+	    value = 0;
+	    typeName = "SCALAR";
+	    force = 1;
+	};
+	class acex_headless_log {
 	    value = 0;
 	    typeName = "BOOL";
 	    force = 1;
@@ -884,12 +910,12 @@ class ACE_Settings {
 	    force = 1;
 	};
 	class ace_advanced_ballistics_simulateForEveryone {
-	    value = 1;
+	    value = 0;
 	    typeName = "BOOL";
 	    force = 1;
 	};
 	class ace_advanced_ballistics_disabledInFullAutoMode {
-	    value = 0;
+	    value = 1;
 	    typeName = "BOOL";
 	    force = 1;
 	};
@@ -917,5 +943,5 @@ class ACE_Settings {
 	    value = 3000;
 	    typeName = "SCALAR";
 	    force = 1;
-	};
+	}
 };
