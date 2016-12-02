@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1469;
+		nextID=1543;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=93;
+		nextID=101;
 	};
 	class Camera
 	{
-		pos[]={9998.2959,258.89603,3248.2837};
-		dir[]={0.52839476,-0.66577357,0.52682906};
-		up[]={0.47147152,0.74615383,0.47007477};
-		aside[]={0.70606005,1.1463999e-007,-0.708157};
+		pos[]={10017.148,224.66251,3256.886};
+		dir[]={0.38857105,-0.4651579,0.7954067};
+		up[]={0.20418052,0.8852219,0.41795838};
+		aside[]={0.89853233,4.3172622e-007,-0.43895122};
 	};
 };
 binarizationWanted=0;
@@ -44,6 +44,7 @@ addons[]=
 	"acex_sitting",
 	"A3_Structures_F_Exp_Military_Flags",
 	"A3_Characters_F_Exp",
+	"asr_ai3_cfgvehicles",
 	"A3_Supplies_F_Heli_CargoNets",
 	"A3_Structures_F_Civ_Garbage",
 	"A3_Structures_F_EPA_Civ_Camping",
@@ -72,7 +73,6 @@ addons[]=
 	"A3_Structures_F_Households_Slum",
 	"A3_Structures_F_EPB_Furniture",
 	"A3_Structures_F_EPB_Items_Military",
-	"A3_Structures_F_Heli_Ind_Machines",
 	"A3_Structures_F_Furniture",
 	"A3_Structures_F_EPB_Items_Vessels",
 	"A3_Structures_F_Walls",
@@ -104,19 +104,25 @@ addons[]=
 	"A3_Air_F_Exp_VTOL_01",
 	"CUP_Misc3_Config",
 	"CUP_Weapons_AmmoBoxes",
+	"A3_Boat_F_Gamma_Boat_Civil_01",
+	"A3_Boat_F_Exp_Scooter_Transport_01",
 	"A3_Weapons_F_Ammoboxes",
 	"ace_explosives",
 	"CUP_TrackedVehicles_M1_Abrams",
 	"MELB",
-	"A3_Structures_F_Exp_Cultural_BasaltRuins",
-	"A3_Boat_F_Gamma_Boat_Civil_01",
-	"A3_Boat_F_Exp_Scooter_Transport_01"
+	"A3_Boat_F_Boat_Transport_01",
+	"CUP_CAStructuresHouse_A_Hospital",
+	"A3_Structures_F_EPC_Dominants_GhostHotel",
+	"CUP_CA_Config",
+	"A3_Structures_F_Naval_Piers",
+	"CUP_AirVehicles_Mi8",
+	"CUP_Editor_Plants_Config"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=45;
+		items=50;
 		class Item0
 		{
 			className="acre_api";
@@ -377,41 +383,68 @@ class AddonsMetaData
 		};
 		class Item39
 		{
+			className="A3_Boat_F_Gamma";
+			name="Arma 3 - Boats and Submersibles";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item40
+		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item40
+		class Item41
 		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item41
+		class Item42
 		{
 			className="CUP_TrackedVehicles_M1_Abrams";
 			name="CUP_TrackedVehicles_M1_Abrams";
 		};
-		class Item42
+		class Item43
 		{
 			className="MELB";
 			name="MELB";
 		};
-		class Item43
+		class Item44
 		{
-			className="A3_Structures_F_Exp_Cultural";
-			name="Arma 3 Apex - Cultural Buildings";
+			className="A3_Boat_F";
+			name="Arma 3 Alpha - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item44
+		class Item45
 		{
-			className="A3_Boat_F_Gamma";
-			name="Arma 3 - Boats and Submersibles";
+			className="CUP_CAStructuresHouse_A_Hospital";
+			name="CUP_CAStructuresHouse_A_Hospital";
+		};
+		class Item46
+		{
+			className="A3_Structures_F_EPC";
+			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
+		};
+		class Item47
+		{
+			className="CUP_CA_Config";
+			name="CUP_CA_Config";
+		};
+		class Item48
+		{
+			className="CUP_AirVehicles_Mi8";
+			name="CUP_AirVehicles_Mi8";
+		};
+		class Item49
+		{
+			className="CUP_Editor_Plants_Config";
+			name="CUP_Editor_Plants_Config";
 		};
 	};
 };
@@ -934,7 +967,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=146;
+		items=162;
 		class Item0
 		{
 			dataType="Layer";
@@ -8551,7 +8584,7 @@ class Mission
 			name="Shed (Sandbags)";
 			class Entities
 			{
-				items=45;
+				items=44;
 				class Item0
 				{
 					dataType="Object";
@@ -9196,23 +9229,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1663.849,45.914501,7745.3936};
-						angles[]={6.1141477,3.2059777,6.1349473};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						skill=0.2;
-					};
-					id=778;
-					type="Land_ButaneCanister_F";
-				};
-				class Item37
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={1665.5973,46.064766,7748.644};
 						angles[]={6.1769199,1.6774988,6.0883551};
 					};
@@ -9225,7 +9241,7 @@ class Mission
 					id=779;
 					type="Land_BakedBeans_F";
 				};
-				class Item38
+				class Item37
 				{
 					dataType="Object";
 					class PositionInfo
@@ -9242,7 +9258,7 @@ class Mission
 					id=780;
 					type="Land_BakedBeans_F";
 				};
-				class Item39
+				class Item38
 				{
 					dataType="Object";
 					class PositionInfo
@@ -9259,7 +9275,7 @@ class Mission
 					id=781;
 					type="Land_BakedBeans_F";
 				};
-				class Item40
+				class Item39
 				{
 					dataType="Object";
 					class PositionInfo
@@ -9277,7 +9293,7 @@ class Mission
 					type="Land_Bandage_F";
 					atlOffset=-0.022167206;
 				};
-				class Item41
+				class Item40
 				{
 					dataType="Object";
 					class PositionInfo
@@ -9295,7 +9311,7 @@ class Mission
 					type="Land_Bandage_F";
 					atlOffset=-0.022506714;
 				};
-				class Item42
+				class Item41
 				{
 					dataType="Object";
 					class PositionInfo
@@ -9312,7 +9328,7 @@ class Mission
 					id=784;
 					type="Land_Can_V2_F";
 				};
-				class Item43
+				class Item42
 				{
 					dataType="Object";
 					class PositionInfo
@@ -9329,7 +9345,7 @@ class Mission
 					id=785;
 					type="Land_Can_V1_F";
 				};
-				class Item44
+				class Item43
 				{
 					dataType="Object";
 					class PositionInfo
@@ -10838,270 +10854,6 @@ class Mission
 		};
 		class Item33
 		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={10044.847,207.77957,3279.9741};
-						angles[]={0,5.7908282,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this allowDamage false;";
-					};
-					id=840;
-					type="I_C_Soldier_Para_7_F";
-					atlOffset=-1.5258789e-005;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="Enh_onDamagedEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="Enh_taskPatrol_combatMode";
-							expression="_this setVariable ['Enh_randomPatrol_combatMode',_value]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="YELLOW";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="Enh_onRespawnEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="Enh_taskPatrol_formation";
-							expression="_this setVariable ['Enh_randomPatrol_formation',_value]";
-							class Value
-							{
-								class data
-								{
-									nil=1;
-									class type
-									{
-										type[]=
-										{
-											"ANY"
-										};
-									};
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="Enh_taskPatrol_behaviour";
-							expression="_this setVariable ['Enh_randomPatrol_behaviour',_value]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="SAFE";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="Enh_taskPatrol_speed";
-							expression="_this setVariable ['Enh_randomPatrol_speedMode',_value]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="LIMITED";
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="Enh_animCombEquipment";
-							expression="_this setVariable ['Enh_animCombEquipment',_value]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="ASIS";
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="Enh_animType";
-							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animEquipment'] remoteExec ['BIS_fnc_ambientAnim',0,true];					};				};			";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="WATCH";
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="Enh_onKilledEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						class Attribute10
-						{
-							property="Enh_animCombType";
-							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animCombEquipment'] remoteExec ['BIS_fnc_ambientAnimCombat',0,true];					};				};			";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="";
-								};
-							};
-						};
-						class Attribute11
-						{
-							property="Enh_animEquipment";
-							expression="_this setVariable ['Enh_animEquipment',_value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="ASIS";
-								};
-							};
-						};
-						nAttributes=12;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=839;
-			atlOffset=-1.5258789e-005;
-		};
-		class Item34
-		{
 			dataType="Logic";
 			class PositionInfo
 			{
@@ -11779,7 +11531,7 @@ class Mission
 				nAttributes=35;
 			};
 		};
-		class Item35
+		class Item34
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -11983,13 +11735,13 @@ class Mission
 				nAttributes=10;
 			};
 		};
-		class Item36
+		class Item35
 		{
 			dataType="Layer";
 			name="Ruin (Fortified)";
 			class Entities
 			{
-				items=42;
+				items=37;
 				class Item0
 				{
 					dataType="Object";
@@ -12353,60 +12105,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12541.823,60.365231,12340.178};
-						angles[]={0.055940546,1.4520301,6.253861};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						skill=0.2;
-					};
-					id=865;
-					type="Land_ButaneCanister_F";
-					atlOffset=-0.00098800659;
-				};
-				class Item21
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12541.479,60.379654,12340.1};
-						angles[]={0.055940546,0.51023477,6.253861};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						skill=0.2;
-					};
-					id=866;
-					type="Land_ButaneCanister_F";
-					atlOffset=-0.0010452271;
-				};
-				class Item22
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12541.571,60.388557,12339.893};
-						angles[]={0.055940546,0.31209806,6.253861};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						skill=0.2;
-					};
-					id=867;
-					type="Land_ButaneCanister_F";
-					atlOffset=-0.00099182129;
-				};
-				class Item23
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={12540.446,60.371368,12337.431};
 						angles[]={6.2591896,0,0.0080009829};
 					};
@@ -12421,25 +12119,7 @@ class Mission
 					type="Land_Garbage_square5_F";
 					atlOffset=3.8146973e-006;
 				};
-				class Item24
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12556.625,61.798908,12346.309};
-						angles[]={0.061256282,5.4105206,0.12993105};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						skill=0.2;
-					};
-					id=869;
-					type="WaterPump_01_forest_F";
-					atlOffset=-0.013729095;
-				};
-				class Item25
+				class Item21
 				{
 					dataType="Object";
 					class PositionInfo
@@ -12457,7 +12137,7 @@ class Mission
 					id=870;
 					type="Land_BagFence_Round_F";
 				};
-				class Item26
+				class Item22
 				{
 					dataType="Object";
 					class PositionInfo
@@ -12475,7 +12155,7 @@ class Mission
 					id=871;
 					type="Land_BagFence_Round_F";
 				};
-				class Item27
+				class Item23
 				{
 					dataType="Object";
 					class PositionInfo
@@ -12494,7 +12174,7 @@ class Mission
 					type="Land_BagFence_Long_F";
 					atlOffset=-3.8146973e-006;
 				};
-				class Item28
+				class Item24
 				{
 					dataType="Object";
 					class PositionInfo
@@ -12512,7 +12192,7 @@ class Mission
 					id=873;
 					type="Land_BagFence_Long_F";
 				};
-				class Item29
+				class Item25
 				{
 					dataType="Object";
 					class PositionInfo
@@ -12530,7 +12210,7 @@ class Mission
 					id=874;
 					type="Land_BagFence_Long_F";
 				};
-				class Item30
+				class Item26
 				{
 					dataType="Object";
 					class PositionInfo
@@ -12548,7 +12228,7 @@ class Mission
 					type="Land_Bench_F";
 					atlOffset=-0.002040863;
 				};
-				class Item31
+				class Item27
 				{
 					dataType="Object";
 					class PositionInfo
@@ -12565,7 +12245,7 @@ class Mission
 					id=876;
 					type="Land_Sack_F";
 				};
-				class Item32
+				class Item28
 				{
 					dataType="Object";
 					class PositionInfo
@@ -12582,7 +12262,7 @@ class Mission
 					id=877;
 					type="Land_CratesPlastic_F";
 				};
-				class Item33
+				class Item29
 				{
 					dataType="Object";
 					class PositionInfo
@@ -12600,7 +12280,7 @@ class Mission
 					type="Land_Basket_F";
 					atlOffset=-0.00018310547;
 				};
-				class Item34
+				class Item30
 				{
 					dataType="Object";
 					class PositionInfo
@@ -12618,7 +12298,7 @@ class Mission
 					type="Land_BarrelWater_grey_F";
 					atlOffset=-0.0035171509;
 				};
-				class Item35
+				class Item31
 				{
 					dataType="Object";
 					class PositionInfo
@@ -12636,7 +12316,7 @@ class Mission
 					type="Land_PlasticCase_01_small_F";
 					atlOffset=-0.0027580261;
 				};
-				class Item36
+				class Item32
 				{
 					dataType="Object";
 					class PositionInfo
@@ -12654,7 +12334,7 @@ class Mission
 					type="Land_Canteen_F";
 					atlOffset=-0.00038146973;
 				};
-				class Item37
+				class Item33
 				{
 					dataType="Object";
 					class PositionInfo
@@ -12672,7 +12352,7 @@ class Mission
 					type="Land_Canteen_F";
 					atlOffset=-0.0011558533;
 				};
-				class Item38
+				class Item34
 				{
 					dataType="Object";
 					class PositionInfo
@@ -12690,7 +12370,7 @@ class Mission
 					type="Land_CerealsBox_F";
 					atlOffset=-0.0005531311;
 				};
-				class Item39
+				class Item35
 				{
 					dataType="Object";
 					class PositionInfo
@@ -12708,25 +12388,7 @@ class Mission
 					type="Land_CerealsBox_F";
 					atlOffset=-0.00053024292;
 				};
-				class Item40
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12556.618,60.704258,12334.792};
-						angles[]={6.256525,3.379324,0.074528553};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						skill=0.2;
-					};
-					id=885;
-					type="Land_CanOpener_F";
-					atlOffset=1.5258789e-005;
-				};
-				class Item41
+				class Item36
 				{
 					dataType="Object";
 					class PositionInfo
@@ -12748,7 +12410,7 @@ class Mission
 			id=887;
 			atlOffset=-0.023853302;
 		};
-		class Item37
+		class Item36
 		{
 			dataType="Group";
 			side="Independent";
@@ -13022,7 +12684,7 @@ class Mission
 			};
 			id=888;
 		};
-		class Item38
+		class Item37
 		{
 			dataType="Group";
 			side="Independent";
@@ -13299,7 +12961,7 @@ class Mission
 			id=891;
 			atlOffset=-3.8146973e-006;
 		};
-		class Item39
+		class Item38
 		{
 			dataType="Group";
 			side="Independent";
@@ -13573,7 +13235,7 @@ class Mission
 			};
 			id=894;
 		};
-		class Item40
+		class Item39
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13613,7 +13275,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item41
+		class Item40
 		{
 			dataType="Layer";
 			name="Long House";
@@ -13730,8 +13392,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12518.026,64.891998,12304.623};
-						angles[]={0.11942901,0.69197267,6.2245865};
+						position[]={12525.907,64.54422,12301.891};
+						angles[]={0.14823833,0.69197267,6.2272439};
 					};
 					side="Empty";
 					flags=4;
@@ -13741,7 +13403,6 @@ class Mission
 					};
 					id=906;
 					type="Land_Tank_rust_F";
-					atlOffset=0.0102005;
 				};
 				class Item7
 				{
@@ -14013,8 +13674,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12526.026,65.172409,12301.12};
-						angles[]={0.14823833,2.2627811,6.2272439};
+						position[]={12517.637,65.396652,12304.826};
+						angles[]={0.11942901,2.2627811,6.2245865};
 					};
 					side="Empty";
 					flags=4;
@@ -14024,7 +13685,6 @@ class Mission
 					};
 					id=925;
 					type="B_G_Van_01_fuel_F";
-					atlOffset=-0.0046615601;
 				};
 				class Item23
 				{
@@ -14436,7 +14096,7 @@ class Mission
 			id=953;
 			atlOffset=-0.058040619;
 		};
-		class Item42
+		class Item41
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14453,7 +14113,7 @@ class Mission
 			type="I_C_Offroad_02_unarmed_F";
 			atlOffset=-7.2479248e-005;
 		};
-		class Item43
+		class Item42
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14470,7 +14130,7 @@ class Mission
 			type="I_C_Van_01_transport_F";
 			atlOffset=-0.00053405762;
 		};
-		class Item44
+		class Item43
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14567,7 +14227,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item45
+		class Item44
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14664,7 +14324,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item46
+		class Item45
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14680,7 +14340,7 @@ class Mission
 			id=959;
 			type="I_C_Offroad_02_unarmed_F";
 		};
-		class Item47
+		class Item46
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14697,7 +14357,7 @@ class Mission
 			type="I_C_Van_01_transport_F";
 			atlOffset=-0.00018692017;
 		};
-		class Item48
+		class Item47
 		{
 			dataType="Group";
 			side="Independent";
@@ -14972,7 +14632,7 @@ class Mission
 			};
 			id=961;
 		};
-		class Item49
+		class Item48
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -15081,7 +14741,7 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item50
+		class Item49
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15098,7 +14758,7 @@ class Mission
 			type="I_C_Offroad_02_unarmed_F";
 			atlOffset=-0.00017166138;
 		};
-		class Item51
+		class Item50
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15114,7 +14774,7 @@ class Mission
 			id=967;
 			type="I_C_Offroad_02_unarmed_F";
 		};
-		class Item52
+		class Item51
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15131,7 +14791,7 @@ class Mission
 			type="I_C_Van_01_transport_F";
 			atlOffset=-0.0049781799;
 		};
-		class Item53
+		class Item52
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15148,7 +14808,7 @@ class Mission
 			type="I_G_Quadbike_01_F";
 			atlOffset=-0.00010299683;
 		};
-		class Item54
+		class Item53
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15164,7 +14824,7 @@ class Mission
 			id=970;
 			type="I_G_Quadbike_01_F";
 		};
-		class Item55
+		class Item54
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15180,7 +14840,7 @@ class Mission
 			id=971;
 			type="I_G_Quadbike_01_F";
 		};
-		class Item56
+		class Item55
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15197,7 +14857,7 @@ class Mission
 			type="I_G_Quadbike_01_F";
 			atlOffset=-0.00011062622;
 		};
-		class Item57
+		class Item56
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15214,7 +14874,7 @@ class Mission
 			type="I_C_Offroad_02_unarmed_F";
 			atlOffset=5.3405762e-005;
 		};
-		class Item58
+		class Item57
 		{
 			dataType="Marker";
 			position[]={9470.7891,0,9715.6875};
@@ -15229,7 +14889,7 @@ class Mission
 			id=974;
 			atlOffset=-77.706932;
 		};
-		class Item59
+		class Item58
 		{
 			dataType="Marker";
 			position[]={11361.596,-1.3196022e-033,3388.8101};
@@ -15244,7 +14904,7 @@ class Mission
 			id=976;
 			atlOffset=-16.985424;
 		};
-		class Item60
+		class Item59
 		{
 			dataType="Marker";
 			position[]={3215.1121,-1.2195271e-030,4703.1768};
@@ -15260,7 +14920,7 @@ class Mission
 			id=977;
 			atlOffset=26.057493;
 		};
-		class Item61
+		class Item60
 		{
 			dataType="Marker";
 			position[]={2764.9771,-1.2195271e-030,11574.162};
@@ -15275,7 +14935,7 @@ class Mission
 			id=978;
 			atlOffset=-13.306086;
 		};
-		class Item62
+		class Item61
 		{
 			dataType="Marker";
 			position[]={1663.87,3.3719283e+029,7720.186};
@@ -15290,7 +14950,7 @@ class Mission
 			id=981;
 			atlOffset=3.3719283e+029;
 		};
-		class Item63
+		class Item62
 		{
 			dataType="Marker";
 			position[]={10070.963,-1.3196022e-033,3248.407};
@@ -15305,7 +14965,7 @@ class Mission
 			id=982;
 			atlOffset=-203.89783;
 		};
-		class Item64
+		class Item63
 		{
 			dataType="Marker";
 			position[]={12553.711,252.62958,12288.697};
@@ -15320,7 +14980,7 @@ class Mission
 			id=983;
 			atlOffset=190.85965;
 		};
-		class Item65
+		class Item64
 		{
 			dataType="Layer";
 			name="Camp Falcon";
@@ -15692,7 +15352,7 @@ class Mission
 			id=1093;
 			atlOffset=-0.054689169;
 		};
-		class Item66
+		class Item65
 		{
 			dataType="Group";
 			side="Independent";
@@ -15966,7 +15626,7 @@ class Mission
 			};
 			id=1094;
 		};
-		class Item67
+		class Item66
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15982,7 +15642,7 @@ class Mission
 			id=1098;
 			type="Land_Camping_Light_F";
 		};
-		class Item68
+		class Item67
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -16092,7 +15752,7 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item69
+		class Item68
 		{
 			dataType="Group";
 			side="Independent";
@@ -16369,7 +16029,7 @@ class Mission
 			id=1100;
 			atlOffset=0.0013608932;
 		};
-		class Item70
+		class Item69
 		{
 			dataType="Group";
 			side="Independent";
@@ -16643,7 +16303,7 @@ class Mission
 			};
 			id=1103;
 		};
-		class Item71
+		class Item70
 		{
 			dataType="Group";
 			side="Independent";
@@ -17252,7 +16912,7 @@ class Mission
 			};
 			id=1129;
 		};
-		class Item72
+		class Item71
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17268,7 +16928,7 @@ class Mission
 			type="I_C_Boat_Transport_02_F";
 			atlOffset=0.64098269;
 		};
-		class Item73
+		class Item72
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17284,7 +16944,7 @@ class Mission
 			type="I_C_Boat_Transport_02_F";
 			atlOffset=0.5403235;
 		};
-		class Item74
+		class Item73
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17300,7 +16960,7 @@ class Mission
 			type="I_C_Boat_Transport_02_F";
 			atlOffset=0.65873289;
 		};
-		class Item75
+		class Item74
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17316,7 +16976,7 @@ class Mission
 			type="I_C_Boat_Transport_02_F";
 			atlOffset=1.2144628;
 		};
-		class Item76
+		class Item75
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17332,7 +16992,7 @@ class Mission
 			type="I_C_Boat_Transport_01_F";
 			atlOffset=0.57984865;
 		};
-		class Item77
+		class Item76
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17348,7 +17008,7 @@ class Mission
 			type="I_C_Boat_Transport_01_F";
 			atlOffset=0.68655759;
 		};
-		class Item78
+		class Item77
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17364,7 +17024,7 @@ class Mission
 			type="I_C_Boat_Transport_01_F";
 			atlOffset=0.75904584;
 		};
-		class Item79
+		class Item78
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17380,268 +17040,7 @@ class Mission
 			type="I_C_Boat_Transport_01_F";
 			atlOffset=1.2529054;
 		};
-		class Item80
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={5330.3311,2.8406479,14465.95};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this allowDamage false;";
-					};
-					id=1164;
-					type="I_C_Soldier_Para_3_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="Enh_onDamagedEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="Enh_taskPatrol_combatMode";
-							expression="_this setVariable ['Enh_randomPatrol_combatMode',_value]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="YELLOW";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="Enh_onRespawnEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="Enh_taskPatrol_formation";
-							expression="_this setVariable ['Enh_randomPatrol_formation',_value]";
-							class Value
-							{
-								class data
-								{
-									nil=1;
-									class type
-									{
-										type[]=
-										{
-											"ANY"
-										};
-									};
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="Enh_taskPatrol_behaviour";
-							expression="_this setVariable ['Enh_randomPatrol_behaviour',_value]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="SAFE";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="Enh_taskPatrol_speed";
-							expression="_this setVariable ['Enh_randomPatrol_speedMode',_value]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="LIMITED";
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="Enh_animCombEquipment";
-							expression="_this setVariable ['Enh_animCombEquipment',_value]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="ASIS";
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="Enh_animType";
-							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animEquipment'] remoteExec ['BIS_fnc_ambientAnim',0,true];					};				};			";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="STAND1";
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="Enh_onKilledEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						class Attribute10
-						{
-							property="Enh_animCombType";
-							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animCombEquipment'] remoteExec ['BIS_fnc_ambientAnimCombat',0,true];					};				};			";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="";
-								};
-							};
-						};
-						class Attribute11
-						{
-							property="Enh_animEquipment";
-							expression="_this setVariable ['Enh_animEquipment',_value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="ASIS";
-								};
-							};
-						};
-						nAttributes=12;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=1163;
-		};
-		class Item81
+		class Item79
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -17883,7 +17282,7 @@ class Mission
 				nAttributes=12;
 			};
 		};
-		class Item82
+		class Item80
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -18240,7 +17639,7 @@ class Mission
 				nAttributes=18;
 			};
 		};
-		class Item83
+		class Item81
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -18655,7 +18054,7 @@ class Mission
 				nAttributes=21;
 			};
 		};
-		class Item84
+		class Item82
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -18821,7 +18220,7 @@ class Mission
 				nAttributes=8;
 			};
 		};
-		class Item85
+		class Item83
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -19406,7 +18805,7 @@ class Mission
 				nAttributes=30;
 			};
 		};
-		class Item86
+		class Item84
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -19534,7 +18933,7 @@ class Mission
 				nAttributes=6;
 			};
 		};
-		class Item87
+		class Item85
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -19567,7 +18966,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item88
+		class Item86
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -19726,7 +19125,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0.6";
+							value="0.2";
 						};
 					};
 				};
@@ -19752,7 +19151,7 @@ class Mission
 				nAttributes=9;
 			};
 		};
-		class Item89
+		class Item87
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -19937,7 +19336,7 @@ class Mission
 				nAttributes=9;
 			};
 		};
-		class Item90
+		class Item88
 		{
 			dataType="Group";
 			side="Independent";
@@ -21044,7 +20443,7 @@ class Mission
 			};
 			id=1195;
 		};
-		class Item91
+		class Item89
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21143,7 +20542,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item92
+		class Item90
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21203,7 +20602,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item93
+		class Item91
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21263,7 +20662,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item94
+		class Item92
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21323,7 +20722,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item95
+		class Item93
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -21432,7 +20831,7 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item96
+		class Item94
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21492,7 +20891,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item97
+		class Item95
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21552,7 +20951,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item98
+		class Item96
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21611,7 +21010,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item99
+		class Item97
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21671,7 +21070,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item100
+		class Item98
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21731,7 +21130,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item101
+		class Item99
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21790,7 +21189,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item102
+		class Item100
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21849,7 +21248,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item103
+		class Item101
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21908,7 +21307,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item104
+		class Item102
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21967,7 +21366,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item105
+		class Item103
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22027,7 +21426,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item106
+		class Item104
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22087,7 +21486,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item107
+		class Item105
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22147,7 +21546,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item108
+		class Item106
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22206,7 +21605,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item109
+		class Item107
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22265,7 +21664,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item110
+		class Item108
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22324,7 +21723,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item111
+		class Item109
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22383,7 +21782,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item112
+		class Item110
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22441,7 +21840,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item113
+		class Item111
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22500,7 +21899,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item114
+		class Item112
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22599,7 +21998,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item115
+		class Item113
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22615,7 +22014,7 @@ class Mission
 			id=1418;
 			type="Mi8Wreck";
 		};
-		class Item116
+		class Item114
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22674,7 +22073,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item117
+		class Item115
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22691,7 +22090,7 @@ class Mission
 			type="UralWreck";
 			atlOffset=0.013061523;
 		};
-		class Item118
+		class Item116
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22732,7 +22131,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item119
+		class Item117
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22792,537 +22191,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item120
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11060.288,216.91962,8474.9072};
-				angles[]={0,5.0379972,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1439;
-			type="Box_NATO_WpsLaunch_F";
-			atlOffset=-1.5258789e-005;
-		};
-		class Item121
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11060.084,217.0224,8472.9365};
-				angles[]={0,4.4408154,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1440;
-			type="Box_NATO_WpsSpecial_F";
-		};
-		class Item122
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11060.829,217.72812,8470.4893};
-				angles[]={0,4.1756358,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1441;
-			type="B_supplyCrate_F";
-		};
-		class Item123
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11062.376,217.05406,8468.7529};
-				angles[]={0,1.6977956,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1442;
-			type="Box_NATO_AmmoOrd_F";
-		};
-		class Item124
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11061.531,217.05409,8469.0205};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1443;
-			type="Box_NATO_AmmoOrd_F";
-			atlOffset=3.0517578e-005;
-		};
-		class Item125
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11072.028,216.93945,8475.9385};
-				angles[]={0,0.98818016,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1444;
-			type="Box_NATO_WpsLaunch_F";
-			atlOffset=0.019821167;
-		};
-		class Item126
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11070.6,216.95671,8477.3115};
-				angles[]={0,0.39099839,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1445;
-			type="Box_NATO_WpsSpecial_F";
-		};
-		class Item127
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11068.212,217.66243,8478.2295};
-				angles[]={0,0.12581876,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1446;
-			type="B_supplyCrate_F";
-		};
-		class Item128
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11065.892,217.05406,8478.0781};
-				angles[]={0,3.931164,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1447;
-			type="Box_NATO_AmmoOrd_F";
-		};
-		class Item129
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11066.622,217.06364,8478.5791};
-				angles[]={0,2.2333684,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1448;
-			type="Box_NATO_AmmoOrd_F";
-			atlOffset=0.0095825195;
-		};
-		class Item130
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11077.604,219.18231,8479.4385};
-				angles[]={0,3.1121724,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1449;
-			type="CUP_B_M1A1_NATO_T";
-		};
-		class Item131
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11058.919,218.71149,8465.2764};
-				angles[]={0,0.70775568,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1450;
-			type="MELB_AH6M_L";
-		};
-		class Item132
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11070.928,220.74678,8468.6689};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=1451;
-			type="Flag_Syndikat_F";
-			atlOffset=-3.0517578e-005;
-		};
-		class Item133
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11084.035,217.88432,8473.5586};
-				angles[]={0,1.6386594,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				createAsSimpleObject=1;
-			};
-			id=1455;
-			type="Land_BasaltWall_01_8m_F";
-		};
-		class Item134
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11067.429,217.90338,8457.457};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				createAsSimpleObject=1;
-			};
-			id=1456;
-			type="Land_BasaltWall_01_8m_F";
-		};
-		class Item135
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11050.299,217.87892,8473.4902};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				createAsSimpleObject=1;
-			};
-			id=1457;
-			type="Land_BasaltWall_01_8m_F";
-		};
-		class Item136
-		{
-			dataType="Trigger";
-			position[]={11068.452,216.77,8474.2188};
-			class Attributes
-			{
-				sizeA=15;
-				sizeB=15;
-				sizeC=20;
-				activationBy="GUER";
-			};
-			id=1458;
-			type="EmptyDetectorAreaR50";
-		};
-		class Item137
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={11076.783,216.77,8467};
-			};
-			id=1460;
-			type="ModuleTaskCreate_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ModuleTaskCreate_F_Destination";
-					expression="_this setVariable ['Destination',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ModuleTaskCreate_F_Type";
-					expression="_this setVariable ['Type',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ModuleTaskCreate_F_Marker";
-					expression="_this setVariable ['Marker',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ModuleTaskCreate_F_Title";
-					expression="_this setVariable ['Title',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Find the Forgotten Hidden Weapons Cache";
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ModuleTaskCreate_F_Description";
-					expression="_this setVariable ['Description',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="When NATO was fighting for control of the islands, Syndikat knew they were going to have trouble keeping all of their supplies so they took some weapons and a few armed vehicles and hid them away but the map saying where they were hidden was lost when one of the old outposts fell. Find the hidden weapons and vehicles.";
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="ModuleTaskCreate_F_ID";
-					expression="_this setVariable ['ID',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="task1";
-						};
-					};
-				};
-				class Attribute6
-				{
-					property="ModuleTaskCreate_F_AlwaysVisible";
-					expression="_this setVariable ['AlwaysVisible',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute7
-				{
-					property="ModuleTaskCreate_F_Owner";
-					expression="_this setVariable ['Owner',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=3;
-						};
-					};
-				};
-				class Attribute8
-				{
-					property="ModuleInfo";
-					expression="false";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute9
-				{
-					property="ModuleTaskCreate_F_State";
-					expression="_this setVariable ['State',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="ASSIGNED";
-						};
-					};
-				};
-				nAttributes=10;
-			};
-		};
-		class Item138
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={11073.464,216.77,8465.7783};
-			};
-			id=1461;
-			type="ModuleTaskSetState_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ModuleInfo";
-					expression="false";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ModuleTaskSetState_F_State";
-					expression="_this setVariable ['State',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="SUCCEEDED";
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item139
+		class Item118
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23420,7 +22289,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item140
+		class Item119
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23517,7 +22386,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item141
+		class Item120
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23533,7 +22402,7 @@ class Mission
 			type="C_Scooter_Transport_01_F";
 			atlOffset=5.6775122;
 		};
-		class Item142
+		class Item121
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23550,7 +22419,7 @@ class Mission
 			type="C_Scooter_Transport_01_F";
 			atlOffset=6.1387405;
 		};
-		class Item143
+		class Item122
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23567,7 +22436,7 @@ class Mission
 			type="C_Scooter_Transport_01_F";
 			atlOffset=6.1507716;
 		};
-		class Item144
+		class Item123
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23584,7 +22453,7 @@ class Mission
 			type="C_Scooter_Transport_01_F";
 			atlOffset=6.1645994;
 		};
-		class Item145
+		class Item124
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23601,16 +22470,3888 @@ class Mission
 			type="C_Scooter_Transport_01_F";
 			atlOffset=6.1481996;
 		};
+		class Item125
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12539.912,59.034241,12350.967};
+				angles[]={0.087773547,3.943785,0.0080009829};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1469;
+			type="Box_NATO_WpsLaunch_F";
+			atlOffset=0.011699677;
+		};
+		class Item126
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12541.584,59.234215,12349.89};
+				angles[]={0.087773547,3.3466032,0.047963165};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1470;
+			type="Box_NATO_WpsSpecial_F";
+			atlOffset=0.0046348572;
+		};
+		class Item127
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12544.248,60.135025,12349.512};
+				angles[]={0.055941612,3.0814235,0.10098849};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1471;
+			type="B_supplyCrate_F";
+		};
+		class Item128
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12546.366,59.728497,12350.021};
+				angles[]={0.0080009829,0.60358334,0.14823711};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1472;
+			type="Box_NATO_AmmoOrd_F";
+			atlOffset=0.0019607544;
+		};
+		class Item129
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12545.742,59.696156,12349.392};
+				angles[]={0.055941612,5.1889734,0.10098849};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1473;
+			type="Box_NATO_AmmoOrd_F";
+			atlOffset=0.0012168884;
+		};
+		class Item130
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12549.544,59.963974,12350.042};
+				angles[]={0.0079935296,0.98818016,0.095706634};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1474;
+			type="Box_NATO_WpsLaunch_F";
+		};
+		class Item131
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12548.115,59.852646,12351.415};
+				angles[]={0.0079935296,0.39099839,0.095706634};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1475;
+			type="Box_NATO_WpsSpecial_F";
+		};
+		class Item132
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12545.728,60.221066,12352.333};
+				angles[]={0.0080009829,0.12581876,0.14823711};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1476;
+			type="B_supplyCrate_F";
+			atlOffset=-3.8146973e-006;
+		};
+		class Item133
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12543.407,59.31382,12352.182};
+				angles[]={0.055940546,3.931164,0.079829417};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1477;
+			type="Box_NATO_AmmoOrd_F";
+		};
+		class Item134
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12544.138,59.37196,12352.683};
+				angles[]={0.050624419,2.2333684,0.14823751};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1478;
+			type="Box_NATO_AmmoOrd_F";
+		};
+		class Item135
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12541.752,60.937054,12358.489};
+				angles[]={0.074525557,4.5835662,0.069219761};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				fuel=0;
+			};
+			id=1479;
+			type="CUP_B_M1A1_NATO_T";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="Enh_onKilledEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="Enh_onRespawnEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="Enh_onDamagedEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item136
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12555.966,63.437595,12296.995};
+				angles[]={0.018657569,0.70774841,6.2591867};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				fuel=0;
+			};
+			id=1480;
+			type="MELB_AH6M_L";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="Enh_onKilledEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="Enh_onRespawnEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[4]],[[],[]],[[""ToolKit"",""ItemGPS"",""ItemRadio""],[1,1,1]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="Enh_onDamagedEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item137
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5598.874,1.2970695,10408.972};
+				angles[]={0,5.1336589,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				fuel=0.74703431;
+			};
+			id=1482;
+			type="C_Boat_Civil_01_F";
+			atlOffset=4.3649998;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="Enh_onKilledEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="Enh_onRespawnEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[6]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="Enh_onDamagedEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item138
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5607.6284,1.3162899,10420.093};
+				angles[]={0,5.1493034,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1483;
+			type="C_Boat_Transport_02_F";
+			atlOffset=4.0509224;
+		};
+		class Item139
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5285.4307,1.2446525,10192.903};
+				angles[]={0,0.07241635,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1484;
+			type="C_Rubberboat";
+			atlOffset=8.1492138;
+		};
+		class Item140
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5230.2002,1.2967086,10156.128};
+				angles[]={0,6.1192465,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				fuel=0.69639349;
+			};
+			id=1485;
+			type="C_Boat_Civil_01_F";
+			atlOffset=5.6800003;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="Enh_onKilledEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="Enh_onRespawnEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[6]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="Enh_onDamagedEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item141
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5269.4131,1.3164196,10203.236};
+			};
+			side="Empty";
+			class Attributes
+			{
+				fuel=0.79767513;
+			};
+			id=1486;
+			type="C_Boat_Transport_02_F";
+			atlOffset=7.8860002;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="Enh_onKilledEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="Enh_onRespawnEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[2]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="Enh_onDamagedEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item142
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11820.711,1.2970161,2526.9624};
+				angles[]={0,1.5690621,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1487;
+			type="C_Boat_Civil_01_F";
+			atlOffset=4.9288964;
+		};
+		class Item143
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11823.389,1.390011,2534.158};
+				angles[]={0,1.6409062,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				presence=0.74703431;
+			};
+			id=1488;
+			type="C_Scooter_Transport_01_F";
+			atlOffset=4.9819999;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="Enh_onKilledEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="Enh_onRespawnEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[2]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="Enh_onDamagedEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item144
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5294.9585,9.2456837,11737.999};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1493;
+			type="Land_ClutterCutter_large_F";
+			atlOffset=0.32890415;
+		};
+		class Item145
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5283.0039,9.2456837,11727.617};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1494;
+			type="Land_ClutterCutter_large_F";
+			atlOffset=0.07605648;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item146
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5283.771,16.587055,11735.824};
+				angles[]={0,5.6336613,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				createAsSimpleObject=1;
+			};
+			id=1497;
+			type="Land_A_Hospital";
+			atlOffset=0.26500034;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item147
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5321.0562,6.1873522,11763.983};
+				angles[]={0,2.4359038,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1501;
+			type="Land_GH_Stairs_F";
+			atlOffset=-3.0999999;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item148
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5324.4902,8.2150278,11765.364};
+				angles[]={0.095713861,2.4291141,0.090425514};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1507;
+			type="RampConcrete";
+			atlOffset=-0.13000011;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item149
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5322.5723,7.9762468,11763.524};
+				angles[]={0.098347999,2.3747683,0.10098849};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1508;
+			type="Land_ClutterCutter_large_F";
+			atlOffset=1.335144e-005;
+		};
+		class Item150
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5328.4932,8.5537586,11763.751};
+				angles[]={0.095706634,2.3225553,0.10098849};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1509;
+			type="Land_ClutterCutter_large_F";
+			atlOffset=-8.9645386e-005;
+		};
+		class Item151
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5327.3496,8.979311,11756.942};
+				angles[]={0.082478598,0,0.06656827};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1510;
+			type="Land_ClutterCutter_large_F";
+			atlOffset=-4.2915344e-005;
+		};
+		class Item152
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5313.0811,4.228447,11773.544};
+				angles[]={0,5.5612125,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				createAsSimpleObject=1;
+			};
+			id=1500;
+			type="Land_Pier_F";
+			atlOffset=4.7683716e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item153
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5314.2749,10.552674,11772.166};
+				angles[]={0.0012391838,3.969734,0.0010995574};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				lock="LOCKED";
+				fuel=0.10136534;
+			};
+			id=1514;
+			type="CUP_C_Mi17_Civilian_RU";
+			atlOffset=0.00046443939;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="Enh_onKilledEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="Enh_onRespawnEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[4]],[[],[]],[[""ToolKit"",""ItemGPS"",""ItemRadio""],[1,1,1]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="Enh_onDamagedEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item154
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=8;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5318.7837,10.2764,11716.916};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						rank="SERGEANT";
+						presence=0.74703431;
+					};
+					id=1519;
+					type="B_Soldier_SL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_taskPatrol_combatMode";
+							expression="_this setVariable ['Enh_randomPatrol_combatMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="YELLOW";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_taskPatrol_formation";
+							expression="_this setVariable ['Enh_randomPatrol_formation',_value]";
+							class Value
+							{
+								class data
+								{
+									nil=1;
+									class type
+									{
+										type[]=
+										{
+											"ANY"
+										};
+									};
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_taskPatrol_behaviour";
+							expression="_this setVariable ['Enh_randomPatrol_behaviour',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="SAFE";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_taskPatrol_speed";
+							expression="_this setVariable ['Enh_randomPatrol_speedMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="LIMITED";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="Enh_animType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animEquipment'] remoteExec ['BIS_fnc_ambientAnim',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="Enh_randomPatrol_radius";
+							expression="				if (is3DEN && (_value <= 50) && (_value > -1)) then				{					['The patrol radius must no be smaller then 51 m. Radius set to 51 m',1,5] call BIS_fnc_3DENNotification;					_this set3DENAttribute ['Enh_randomPatrol_radius',51];				};				if (!is3DEN && (_value > 0)) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						private _unit = _this select 0;						private _center = getPosWorld _unit;						for '_i' from 1 to 3 do						{							private _wpPos = [_center,1,_this select 1,10,[0,2] select ((vehicle _unit) isKindOf 'ship'),0,0] call BIS_fnc_findSafePos;							_wpPos set [2,0];							private _wp = (group _unit) addWaypoint [_wpPos,10];							[group _unit,_i - 1] setWaypointVisible false;							if (_i == 1) then							{								_wp setWaypointBehaviour (_unit getVariable ['Enh_randomPatrol_behaviour','SAFE']);								_wp setWaypointSpeed (_unit getVariable ['Enh_randomPatrol_speedMode','LIMITED']);								_wp setWaypointCombatMode (_unit getVariable ['Enh_randomPatrol_combatMode','GREEN']);								_wp setWaypointFormation (_unit getVariable ['Enh_randomPatrol_formation','COLUMN']);							};							if (_i == 3) then							{								_wp setWaypointType 'CYCLE';								_wp setWaypointPosition [_center,10];							};						};					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=100;
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="Enh_animCombType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animCombEquipment'] remoteExec ['BIS_fnc_ambientAnimCombat',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=10;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5323.7837,10.340604,11711.916};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+						presence=0.74703431;
+					};
+					id=1520;
+					type="B_soldier_AR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_taskPatrol_combatMode";
+							expression="_this setVariable ['Enh_randomPatrol_combatMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="YELLOW";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_taskPatrol_formation";
+							expression="_this setVariable ['Enh_randomPatrol_formation',_value]";
+							class Value
+							{
+								class data
+								{
+									nil=1;
+									class type
+									{
+										type[]=
+										{
+											"ANY"
+										};
+									};
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_taskPatrol_behaviour";
+							expression="_this setVariable ['Enh_randomPatrol_behaviour',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="SAFE";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_taskPatrol_speed";
+							expression="_this setVariable ['Enh_randomPatrol_speedMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="LIMITED";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="Enh_animType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animEquipment'] remoteExec ['BIS_fnc_ambientAnim',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="Enh_randomPatrol_radius";
+							expression="				if (is3DEN && (_value <= 50) && (_value > -1)) then				{					['The patrol radius must no be smaller then 51 m. Radius set to 51 m',1,5] call BIS_fnc_3DENNotification;					_this set3DENAttribute ['Enh_randomPatrol_radius',51];				};				if (!is3DEN && (_value > 0)) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						private _unit = _this select 0;						private _center = getPosWorld _unit;						for '_i' from 1 to 3 do						{							private _wpPos = [_center,1,_this select 1,10,[0,2] select ((vehicle _unit) isKindOf 'ship'),0,0] call BIS_fnc_findSafePos;							_wpPos set [2,0];							private _wp = (group _unit) addWaypoint [_wpPos,10];							[group _unit,_i - 1] setWaypointVisible false;							if (_i == 1) then							{								_wp setWaypointBehaviour (_unit getVariable ['Enh_randomPatrol_behaviour','SAFE']);								_wp setWaypointSpeed (_unit getVariable ['Enh_randomPatrol_speedMode','LIMITED']);								_wp setWaypointCombatMode (_unit getVariable ['Enh_randomPatrol_combatMode','GREEN']);								_wp setWaypointFormation (_unit getVariable ['Enh_randomPatrol_formation','COLUMN']);							};							if (_i == 3) then							{								_wp setWaypointType 'CYCLE';								_wp setWaypointPosition [_center,10];							};						};					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=100;
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="Enh_animCombType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animCombEquipment'] remoteExec ['BIS_fnc_ambientAnimCombat',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=10;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5313.7837,10.433647,11711.916};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.44999999;
+						rank="CORPORAL";
+						presence=0.74703431;
+					};
+					id=1521;
+					type="B_Soldier_GL_F";
+					atlOffset=9.5367432e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_taskPatrol_combatMode";
+							expression="_this setVariable ['Enh_randomPatrol_combatMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="YELLOW";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_taskPatrol_formation";
+							expression="_this setVariable ['Enh_randomPatrol_formation',_value]";
+							class Value
+							{
+								class data
+								{
+									nil=1;
+									class type
+									{
+										type[]=
+										{
+											"ANY"
+										};
+									};
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_taskPatrol_behaviour";
+							expression="_this setVariable ['Enh_randomPatrol_behaviour',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="SAFE";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_taskPatrol_speed";
+							expression="_this setVariable ['Enh_randomPatrol_speedMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="LIMITED";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="Enh_animType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animEquipment'] remoteExec ['BIS_fnc_ambientAnim',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="Enh_randomPatrol_radius";
+							expression="				if (is3DEN && (_value <= 50) && (_value > -1)) then				{					['The patrol radius must no be smaller then 51 m. Radius set to 51 m',1,5] call BIS_fnc_3DENNotification;					_this set3DENAttribute ['Enh_randomPatrol_radius',51];				};				if (!is3DEN && (_value > 0)) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						private _unit = _this select 0;						private _center = getPosWorld _unit;						for '_i' from 1 to 3 do						{							private _wpPos = [_center,1,_this select 1,10,[0,2] select ((vehicle _unit) isKindOf 'ship'),0,0] call BIS_fnc_findSafePos;							_wpPos set [2,0];							private _wp = (group _unit) addWaypoint [_wpPos,10];							[group _unit,_i - 1] setWaypointVisible false;							if (_i == 1) then							{								_wp setWaypointBehaviour (_unit getVariable ['Enh_randomPatrol_behaviour','SAFE']);								_wp setWaypointSpeed (_unit getVariable ['Enh_randomPatrol_speedMode','LIMITED']);								_wp setWaypointCombatMode (_unit getVariable ['Enh_randomPatrol_combatMode','GREEN']);								_wp setWaypointFormation (_unit getVariable ['Enh_randomPatrol_formation','COLUMN']);							};							if (_i == 3) then							{								_wp setWaypointType 'CYCLE';								_wp setWaypointPosition [_center,10];							};						};					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=100;
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="Enh_animCombType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animCombEquipment'] remoteExec ['BIS_fnc_ambientAnimCombat',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=10;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5328.7837,10.369288,11706.916};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						rank="SERGEANT";
+						presence=0.74703431;
+					};
+					id=1522;
+					type="B_soldier_M_F";
+					atlOffset=9.5367432e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_taskPatrol_combatMode";
+							expression="_this setVariable ['Enh_randomPatrol_combatMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="YELLOW";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_taskPatrol_formation";
+							expression="_this setVariable ['Enh_randomPatrol_formation',_value]";
+							class Value
+							{
+								class data
+								{
+									nil=1;
+									class type
+									{
+										type[]=
+										{
+											"ANY"
+										};
+									};
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_taskPatrol_behaviour";
+							expression="_this setVariable ['Enh_randomPatrol_behaviour',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="SAFE";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_taskPatrol_speed";
+							expression="_this setVariable ['Enh_randomPatrol_speedMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="LIMITED";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="Enh_animType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animEquipment'] remoteExec ['BIS_fnc_ambientAnim',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="Enh_randomPatrol_radius";
+							expression="				if (is3DEN && (_value <= 50) && (_value > -1)) then				{					['The patrol radius must no be smaller then 51 m. Radius set to 51 m',1,5] call BIS_fnc_3DENNotification;					_this set3DENAttribute ['Enh_randomPatrol_radius',51];				};				if (!is3DEN && (_value > 0)) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						private _unit = _this select 0;						private _center = getPosWorld _unit;						for '_i' from 1 to 3 do						{							private _wpPos = [_center,1,_this select 1,10,[0,2] select ((vehicle _unit) isKindOf 'ship'),0,0] call BIS_fnc_findSafePos;							_wpPos set [2,0];							private _wp = (group _unit) addWaypoint [_wpPos,10];							[group _unit,_i - 1] setWaypointVisible false;							if (_i == 1) then							{								_wp setWaypointBehaviour (_unit getVariable ['Enh_randomPatrol_behaviour','SAFE']);								_wp setWaypointSpeed (_unit getVariable ['Enh_randomPatrol_speedMode','LIMITED']);								_wp setWaypointCombatMode (_unit getVariable ['Enh_randomPatrol_combatMode','GREEN']);								_wp setWaypointFormation (_unit getVariable ['Enh_randomPatrol_formation','COLUMN']);							};							if (_i == 3) then							{								_wp setWaypointType 'CYCLE';								_wp setWaypointPosition [_center,10];							};						};					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=100;
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="Enh_animCombType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animCombEquipment'] remoteExec ['BIS_fnc_ambientAnimCombat',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=10;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5308.7837,10.704224,11706.916};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.44999999;
+						rank="CORPORAL";
+						presence=0.74703431;
+					};
+					id=1523;
+					type="B_soldier_AT_F";
+					atlOffset=1.9073486e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_taskPatrol_combatMode";
+							expression="_this setVariable ['Enh_randomPatrol_combatMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="YELLOW";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_taskPatrol_formation";
+							expression="_this setVariable ['Enh_randomPatrol_formation',_value]";
+							class Value
+							{
+								class data
+								{
+									nil=1;
+									class type
+									{
+										type[]=
+										{
+											"ANY"
+										};
+									};
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_taskPatrol_behaviour";
+							expression="_this setVariable ['Enh_randomPatrol_behaviour',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="SAFE";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_taskPatrol_speed";
+							expression="_this setVariable ['Enh_randomPatrol_speedMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="LIMITED";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="Enh_animType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animEquipment'] remoteExec ['BIS_fnc_ambientAnim',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="Enh_randomPatrol_radius";
+							expression="				if (is3DEN && (_value <= 50) && (_value > -1)) then				{					['The patrol radius must no be smaller then 51 m. Radius set to 51 m',1,5] call BIS_fnc_3DENNotification;					_this set3DENAttribute ['Enh_randomPatrol_radius',51];				};				if (!is3DEN && (_value > 0)) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						private _unit = _this select 0;						private _center = getPosWorld _unit;						for '_i' from 1 to 3 do						{							private _wpPos = [_center,1,_this select 1,10,[0,2] select ((vehicle _unit) isKindOf 'ship'),0,0] call BIS_fnc_findSafePos;							_wpPos set [2,0];							private _wp = (group _unit) addWaypoint [_wpPos,10];							[group _unit,_i - 1] setWaypointVisible false;							if (_i == 1) then							{								_wp setWaypointBehaviour (_unit getVariable ['Enh_randomPatrol_behaviour','SAFE']);								_wp setWaypointSpeed (_unit getVariable ['Enh_randomPatrol_speedMode','LIMITED']);								_wp setWaypointCombatMode (_unit getVariable ['Enh_randomPatrol_combatMode','GREEN']);								_wp setWaypointFormation (_unit getVariable ['Enh_randomPatrol_formation','COLUMN']);							};							if (_i == 3) then							{								_wp setWaypointType 'CYCLE';								_wp setWaypointPosition [_center,10];							};						};					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=100;
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="Enh_animCombType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animCombEquipment'] remoteExec ['BIS_fnc_ambientAnimCombat',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=10;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5333.7837,9.9431276,11701.916};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+						presence=0.74703431;
+					};
+					id=1524;
+					type="B_soldier_AAT_F";
+					atlOffset=1.9073486e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_taskPatrol_combatMode";
+							expression="_this setVariable ['Enh_randomPatrol_combatMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="YELLOW";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_taskPatrol_formation";
+							expression="_this setVariable ['Enh_randomPatrol_formation',_value]";
+							class Value
+							{
+								class data
+								{
+									nil=1;
+									class type
+									{
+										type[]=
+										{
+											"ANY"
+										};
+									};
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_taskPatrol_behaviour";
+							expression="_this setVariable ['Enh_randomPatrol_behaviour',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="SAFE";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_taskPatrol_speed";
+							expression="_this setVariable ['Enh_randomPatrol_speedMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="LIMITED";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="Enh_animType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animEquipment'] remoteExec ['BIS_fnc_ambientAnim',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="Enh_randomPatrol_radius";
+							expression="				if (is3DEN && (_value <= 50) && (_value > -1)) then				{					['The patrol radius must no be smaller then 51 m. Radius set to 51 m',1,5] call BIS_fnc_3DENNotification;					_this set3DENAttribute ['Enh_randomPatrol_radius',51];				};				if (!is3DEN && (_value > 0)) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						private _unit = _this select 0;						private _center = getPosWorld _unit;						for '_i' from 1 to 3 do						{							private _wpPos = [_center,1,_this select 1,10,[0,2] select ((vehicle _unit) isKindOf 'ship'),0,0] call BIS_fnc_findSafePos;							_wpPos set [2,0];							private _wp = (group _unit) addWaypoint [_wpPos,10];							[group _unit,_i - 1] setWaypointVisible false;							if (_i == 1) then							{								_wp setWaypointBehaviour (_unit getVariable ['Enh_randomPatrol_behaviour','SAFE']);								_wp setWaypointSpeed (_unit getVariable ['Enh_randomPatrol_speedMode','LIMITED']);								_wp setWaypointCombatMode (_unit getVariable ['Enh_randomPatrol_combatMode','GREEN']);								_wp setWaypointFormation (_unit getVariable ['Enh_randomPatrol_formation','COLUMN']);							};							if (_i == 3) then							{								_wp setWaypointType 'CYCLE';								_wp setWaypointPosition [_center,10];							};						};					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=100;
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="Enh_animCombType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animCombEquipment'] remoteExec ['BIS_fnc_ambientAnimCombat',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=10;
+					};
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5303.7837,11.092818,11701.916};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+						presence=0.74703431;
+					};
+					id=1525;
+					type="B_Soldier_A_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_taskPatrol_combatMode";
+							expression="_this setVariable ['Enh_randomPatrol_combatMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="YELLOW";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_taskPatrol_formation";
+							expression="_this setVariable ['Enh_randomPatrol_formation',_value]";
+							class Value
+							{
+								class data
+								{
+									nil=1;
+									class type
+									{
+										type[]=
+										{
+											"ANY"
+										};
+									};
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_taskPatrol_behaviour";
+							expression="_this setVariable ['Enh_randomPatrol_behaviour',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="SAFE";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_taskPatrol_speed";
+							expression="_this setVariable ['Enh_randomPatrol_speedMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="LIMITED";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="Enh_animType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animEquipment'] remoteExec ['BIS_fnc_ambientAnim',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="Enh_randomPatrol_radius";
+							expression="				if (is3DEN && (_value <= 50) && (_value > -1)) then				{					['The patrol radius must no be smaller then 51 m. Radius set to 51 m',1,5] call BIS_fnc_3DENNotification;					_this set3DENAttribute ['Enh_randomPatrol_radius',51];				};				if (!is3DEN && (_value > 0)) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						private _unit = _this select 0;						private _center = getPosWorld _unit;						for '_i' from 1 to 3 do						{							private _wpPos = [_center,1,_this select 1,10,[0,2] select ((vehicle _unit) isKindOf 'ship'),0,0] call BIS_fnc_findSafePos;							_wpPos set [2,0];							private _wp = (group _unit) addWaypoint [_wpPos,10];							[group _unit,_i - 1] setWaypointVisible false;							if (_i == 1) then							{								_wp setWaypointBehaviour (_unit getVariable ['Enh_randomPatrol_behaviour','SAFE']);								_wp setWaypointSpeed (_unit getVariable ['Enh_randomPatrol_speedMode','LIMITED']);								_wp setWaypointCombatMode (_unit getVariable ['Enh_randomPatrol_combatMode','GREEN']);								_wp setWaypointFormation (_unit getVariable ['Enh_randomPatrol_formation','COLUMN']);							};							if (_i == 3) then							{								_wp setWaypointType 'CYCLE';								_wp setWaypointPosition [_center,10];							};						};					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=100;
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="Enh_animCombType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animCombEquipment'] remoteExec ['BIS_fnc_ambientAnimCombat',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=10;
+					};
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5338.7837,9.9749556,11696.916};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+						presence=0.74703431;
+					};
+					id=1526;
+					type="B_medic_F";
+					atlOffset=9.5367432e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_taskPatrol_combatMode";
+							expression="_this setVariable ['Enh_randomPatrol_combatMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="YELLOW";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_taskPatrol_formation";
+							expression="_this setVariable ['Enh_randomPatrol_formation',_value]";
+							class Value
+							{
+								class data
+								{
+									nil=1;
+									class type
+									{
+										type[]=
+										{
+											"ANY"
+										};
+									};
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_taskPatrol_behaviour";
+							expression="_this setVariable ['Enh_randomPatrol_behaviour',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="SAFE";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_taskPatrol_speed";
+							expression="_this setVariable ['Enh_randomPatrol_speedMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="LIMITED";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="Enh_animType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animEquipment'] remoteExec ['BIS_fnc_ambientAnim',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="Enh_randomPatrol_radius";
+							expression="				if (is3DEN && (_value <= 50) && (_value > -1)) then				{					['The patrol radius must no be smaller then 51 m. Radius set to 51 m',1,5] call BIS_fnc_3DENNotification;					_this set3DENAttribute ['Enh_randomPatrol_radius',51];				};				if (!is3DEN && (_value > 0)) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						private _unit = _this select 0;						private _center = getPosWorld _unit;						for '_i' from 1 to 3 do						{							private _wpPos = [_center,1,_this select 1,10,[0,2] select ((vehicle _unit) isKindOf 'ship'),0,0] call BIS_fnc_findSafePos;							_wpPos set [2,0];							private _wp = (group _unit) addWaypoint [_wpPos,10];							[group _unit,_i - 1] setWaypointVisible false;							if (_i == 1) then							{								_wp setWaypointBehaviour (_unit getVariable ['Enh_randomPatrol_behaviour','SAFE']);								_wp setWaypointSpeed (_unit getVariable ['Enh_randomPatrol_speedMode','LIMITED']);								_wp setWaypointCombatMode (_unit getVariable ['Enh_randomPatrol_combatMode','GREEN']);								_wp setWaypointFormation (_unit getVariable ['Enh_randomPatrol_formation','COLUMN']);							};							if (_i == 3) then							{								_wp setWaypointType 'CYCLE';								_wp setWaypointPosition [_center,10];							};						};					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=100;
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="Enh_animCombType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animCombEquipment'] remoteExec ['BIS_fnc_ambientAnimCombat',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=10;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1518;
+		};
+		class Item155
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5275.082,6.6066208,11769.314};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						rank="SERGEANT";
+						presence=0.80189508;
+					};
+					id=1528;
+					type="B_Soldier_TL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_taskPatrol_combatMode";
+							expression="_this setVariable ['Enh_randomPatrol_combatMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="YELLOW";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_taskPatrol_formation";
+							expression="_this setVariable ['Enh_randomPatrol_formation',_value]";
+							class Value
+							{
+								class data
+								{
+									nil=1;
+									class type
+									{
+										type[]=
+										{
+											"ANY"
+										};
+									};
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_taskPatrol_behaviour";
+							expression="_this setVariable ['Enh_randomPatrol_behaviour',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="SAFE";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_taskPatrol_speed";
+							expression="_this setVariable ['Enh_randomPatrol_speedMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="LIMITED";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="Enh_animType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animEquipment'] remoteExec ['BIS_fnc_ambientAnim',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="Enh_randomPatrol_radius";
+							expression="				if (is3DEN && (_value <= 50) && (_value > -1)) then				{					['The patrol radius must no be smaller then 51 m. Radius set to 51 m',1,5] call BIS_fnc_3DENNotification;					_this set3DENAttribute ['Enh_randomPatrol_radius',51];				};				if (!is3DEN && (_value > 0)) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						private _unit = _this select 0;						private _center = getPosWorld _unit;						for '_i' from 1 to 3 do						{							private _wpPos = [_center,1,_this select 1,10,[0,2] select ((vehicle _unit) isKindOf 'ship'),0,0] call BIS_fnc_findSafePos;							_wpPos set [2,0];							private _wp = (group _unit) addWaypoint [_wpPos,10];							[group _unit,_i - 1] setWaypointVisible false;							if (_i == 1) then							{								_wp setWaypointBehaviour (_unit getVariable ['Enh_randomPatrol_behaviour','SAFE']);								_wp setWaypointSpeed (_unit getVariable ['Enh_randomPatrol_speedMode','LIMITED']);								_wp setWaypointCombatMode (_unit getVariable ['Enh_randomPatrol_combatMode','GREEN']);								_wp setWaypointFormation (_unit getVariable ['Enh_randomPatrol_formation','COLUMN']);							};							if (_i == 3) then							{								_wp setWaypointType 'CYCLE';								_wp setWaypointPosition [_center,10];							};						};					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=51;
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="Enh_animCombType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animCombEquipment'] remoteExec ['BIS_fnc_ambientAnimCombat',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=10;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5280.082,7.1050224,11764.314};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.44999999;
+						rank="CORPORAL";
+						presence=0.80189508;
+					};
+					id=1529;
+					type="B_soldier_AT_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_taskPatrol_combatMode";
+							expression="_this setVariable ['Enh_randomPatrol_combatMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="YELLOW";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_taskPatrol_formation";
+							expression="_this setVariable ['Enh_randomPatrol_formation',_value]";
+							class Value
+							{
+								class data
+								{
+									nil=1;
+									class type
+									{
+										type[]=
+										{
+											"ANY"
+										};
+									};
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_taskPatrol_behaviour";
+							expression="_this setVariable ['Enh_randomPatrol_behaviour',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="SAFE";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_taskPatrol_speed";
+							expression="_this setVariable ['Enh_randomPatrol_speedMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="LIMITED";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="Enh_animType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animEquipment'] remoteExec ['BIS_fnc_ambientAnim',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="Enh_randomPatrol_radius";
+							expression="				if (is3DEN && (_value <= 50) && (_value > -1)) then				{					['The patrol radius must no be smaller then 51 m. Radius set to 51 m',1,5] call BIS_fnc_3DENNotification;					_this set3DENAttribute ['Enh_randomPatrol_radius',51];				};				if (!is3DEN && (_value > 0)) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						private _unit = _this select 0;						private _center = getPosWorld _unit;						for '_i' from 1 to 3 do						{							private _wpPos = [_center,1,_this select 1,10,[0,2] select ((vehicle _unit) isKindOf 'ship'),0,0] call BIS_fnc_findSafePos;							_wpPos set [2,0];							private _wp = (group _unit) addWaypoint [_wpPos,10];							[group _unit,_i - 1] setWaypointVisible false;							if (_i == 1) then							{								_wp setWaypointBehaviour (_unit getVariable ['Enh_randomPatrol_behaviour','SAFE']);								_wp setWaypointSpeed (_unit getVariable ['Enh_randomPatrol_speedMode','LIMITED']);								_wp setWaypointCombatMode (_unit getVariable ['Enh_randomPatrol_combatMode','GREEN']);								_wp setWaypointFormation (_unit getVariable ['Enh_randomPatrol_formation','COLUMN']);							};							if (_i == 3) then							{								_wp setWaypointType 'CYCLE';								_wp setWaypointPosition [_center,10];							};						};					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=51;
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="Enh_animCombType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animCombEquipment'] remoteExec ['BIS_fnc_ambientAnimCombat',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=10;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5270.082,7.0588684,11764.314};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+						presence=0.80189508;
+					};
+					id=1530;
+					type="B_soldier_AT_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_taskPatrol_combatMode";
+							expression="_this setVariable ['Enh_randomPatrol_combatMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="YELLOW";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_taskPatrol_formation";
+							expression="_this setVariable ['Enh_randomPatrol_formation',_value]";
+							class Value
+							{
+								class data
+								{
+									nil=1;
+									class type
+									{
+										type[]=
+										{
+											"ANY"
+										};
+									};
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_taskPatrol_behaviour";
+							expression="_this setVariable ['Enh_randomPatrol_behaviour',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="SAFE";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_taskPatrol_speed";
+							expression="_this setVariable ['Enh_randomPatrol_speedMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="LIMITED";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="Enh_animType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animEquipment'] remoteExec ['BIS_fnc_ambientAnim',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="Enh_randomPatrol_radius";
+							expression="				if (is3DEN && (_value <= 50) && (_value > -1)) then				{					['The patrol radius must no be smaller then 51 m. Radius set to 51 m',1,5] call BIS_fnc_3DENNotification;					_this set3DENAttribute ['Enh_randomPatrol_radius',51];				};				if (!is3DEN && (_value > 0)) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						private _unit = _this select 0;						private _center = getPosWorld _unit;						for '_i' from 1 to 3 do						{							private _wpPos = [_center,1,_this select 1,10,[0,2] select ((vehicle _unit) isKindOf 'ship'),0,0] call BIS_fnc_findSafePos;							_wpPos set [2,0];							private _wp = (group _unit) addWaypoint [_wpPos,10];							[group _unit,_i - 1] setWaypointVisible false;							if (_i == 1) then							{								_wp setWaypointBehaviour (_unit getVariable ['Enh_randomPatrol_behaviour','SAFE']);								_wp setWaypointSpeed (_unit getVariable ['Enh_randomPatrol_speedMode','LIMITED']);								_wp setWaypointCombatMode (_unit getVariable ['Enh_randomPatrol_combatMode','GREEN']);								_wp setWaypointFormation (_unit getVariable ['Enh_randomPatrol_formation','COLUMN']);							};							if (_i == 3) then							{								_wp setWaypointType 'CYCLE';								_wp setWaypointPosition [_center,10];							};						};					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=51;
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="Enh_animCombType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animCombEquipment'] remoteExec ['BIS_fnc_ambientAnimCombat',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=10;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5285.082,7.8348207,11759.314};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+						presence=0.80189508;
+					};
+					id=1531;
+					type="B_soldier_AAT_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_taskPatrol_combatMode";
+							expression="_this setVariable ['Enh_randomPatrol_combatMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="YELLOW";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_taskPatrol_formation";
+							expression="_this setVariable ['Enh_randomPatrol_formation',_value]";
+							class Value
+							{
+								class data
+								{
+									nil=1;
+									class type
+									{
+										type[]=
+										{
+											"ANY"
+										};
+									};
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_taskPatrol_behaviour";
+							expression="_this setVariable ['Enh_randomPatrol_behaviour',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="SAFE";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_taskPatrol_speed";
+							expression="_this setVariable ['Enh_randomPatrol_speedMode',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="LIMITED";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="Enh_animType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animEquipment'] remoteExec ['BIS_fnc_ambientAnim',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="Enh_randomPatrol_radius";
+							expression="				if (is3DEN && (_value <= 50) && (_value > -1)) then				{					['The patrol radius must no be smaller then 51 m. Radius set to 51 m',1,5] call BIS_fnc_3DENNotification;					_this set3DENAttribute ['Enh_randomPatrol_radius',51];				};				if (!is3DEN && (_value > 0)) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						private _unit = _this select 0;						private _center = getPosWorld _unit;						for '_i' from 1 to 3 do						{							private _wpPos = [_center,1,_this select 1,10,[0,2] select ((vehicle _unit) isKindOf 'ship'),0,0] call BIS_fnc_findSafePos;							_wpPos set [2,0];							private _wp = (group _unit) addWaypoint [_wpPos,10];							[group _unit,_i - 1] setWaypointVisible false;							if (_i == 1) then							{								_wp setWaypointBehaviour (_unit getVariable ['Enh_randomPatrol_behaviour','SAFE']);								_wp setWaypointSpeed (_unit getVariable ['Enh_randomPatrol_speedMode','LIMITED']);								_wp setWaypointCombatMode (_unit getVariable ['Enh_randomPatrol_combatMode','GREEN']);								_wp setWaypointFormation (_unit getVariable ['Enh_randomPatrol_formation','COLUMN']);							};							if (_i == 3) then							{								_wp setWaypointType 'CYCLE';								_wp setWaypointPosition [_center,10];							};						};					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=51;
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="Enh_animCombType";
+							expression="				if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};				if !(_value isEqualTo '' && isServer) then				{					[_this,_value] spawn					{						waitUntil {time > 0.2};						[_this select 0,_this select 1,(_this select 0) getVariable 'Enh_animCombEquipment'] remoteExec ['BIS_fnc_ambientAnimCombat',0,true];					};				};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=10;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1527;
+		};
+		class Item156
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5295.1631,8.5789318,11753.148};
+				angles[]={0.10890111,5.5979424,6.2378831};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1536;
+			type="CUP_Krovi4";
+		};
+		class Item157
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5298.896,8.3370943,11753.999};
+				angles[]={0.095706634,0.853827,6.2405434};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1537;
+			type="CUP_Krovi4";
+		};
+		class Item158
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5301.7686,8.5298882,11750.714};
+				angles[]={0.095706634,0.83330375,6.2405434};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1538;
+			type="CUP_Krovi4";
+		};
+		class Item159
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7090.6128,208.35822,9432.5615};
+				angles[]={6.198061,5.6411996,0.31211802};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				createAsSimpleObject=1;
+			};
+			id=1540;
+			type="Land_Wreck_Heli_Attack_02_F";
+		};
+		class Item160
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7092.9893,206.60176,9434.2471};
+				angles[]={6.2139654,0.60545468,0.26804766};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				presence=0.59933239;
+			};
+			id=1541;
+			type="Box_East_Wps_F";
+			atlOffset=-1.5258789e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item161
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7091.6377,206.02405,9430.8945};
+				angles[]={6.1532454,5.0372119,0.28286552};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				presence=0.75125462;
+			};
+			id=1542;
+			type="Box_East_Ammo_F";
+			atlOffset=-1.5258789e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=4;
+			nextID=2;
 		};
 		class Links
 		{
-			items=4;
+			items=2;
 			class Item0
 			{
 				linkID=0;
@@ -23626,26 +26367,6 @@ class Mission
 				linkID=1;
 				item0=1166;
 				item1=1165;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item2
-			{
-				linkID=2;
-				item0=1458;
-				item1=1461;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item3
-			{
-				linkID=3;
-				item0=1461;
-				item1=1460;
 				class CustomData
 				{
 					type="Sync";
