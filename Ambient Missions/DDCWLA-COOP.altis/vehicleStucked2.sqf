@@ -1,0 +1,31 @@
+private ["_veh","_way","_pos","_xx","_yy","_start","_pPos","_t"];
+_veh = _this select 0;
+_way = _this select 1;
+_pos = + (getposATL _veh);
+_n = ("vehStuc2") SPAWN DiagForCPS;
+sleep 30;
+if (count ([] CALL AllPf) == 0) exitWith {};
+_t = 0;
+while {!isNull _veh && {_pos distance (getposATL _veh) < 15} && {{(vehicle _x distance _veh < 400)} count ([] CALL AllPf) == 0} && {_t < 1}} do {
+_t = _t + 1;
+_xx = random (1100);
+_yy = 1100 - _xx;
+if (random 1 < 0.5) then {_xx = _xx*(-1)};
+if (random 1 < 0.5) then {_yy = _yy*(-1)};
+_pPos = getposATL (([] CALL AllPf) call RETURNRANDOM);
+_start = [(_pPos select 0) + _xx,(_pPos select 1) + _yy,0];
+while  {!isNull _veh && {surfaceIsWater _start}} do {
+sleep 5;
+_xx = random (1100);
+_yy = 1100 - _xx;
+if (random 1 < 0.5) then {_xx = _xx*(-1)};
+if (random 1 < 0.5) then {_yy = _yy*(-1)};
+_pPos = getposATL (([] CALL AllPf) call RETURNRANDOM);
+_start = [(_pPos select 0) + _xx,(_pPos select 1) + _yy,0];
+};
+_veh setpos _start;
+(group driver _veh) move _way; 
+_pos = + (getposATL _veh);
+sleep 30;
+_pos = + (getposATL _veh);
+};
