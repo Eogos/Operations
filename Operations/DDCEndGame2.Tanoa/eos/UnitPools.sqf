@@ -75,7 +75,7 @@ _tempArray=[];
 };
 // ADD CLASSNAMES 
 	if (_faction==5) then {
-	_InfPool=	["I_C_Soldier_Para_7_F","I_C_Soldier_Para_2_F","I_C_Helipilot_F","I_C_Soldier_Para_3_F","I_C_Soldier_Para_4_F","I_C_Soldier_Para_6_F","I_C_Soldier_8_F","I_C_Soldier_Para_1_F","I_C_Soldier_Para_5_f"];	
+	_InfPool=	["I_C_Soldier_Para_7_F","I_C_Soldier_Para_2_F","I_C_Helipilot_F","I_C_Soldier_Para_3_F","I_C_Soldier_Para_4_F","I_C_Soldier_Para_6_F","I_C_Soldier_8_F","I_C_Soldier_Para_1_F","I_C_Soldier_Para_5_f","I_C_Soldier_Bandit_7_F","I_C_Soldier_Bandit_3_F","I_C_Soldier_Bandit_2_F","I_C_Soldier_Bandit_5_F","I_C_Soldier_Bandit_6_F","I_C_Soldier_Bandit_1_F","I_C_Soldier_Bandit_8_F","I_C_Soldier_Bandit_4_F"];	
 	_ArmPool=	[];
 	_MotPool=	["I_C_Offroad_02_unarmed_F","I_G_Offroad_01_armed_F","I_G_Offroad_01_F"];
 	_ACHPool=	[];
