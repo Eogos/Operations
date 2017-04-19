@@ -152,12 +152,6 @@ while {dialog} do {
 	lbAdd [1501, "Support[AAF]"];
 	lbAdd [1501, "VehAmmo[NATO]"]; 
 	lbAdd [1501, "VehAmmo[AAF]"]; 
-	lbAdd [1501, "Medical Supplies"];
-	lbAdd [1501, "Chemlights"];
-	lbAdd [1501, "82mm HE"];
-	lbAdd [1501, "82mm Illumination"];
-	lbAdd [1501, "82mm Smoke"];
-	lbAdd [1501, "Radios"];
 	
 	//"Box_FIA_Ammo_F","Box_FIA_Wps_F","Box_FIA_Support_F",
 	
