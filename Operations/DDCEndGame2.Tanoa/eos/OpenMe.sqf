@@ -28,5 +28,5 @@ null = [["BAS_zone_1"],[0,1],[0,2],[0],[1,2],[0,0,EAST,TRUE],[0,2,120,TRUE,FALSE
 null = [["FOB1"],[4,2],[4,2],[0,0],[0],[0],[0,0],[5,0,1000,INDEPENDENT,FALSE,FALSE]] call EOS_Spawn;
 null = [["FOB2"],[2,4],[3,2],[0,0],[0],[0],[0,0],[5,0,1000,INDEPENDENT,FALSE,FALSE]] call EOS_Spawn;
 null = [["Intel1","Intel2"],[0,0],[2,2],[0,0],[0],[0],[0,0],[5,0,500,INDEPENDENT,FALSE,FALSE]] call EOS_Spawn;
-null = [["Intel3"],[0,0],[2,1],[0,0],[0],[0],[0,0],[5,0,1000,INDEPENDENT,FALSE,FALSE]] call EOS_Spawn;
+null = [["Intel4"],[2,2],[2,2],[0,0],[0],[0],[0,0],[5,0,1000,INDEPENDENT,FALSE,FALSE]] call EOS_Spawn;
 null = [["City1"],[8,2],[5,2],[0,0],[0],[0],[0,0],[5,0,1000,INDEPENDENT,FALSE,FALSE]] call EOS_Spawn;
