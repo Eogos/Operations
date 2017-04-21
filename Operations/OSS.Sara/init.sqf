@@ -1,0 +1,1 @@
+ ({if (side _x == west) then {_x disableAI ""ALL"";};} forEach allUnits) call CBA_fnc_addPerFrameHandler _handle = 1;
