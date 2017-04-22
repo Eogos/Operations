@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2254;
+		nextID=2256;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=109;
+		nextID=124;
 	};
 	class Camera
 	{
-		pos[]={12456.102,162.18889,11277.817};
-		dir[]={-0.67576003,-0.40757191,-0.61439204};
-		up[]={-0.30160847,0.91313505,-0.27421412};
-		aside[]={-0.67278719,-1.4104589e-006,0.73999768};
+		pos[]={11802.291,1055.8933,11213.235};
+		dir[]={-0.93818086,-0.30239263,-0.16919984};
+		up[]={-0.29767504,0.95314628,-0.053683568};
+		aside[]={-0.17750339,-2.4391338e-006,0.98425013};
 	};
 };
 binarizationWanted=0;
@@ -119,13 +119,14 @@ addons[]=
 	"A3_Signs_F",
 	"ace_interaction",
 	"achilles_data_f_achilles",
-	"A3_Structures_F_Exp_Military_Barracks_01"
+	"A3_Structures_F_Exp_Military_Barracks_01",
+	"A3_Props_F_Exp_A_Military_Equipment"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=41;
+		items=42;
 		class Item0
 		{
 			className="A3_Characters_F_Exp";
@@ -413,6 +414,13 @@ class AddonsMetaData
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
+		class Item41
+		{
+			className="A3_Props_F_Exp_A";
+			name="Arma 3 Nexus Update - Decorative and Mission Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=6362750;
@@ -472,7 +480,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=291;
+		items=293;
 		class Item0
 		{
 			dataType="Group";
@@ -19806,7 +19814,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						name="upload2";
+						createAsSimpleObject=1;
 					};
 					id=1187;
 					type="Land_Communication_F";
@@ -35079,7 +35087,7 @@ class Mission
 			type="rectangle";
 			a=265;
 			b=115.428;
-			angle=220.33685;
+			angle=220.33684;
 			id=2156;
 			atlOffset=-19.43;
 		};
@@ -35224,7 +35232,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
-						name="upload1";
+						createAsSimpleObject=1;
 					};
 					id=2230;
 					type="Land_TTowerSmall_2_F";
@@ -35502,6 +35510,86 @@ class Mission
 			};
 			id=2253;
 			type="LocationRespawnPoint_F";
+		};
+		class Item291
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11054.263,350.39084,11476.154};
+				angles[]={-0,5.615984,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="upload1";
+			};
+			id=2254;
+			type="Land_DataTerminal_01_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item292
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6829.252,2.6828055,7159.4521};
+				angles[]={0,0.69085366,6.2671981};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="upload2";
+			};
+			id=2255;
+			type="Land_DataTerminal_01_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections
