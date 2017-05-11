@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=521;
+	toggles=649;
 	class ItemIDProvider
 	{
 		nextID=618;
@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=16;
+		nextID=26;
 	};
 	class Camera
 	{
@@ -78,7 +78,6 @@ addons[]=
 	"ace_realisticnames",
 	"ace_cargo",
 	"A3_Modules_F",
-	"mars_editor",
 	"acre_api",
 	"A3_Modules_F_Intel",
 	"A3_Modules_F_Curator_Intel",
@@ -89,7 +88,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=34;
+		items=33;
 		class Item0
 		{
 			className="A3_Supplies_F_Heli";
@@ -298,25 +297,19 @@ class AddonsMetaData
 		};
 		class Item30
 		{
-			className="mars_editor";
-			name="mars_editor";
-			author="Mars Team";
-		};
-		class Item31
-		{
 			className="acre_api";
 			name="ACRE2 - API";
 			author="ACRE2Team";
 			url="https://github.com/IDI-Systems/acre2";
 		};
-		class Item32
+		class Item31
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item33
+		class Item32
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
@@ -330,10 +323,38 @@ class ScenarioData
 {
 	author="spazz1219";
 };
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="Enh_ambientFlyby_speed";
+			expression="missionNamespace setVariable ['Enh_ambientFlyby_speed',_value]";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"STRING"
+						};
+					};
+					value="LIMITED";
+				};
+			};
+		};
+		nAttributes=1;
+	};
+};
 class Mission
 {
 	class Intel
 	{
+		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.25;
 		startWind=0.1;
@@ -30238,7 +30259,7 @@ class Mission
 			name="Modules";
 			class Entities
 			{
-				items=11;
+				items=10;
 				class Item0
 				{
 					dataType="Logic";
@@ -30283,18 +30304,6 @@ class Mission
 					atlOffset=-0.0013122559;
 				};
 				class Item3
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={1729.313,338.98999,1532.2693};
-						angles[]={0,0,0.0026520467};
-					};
-					id=600;
-					type="MARS_GameMaster";
-					atlOffset=-0.0012207031;
-				};
-				class Item4
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -30422,7 +30431,7 @@ class Mission
 						nAttributes=6;
 					};
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -30551,7 +30560,7 @@ class Mission
 						nAttributes=6;
 					};
 				};
-				class Item6
+				class Item5
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -30642,7 +30651,7 @@ class Mission
 						nAttributes=4;
 					};
 				};
-				class Item7
+				class Item6
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -30865,7 +30874,7 @@ class Mission
 						nAttributes=11;
 					};
 				};
-				class Item8
+				class Item7
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -30900,7 +30909,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item9
+				class Item8
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -31125,7 +31134,7 @@ class Mission
 						nAttributes=11;
 					};
 				};
-				class Item10
+				class Item9
 				{
 					dataType="Layer";
 					name="Zeus Modules";

@@ -5,14 +5,14 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=521;
+	toggles=649;
 	class ItemIDProvider
 	{
 		nextID=642;
 	};
 	class LayerIndexProvider
 	{
-		nextID=12;
+		nextID=24;
 	};
 	class Camera
 	{
@@ -73,27 +73,18 @@ addons[]=
 	"A3_Soft_F_Gamma_Truck_01",
 	"ace_realisticnames",
 	"ace_cargo",
-	"TTT_NimitzFuel",
-	"ttt_nimitzelevator",
-	"TTT_NimitzRepair",
-	"TTT_NimitzRescue",
-	"FIR_F14D_F",
-	"JS_JC_FA18",
-	"JDG_carrier",
 	"A3_Ui_F",
 	"A3_Modules_F",
-	"mars_editor",
 	"acre_api",
 	"A3_Modules_F_Intel",
 	"A3_Modules_F_Curator_Intel",
-	"A3_Modules_F_Curator_Curator",
-	"A3_Modules_F_Multiplayer"
+	"A3_Modules_F_Curator_Curator"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=41;
+		items=33;
 		class Item0
 		{
 			className="A3_Supplies_F_Heli";
@@ -295,68 +286,26 @@ class AddonsMetaData
 		};
 		class Item29
 		{
-			className="TTT_NimitzFuel";
-			name="TTT_NimitzFuel";
-		};
-		class Item30
-		{
-			className="TTT_NimitzElevator";
-			name="ttt_nimitzelevator";
-		};
-		class Item31
-		{
-			className="TTT_NimitzRepair";
-			name="TTT_NimitzRepair";
-		};
-		class Item32
-		{
-			className="TTT_NimitzRescue";
-			name="TTT_NimitzRescue";
-		};
-		class Item33
-		{
-			className="FIR_F14D_F";
-			name="FIR_F14D_F";
-		};
-		class Item34
-		{
-			className="JS_JC_FA18";
-			name="JS_JC_FA18";
-		};
-		class Item35
-		{
-			className="JDG_carrier";
-			name="JDG_carrier";
-			author="JDog, Odyseus, TeTeT";
-		};
-		class Item36
-		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item37
+		class Item30
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item38
-		{
-			className="mars_editor";
-			name="mars_editor";
-			author="Mars Team";
-		};
-		class Item39
+		class Item31
 		{
 			className="acre_api";
 			name="ACRE2 - API";
 			author="ACRE2Team";
 			url="https://github.com/IDI-Systems/acre2";
 		};
-		class Item40
+		class Item32
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
@@ -370,10 +319,38 @@ class ScenarioData
 {
 	author="spazz1219";
 };
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="Enh_ambientFlyby_speed";
+			expression="missionNamespace setVariable ['Enh_ambientFlyby_speed',_value]";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"STRING"
+						};
+					};
+					value="LIMITED";
+				};
+			};
+		};
+		nAttributes=1;
+	};
+};
 class Mission
 {
 	class Intel
 	{
+		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.1;
 		startWind=0.1;
@@ -30825,1174 +30802,8 @@ class Mission
 		{
 			dataType="Layer";
 			name="Nimitz";
-			class Entities
-			{
-				items=13;
-				class Item0
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={4893.8374,-33.339027,443.22131};
-					};
-					id=608;
-					type="TTT_ModuleNimitzFuel";
-					atlOffset=1.1495361;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="TTT_ModuleNimitzFuel_Units";
-							expression="_this setVariable ['Units',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="1";
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={4907.2612,-34.457806,424.11975};
-						angles[]={6.2810569,0,0.00084572798};
-					};
-					id=609;
-					type="TTT_ModuleNimitzOnShip";
-					atlOffset=0.065677643;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="TTT_ModuleNimitzOnShip_Units";
-							expression="_this setVariable ['Units',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="1";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="TTT_ModuleNimitzOnShip_Height";
-							expression="_this setVariable ['Height',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=17.5;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item2
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={4892.0063,-34.39241,457.25159};
-						angles[]={6.2810569,0,0.00034526698};
-					};
-					id=610;
-					type="TTT_ModuleNimitzRepair";
-					atlOffset=0.065761566;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="TTT_ModuleNimitzRepair_Units";
-							expression="_this setVariable ['Units',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="1";
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item3
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={4894.9585,-34.397411,454.31311};
-						angles[]={6.2810569,0,0.00034526698};
-					};
-					id=611;
-					type="TTT_ModuleNimitzRescue";
-					atlOffset=0.065769196;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="TTT_ModuleNimitzRescue_Units";
-							expression="_this setVariable ['Units',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="1";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="TTT_ModuleNimitzRescue_Brief";
-							expression="_this setVariable ['Brief',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="TTT_ModuleNimitzRescue_Range";
-							expression="_this setVariable ['Range',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=200;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4846.4634,20.097778,529.36554};
-						angles[]={0,5.148665,0};
-					};
-					side="Empty";
-					class Attributes
-					{
-					};
-					id=612;
-					type="FIR_F14D";
-					atlOffset=0.29300308;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="Enh_onDamagedEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="Enh_onRespawnEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="F14_Foldwing_A_ID";
-							expression="_this setVariable [""F14_Foldwing_C"",_value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="F14_ABSound_A_ID";
-							expression="_this setVariable [""F14_ABSound_C"",_value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="Enh_onKilledEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="ammoBox";
-							expression="[_this,_value] call bis_fnc_initAmmoBox;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="F14_ReplacePilotID";
-							expression="_this setVariable [""F14_ReplacePilot"",_value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=7;
-					};
-				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4846.7114,19.871342,491.56873};
-						angles[]={0,4.9938626,0};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=613;
-					type="FIR_F14D";
-					atlOffset=0.053836823;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="Enh_onDamagedEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="Enh_onRespawnEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="F14_Foldwing_A_ID";
-							expression="_this setVariable [""F14_Foldwing_C"",_value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="F14_ABSound_A_ID";
-							expression="_this setVariable [""F14_ABSound_C"",_value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="Enh_onKilledEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="ammoBox";
-							expression="[_this,_value] call bis_fnc_initAmmoBox;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="F14_ReplacePilotID";
-							expression="_this setVariable [""F14_ReplacePilot"",_value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=7;
-					};
-				};
-				class Item6
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4842.9478,19.820633,399.60388};
-						angles[]={0,6.0473294,0};
-					};
-					side="Empty";
-					class Attributes
-					{
-					};
-					id=614;
-					type="JS_JC_FA18E";
-					atlOffset=0.27680206;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="Enh_onDamagedEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="Enh_onRespawnEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ttt_loadout";
-							expression="_this setVariable ['Loadout', _value]; [_this, _value] execVM 'js_jc_fa18\scripts\LOADOUTS\FA18_roles.sqf';";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="default";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="Enh_onKilledEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ammoBox";
-							expression="[_this,_value] call bis_fnc_initAmmoBox;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="ttt_foldWings";
-							expression="_this setVariable ['Wings', _value]; if (_value) then { _this animate ['l_wingfold',1, true]; _this animate ['r_wingfold',1, true]; } else { _this animate ['l_wingfold',0, true]; _this animate ['r_wingfold',0, true]; };";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="ttt_paintscheme";
-							expression="_this setVariable ['Paintscheme', _value]; [_this, _value] execVM 'js_jc_fa18\scripts\EDEN\fn_paintscheme.sqf';";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="genericnavyE";
-								};
-							};
-						};
-						nAttributes=7;
-					};
-				};
-				class Item7
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4846.9771,20.111156,510.13904};
-						angles[]={0,5.1316543,0};
-					};
-					side="Empty";
-					class Attributes
-					{
-					};
-					id=615;
-					type="JS_JC_FA18E";
-					atlOffset=0.56747246;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="Enh_onDamagedEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="Enh_onRespawnEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ttt_loadout";
-							expression="_this setVariable ['Loadout', _value]; [_this, _value] execVM 'js_jc_fa18\scripts\LOADOUTS\FA18_roles.sqf';";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="default";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="Enh_onKilledEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ammoBox";
-							expression="[_this,_value] call bis_fnc_initAmmoBox;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="ttt_foldWings";
-							expression="_this setVariable ['Wings', _value]; if (_value) then { _this animate ['l_wingfold',1, true]; _this animate ['r_wingfold',1, true]; } else { _this animate ['l_wingfold',0, true]; _this animate ['r_wingfold',0, true]; };";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="ttt_paintscheme";
-							expression="_this setVariable ['Paintscheme', _value]; [_this, _value] execVM 'js_jc_fa18\scripts\EDEN\fn_paintscheme.sqf';";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="genericnavyE";
-								};
-							};
-						};
-						nAttributes=7;
-					};
-				};
-				class Item8
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4844.5981,19.985264,431.67029};
-						angles[]={0,4.6897964,0};
-					};
-					side="Empty";
-					class Attributes
-					{
-					};
-					id=616;
-					type="JS_JC_FA18F";
-					atlOffset=0.44143295;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="Enh_onDamagedEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="Enh_onRespawnEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ttt_loadout";
-							expression="_this setVariable ['Loadout', _value]; [_this, _value] execVM 'js_jc_fa18\scripts\LOADOUTS\FA18_roles.sqf';";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="default";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="Enh_onKilledEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ammoBox";
-							expression="[_this,_value] call bis_fnc_initAmmoBox;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="ttt_foldWings";
-							expression="_this setVariable ['Wings', _value]; if (_value) then { _this animate ['l_wingfold',1, true]; _this animate ['r_wingfold',1, true]; } else { _this animate ['l_wingfold',0, true]; _this animate ['r_wingfold',0, true]; };";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="ttt_paintscheme";
-							expression="_this setVariable ['Paintscheme', _value]; [_this, _value] execVM 'js_jc_fa18\scripts\EDEN\fn_paintscheme.sqf';";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="genericnavyF";
-								};
-							};
-						};
-						nAttributes=7;
-					};
-				};
-				class Item9
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4789.4214,19.819691,452.63513};
-					};
-					side="Empty";
-					class Attributes
-					{
-					};
-					id=617;
-					type="JS_JC_FA18F";
-					atlOffset=0.27585793;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="Enh_onDamagedEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="Enh_onRespawnEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ttt_loadout";
-							expression="_this setVariable ['Loadout', _value]; [_this, _value] execVM 'js_jc_fa18\scripts\LOADOUTS\FA18_roles.sqf';";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="default";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="Enh_onKilledEvent";
-							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="false";
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ammoBox";
-							expression="[_this,_value] call bis_fnc_initAmmoBox;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="ttt_foldWings";
-							expression="_this setVariable ['Wings', _value]; if (_value) then { _this animate ['l_wingfold',1, true]; _this animate ['r_wingfold',1, true]; } else { _this animate ['l_wingfold',0, true]; _this animate ['r_wingfold',0, true]; };";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="ttt_paintscheme";
-							expression="_this setVariable ['Paintscheme', _value]; [_this, _value] execVM 'js_jc_fa18\scripts\EDEN\fn_paintscheme.sqf';";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="genericnavyF";
-								};
-							};
-						};
-						nAttributes=7;
-					};
-				};
-				class Item10
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4791.6968,19.817963,396.91077};
-						angles[]={0,1.5453268,0};
-					};
-					side="Empty";
-					class Attributes
-					{
-					};
-					id=618;
-					type="B_Heli_Transport_01_F";
-					atlOffset=0.2787056;
-				};
-				class Item11
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4792.3335,19.751144,415.54453};
-						angles[]={0,1.5453268,0};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=619;
-					type="B_Heli_Transport_01_F";
-					atlOffset=0.17779732;
-				};
-				class Item12
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4819.7847,0,515.64856};
-					};
-					side="Empty";
-					class Attributes
-					{
-					};
-					id=604;
-					type="JDG_carrier_Spawner";
-					atlOffset=34.377243;
-				};
-			};
 			id=607;
-			atlOffset=1.7298546;
+			atlOffset=50.040001;
 		};
 		class Item4
 		{
@@ -32010,7 +30821,7 @@ class Mission
 			name="Modules";
 			class Entities
 			{
-				items=12;
+				items=10;
 				class Item0
 				{
 					dataType="Logic";
@@ -32056,18 +30867,6 @@ class Mission
 					atlOffset=0.048857689;
 				};
 				class Item3
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={2950.4189,8.5109997,2423.8696};
-						angles[]={6.2751846,4.6631727,6.2272501};
-					};
-					id=625;
-					type="MARS_GameMaster";
-					atlOffset=0.043963432;
-				};
-				class Item4
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -32197,7 +30996,7 @@ class Mission
 						nAttributes=6;
 					};
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -32327,7 +31126,7 @@ class Mission
 						nAttributes=6;
 					};
 				};
-				class Item6
+				class Item5
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -32419,7 +31218,7 @@ class Mission
 						nAttributes=4;
 					};
 				};
-				class Item7
+				class Item6
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -32644,7 +31443,7 @@ class Mission
 						nAttributes=11;
 					};
 				};
-				class Item8
+				class Item7
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -32679,7 +31478,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item9
+				class Item8
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -32904,7 +31703,7 @@ class Mission
 						nAttributes=11;
 					};
 				};
-				class Item10
+				class Item9
 				{
 					dataType="Layer";
 					name="Zeus Modules";
@@ -33895,130 +32694,20 @@ class Mission
 					id=632;
 					atlOffset=0.0515728;
 				};
-				class Item11
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={4847.3452,18.024067,415.73303};
-					};
-					id=606;
-					type="ModuleRespawnPosition_F";
-					atlOffset=0.61283875;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ModuleRespawnPosition_F_Marker";
-							expression="_this setVariable ['Marker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="0";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ModuleRespawnPosition_F_Name";
-							expression="_this setVariable ['Name',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Nimitz";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ModuleRespawnPosition_F_Side";
-							expression="_this setVariable ['Side',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="1";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ModuleRespawnPosition_F_ShowNotification";
-							expression="_this setVariable ['ShowNotification',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="0";
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ModuleRespawnPosition_F_Type";
-							expression="_this setVariable ['Type',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="0";
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
 			};
 			id=621;
-			atlOffset=48.139397;
+			atlOffset=0.052638054;
 		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=19;
+			nextID=10;
 		};
 		class Links
 		{
-			items=19;
+			items=10;
 			class Item0
 			{
 				linkID=0;
@@ -34114,96 +32803,6 @@ class Mission
 				linkID=9;
 				item0=601;
 				item1=603;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item10
-			{
-				linkID=10;
-				item0=612;
-				item1=609;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item11
-			{
-				linkID=11;
-				item0=613;
-				item1=609;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item12
-			{
-				linkID=12;
-				item0=615;
-				item1=609;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item13
-			{
-				linkID=13;
-				item0=616;
-				item1=609;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item14
-			{
-				linkID=14;
-				item0=614;
-				item1=609;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item15
-			{
-				linkID=15;
-				item0=617;
-				item1=609;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item16
-			{
-				linkID=16;
-				item0=619;
-				item1=609;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item17
-			{
-				linkID=17;
-				item0=618;
-				item1=609;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item18
-			{
-				linkID=18;
-				item0=609;
-				item1=606;
 				class CustomData
 				{
 					type="Sync";
