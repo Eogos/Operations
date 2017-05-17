@@ -8,18 +8,18 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=1200;
+		nextID=1211;
 	};
 	class LayerIndexProvider
 	{
-		nextID=100;
+		nextID=107;
 	};
 	class Camera
 	{
-		pos[]={1747.4556,97.586998,5334.1772};
-		dir[]={0.077956103,-0.95677626,0.28018489};
-		up[]={0.25646344,0.2908192,0.92176443};
-		aside[]={0.96340597,1.1583325e-008,-0.26804912};
+		pos[]={1315.3927,77.596359,7046.6738};
+		dir[]={-0.063161075,-0.21626094,0.97435582};
+		up[]={-0.013990372,0.9763273,0.21582842};
+		aside[]={0.99796772,8.4139174e-008,0.064688787};
 	};
 };
 binarizationWanted=0;
@@ -78,13 +78,16 @@ addons[]=
 	"acre_api",
 	"A3_Modules_F_Intel",
 	"A3_Modules_F_Curator_Intel",
-	"A3_Modules_F_Curator_Curator"
+	"A3_Modules_F_Curator_Curator",
+	"A3_Boat_F_Jets_Carrier_01",
+	"A3_Air_F_Jets_Plane_Fighter_01",
+	"A3_Air_F_EPC_Plane_CAS_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=33;
+		items=36;
 		class Item0
 		{
 			className="A3_Supplies_F_Heli";
@@ -312,9 +315,34 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item33
+		{
+			className="A3_Boat_F_Jets";
+			name="Arma 3 Jets - Boats and Submersibles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item34
+		{
+			className="A3_Air_F_Jets";
+			name="Arma 3 Jets - Aircrafts";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item35
+		{
+			className="A3_Air_F_EPC";
+			name="Arma 3 Win Episode - Aircrafts";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=11211519;
+class ScenarioData
+{
+	author="Aselia";
+};
 class CustomAttributes
 {
 	class Category0
@@ -369,7 +397,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=6;
+		items=7;
 		class Item0
 		{
 			dataType="Layer";
@@ -13190,7 +13218,7 @@ class Mission
 					};
 					id=859;
 					type="B_Heli_Transport_01_camo_F";
-					atlOffset=-0.00063943863;
+					atlOffset=-0.0006518364;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -30757,7 +30785,7 @@ class Mission
 			dataType="Layer";
 			name="Nimitz";
 			id=1090;
-			atlOffset=136.97011;
+			atlOffset=142.91;
 		};
 		class Item4
 		{
@@ -32643,6 +32671,330 @@ class Mission
 			};
 			id=1106;
 			atlOffset=-0.00021743774;
+		};
+		class Item6
+		{
+			dataType="Layer";
+			name="Freedom";
+			class Entities
+			{
+				items=10;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1302.2296,1.5580255,7248.3574};
+						angles[]={0,3.7957683,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+					};
+					id=1201;
+					type="Land_Carrier_01_base_F";
+					atlOffset=72.405792;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1286.6923,27.801624,7177.6069};
+						angles[]={0,5.2823372,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+					};
+					id=1202;
+					type="B_Plane_Fighter_01_F";
+					atlOffset=0.32177544;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1277.6049,27.775425,7165.0313};
+						angles[]={-0,5.2954292,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=1203;
+					type="B_Plane_Fighter_01_F";
+					atlOffset=0.24598122;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1296.6921,27.615416,7191.75};
+						angles[]={0,5.292963,-0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						aiRadarUsage=1;
+					};
+					id=1204;
+					type="B_Plane_Fighter_01_Stealth_F";
+					atlOffset=0.13556671;
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1307.7242,27.568424,7205.1943};
+						angles[]={0,5.292963,-0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						aiRadarUsage=1;
+					};
+					id=1205;
+					type="B_Plane_Fighter_01_Stealth_F";
+					atlOffset=0.088705063;
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1239.2759,27.572403,7117.0771};
+						angles[]={0,5.3856812,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+						init="[west, mhq4] call BIS_fnc_addRespawnPosition;";
+						name="mhq4";
+					};
+					id=1206;
+					type="B_Heli_Transport_01_F";
+					atlOffset=0.37821007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ammoBox";
+							expression="[_this,_value] call bis_fnc_initAmmoBox;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="[[[[""arifle_MXC_F"",""FirstAidKit"",""Medikit""],[2,8,1]],[[""SmokeShell"",""SmokeShellBlue"",""30Rnd_65x39_caseless_mag""],[2,2,4]],[[""ToolKit"",""ItemGPS""],[1,1]],[[""B_Parachute""],[8]]],false]";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="ace_fastroping_equipFRIES";
+							expression="[_this] call ace_fastroping_fnc_equipFRIES";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1321.3202,27.696398,7219.6157};
+						angles[]={0,5.3758774,-0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						aiRadarUsage=28161;
+					};
+					id=1207;
+					type="B_Plane_CAS_01_dynamicLoadout_F";
+					atlOffset=0.18500519;
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1333.9766,27.758144,7235.7329};
+						angles[]={-0,5.3758774,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						aiRadarUsage=28161;
+					};
+					id=1208;
+					type="B_Plane_CAS_01_dynamicLoadout_F";
+					atlOffset=0.24675179;
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1253.8473,25.937536,7148.501};
+						angles[]={0,5.4014673,-0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="this addAction [""Open Virtual Arsenal"", {[""Open"",true] spawn BIS_fnc_arsenal}]; this allowDamage false;";
+						name="abox_5";
+					};
+					id=1209;
+					type="B_CargoNet_01_ammo_F";
+					atlOffset=0.062355042;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ammoBox";
+							expression="[_this,_value] call bis_fnc_initAmmoBox;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="[[[[""arifle_MXC_F"",""arifle_MXM_F"",""arifle_MX_F"",""arifle_MX_GL_F"",""arifle_MX_SW_F"",""arifle_SDAR_F"",""hgun_P07_F"",""hgun_Pistol_heavy_01_F"",""launch_NLAW_F"",""launch_Titan_F"",""launch_Titan_short_F"",""SMG_01_F"",""srifle_EBR_F"",""srifle_LRR_camo_F"",""srifle_LRR_F"",""FirstAidKit"",""Medikit"",""MineDetector""],[4,2,8,4,4,2,2,2,2,2,2,2,2,2,2,10,1,1]],[[""100Rnd_65x39_caseless_mag_Tracer"",""11Rnd_45ACP_Mag"",""16Rnd_9x21_Mag"",""1Rnd_HE_Grenade_shell"",""1Rnd_SmokeBlue_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokePurple_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""1Rnd_SmokeYellow_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""20Rnd_556x45_UW_mag"",""20Rnd_762x51_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""30Rnd_556x45_Stanag_red"",""30Rnd_65x39_caseless_mag"",""3Rnd_HE_Grenade_shell"",""7Rnd_408_Mag"",""APERSBoundingMine_Range_Mag"",""APERSMine_Range_Mag"",""APERSTripMine_Wire_Mag"",""ATMine_Range_Mag"",""B_IR_Grenade"",""ClaymoreDirectionalMine_Remote_Mag"",""DemoCharge_Remote_Mag"",""HandGrenade"",""Laserbatteries"",""MiniGrenade"",""SatchelCharge_Remote_Mag"",""SLAMDirectionalMine_Wire_Mag"",""SmokeShell"",""SmokeShellBlue"",""SmokeShellGreen"",""SmokeShellOrange"",""SmokeShellPurple"",""SmokeShellRed"",""SmokeShellYellow"",""Titan_AA"",""Titan_AP"",""Titan_AT"",""UGL_FlareGreen_F"",""UGL_FlareWhite_F""],[16,14,14,15,2,2,2,2,2,2,2,6,24,14,6,52,3,12,5,5,5,5,8,5,5,24,5,24,5,5,2,2,2,2,2,2,2,6,6,6,2,2]],[[""Binocular"",""Laserdesignator"",""Rangefinder"",""acc_flashlight"",""acc_pointer_IR"",""ItemGPS"",""muzzle_snds_acp"",""muzzle_snds_B"",""muzzle_snds_H"",""muzzle_snds_H_SW"",""muzzle_snds_L"",""optic_Aco"",""optic_Aco_smg"",""optic_DMS"",""optic_Hamr"",""optic_Holosight"",""optic_LRPS"",""optic_MRD"",""optic_NVS"",""optic_SOS"",""optic_tws"",""optic_tws_mg"",""ToolKit""],[1,1,1,5,5,5,5,5,5,1,5,2,2,2,2,2,2,2,2,2,2,2,1]],[[],[]]],false]";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isMedicalFacility";
+							expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item9
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={1252.8124,25.98806,7154.498};
+						angles[]={0,3.7957683,0};
+					};
+					name="CarrierFreedom";
+					init="[west, CarrierFreedom] call BIS_fnc_addRespawnPosition;";
+					id=1210;
+					type="LocationRespawnPoint_F";
+					atlOffset=0.91138649;
+				};
+			};
+			id=1200;
+			atlOffset=0.48360634;
 		};
 	};
 	class Connections
