@@ -16,7 +16,7 @@ if (isnil "SERVER") then {Hint "You must ADD a object named SERVER";Player Sidec
 if (isServer) then {
 IF (!isnil ("COScomplete")) then {Hint "Check your call. COS was called twice!";}else{
 
-COS_distance=100;//Set spawn distance
+COS_distance=500;//Set spawn distance
 _aerielActivation=false;// Set if flying units can activate civilian Zones
 
 blackListTowns = ["sagonisi"];// Remove towns from COS
@@ -36,10 +36,10 @@ COScars=true;// Spawn Cars
 COSparked=true;// Spawn parked cars
 
 // Types of units that will be spawned as civilians.
-COScivPool =["C_man_1","C_man_1_1_F","C_man_1_2_F","C_man_1_3_F","C_man_hunter_1_F","C_man_p_beggar_F","C_man_p_beggar_F_afro","C_man_p_fugitive_F","C_man_p_shorts_1_F","C_man_polo_1_F","C_man_polo_2_F","C_man_polo_3_F","C_man_polo_4_F","C_man_polo_5_F","C_man_polo_6_F","C_man_shorts_1_F","C_man_shorts_2_F","C_man_shorts_3_F","C_man_shorts_4_F","C_man_w_worker_F"];
-COSmotPool =["C_Hatchback_01_F","C_Hatchback_01_sport_F","C_Offroad_01_F","C_SUV_01_F","C_Van_01_box_F","C_Van_01_fuel_F","C_Van_01_transport_F"];
+COScivPool =["CUP_C_TK_Man_07","CUP_C_TK_Man_04","CUP_C_TK_Man_04_Jack","CUP_C_TK_Man_04_Waist","CUP_C_TK_Man_07_Waist","CUP_C_TK_Man_07_Coat","CUP_C_TK_Man_08","CUP_C_TK_Man_08_Jack","CUP_C_TK_Man_08_waist","CUP_C_TK_Man_05_Jack","CUP_C_TK_Man_05_Coat","CUP_C_TK_Man_05_Waist","CUP_C_TK_Man_06_Jack","CUP_C_TK_Man_06_Coat","CUP_C_TK_Man_06_Waist","CUP_C_TK_Man_02","CUP_C_TK_Man_02_Waist","CUP_C_TK_Man_02_Jack","CUP_C_TK_Man_01_Jack","CUP_C_TK_Man_03_Coat"];
+COSmotPool =["CUP_C_LR_Transport_CTK","CUP_C_V3s_Open_TKC","CUP_C_SUV_TK","CUP_C_UAZ_Open_TK_CIV"];
 
-COSmaxGrps=72;//Set Maximum group limit for COS at any one time (If limit is hit then civilians will be placed into a single group for each town)
+COSmaxGrps=36;//Set Maximum group limit for COS at any one time (If limit is hit then civilians will be placed into a single group for each town)
 
 // Browse to line 81 to customise number of civilians that spawn.
 private ["_sizeX","_sizeY","_name","_pos","_mSize","_rad","_civilians","_vehicles","_parked","_actCond"];
@@ -81,35 +81,35 @@ if (({_name==_x} count blackListTowns)>0 OR (_name == "")) then {}else{
 _randomisation=2;
 	if (_houses <= 10)
 		then {
-	_civilians=10+ round(random _randomisation);// Civilians spawned
+	_civilians=5+ round(random _randomisation);// Civilians spawned
 	_vehicles=0;// Moving Vehicles Spawned
 	_parked=1;// Parked Vehicles Spawned
 			};
  	if (_houses <= 30 and _houses > _randomisation)
 		then {
-	_civilians=2+ round(random _randomisation);// Civilians spawned
-	_vehicles=2;// Moving Vehicles Spawned
-	_parked=2;// Parked Vehicles Spawned
+	_civilians=1+ round(random _randomisation);// Civilians spawned
+	_vehicles=1;// Moving Vehicles Spawned
+	_parked=1;// Parked Vehicles Spawned
 			};
 
  	if (_houses <= 70 and _houses > 30)
 		then {
-	_civilians=4+ round(random _randomisation);// Civilians spawned
-	_vehicles=4;// Moving Vehicles Spawned
-	_parked=2;// Parked Vehicles Spawned
+	_civilians=2+ round(random _randomisation);// Civilians spawned
+	_vehicles=2;// Moving Vehicles Spawned
+	_parked=1;// Parked Vehicles Spawned
 			};
 
  	if (_houses <= 140 and _houses > 70)
 		then {
-	_civilians=8+ round(random _randomisation);// Civilians spawned
-	_vehicles=5;// Moving Vehicles Spawned
-	_parked=3;// Parked Vehicles Spawned
+	_civilians=4+ round(random _randomisation);// Civilians spawned
+	_vehicles=2;// Moving Vehicles Spawned
+	_parked=1;// Parked Vehicles Spawned
 			};
  	if (_houses > 140)
 		then {
-	_civilians=12+ round(random _randomisation);// Civilians spawned
-	_vehicles=5;// Moving Vehicles Spawned
-	_parked=3;// Parked Vehicles Spawned
+	_civilians=6+ round(random _randomisation);// Civilians spawned
+	_vehicles=2;// Moving Vehicles Spawned
+	_parked=1;// Parked Vehicles Spawned
 			};
 
  if (!COSpedestrians) then {_civilians=0;};	// If pedestrians disabled spawn 0
