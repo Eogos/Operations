@@ -1,5 +1,5 @@
 # Death Delivery Corps Repository
-### The DDC GitLab Repository for misson-making content.
+### The DDC Repository for misson-making content.
 
 #### Missions
 This is the main section of the repository.
