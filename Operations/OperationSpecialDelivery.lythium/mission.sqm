@@ -5,21 +5,25 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=129;
 	class ItemIDProvider
 	{
-		nextID=460;
+		nextID=461;
+	};
+	class MarkerIDProvider
+	{
+		nextID=1;
 	};
 	class LayerIndexProvider
 	{
-		nextID=19;
+		nextID=29;
 	};
 	class Camera
 	{
 		pos[]={9644.3584,113.84872,7360.0571};
-		dir[]={-0.033029892,-0.97836077,-0.20486614};
-		up[]={-0.15571576,0.20720482,-0.96580625};
-		aside[]={-0.98736221,7.089111e-007,0.1591924};
+		dir[]={-0.082697764,-0.98585272,-0.14665204};
+		up[]={-0.48419699,0.16805343,-0.85864723};
+		aside[]={-0.87115002,7.8999437e-007,0.49124905};
 	};
 };
 binarizationWanted=0;
@@ -96,13 +100,15 @@ addons[]=
 	"CUP_CWA_Misc",
 	"A3_Structures_F_Items_Documents",
 	"radio_b",
-	"Jbad_misc_interior"
+	"Jbad_misc_interior",
+	"CUP_BaseConfigs",
+	"A3_Ui_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=59;
+		items=61;
 		class Item0
 		{
 			className="CUP_Creatures_Military_Russia";
@@ -463,6 +469,18 @@ class AddonsMetaData
 			className="Jbad_misc_interior";
 			name="Jbad_misc_interior";
 		};
+		class Item59
+		{
+			className="CUP_BaseConfigs";
+			name="CUP_BaseConfigs";
+		};
+		class Item60
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=9019134;
@@ -522,7 +540,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=128;
+		items=129;
 		class Item0
 		{
 			dataType="Group";
@@ -3020,14 +3038,16 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9646.9102,70.431374,7357.3555};
-						angles[]={6.2822089,0,6.2813263};
+						position[]={9646.9102,70.431374,7357.356};
+						angles[]={6.282208,0,6.2813177};
 					};
 					side="East";
 					flags=6;
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="call{[east, c1] call BIS_fnc_addRespawnPosition;}";
+						name="c1";
 						description="Squad Leader";
 						isPlayable=1;
 					};
@@ -5938,6 +5958,8 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="call{[east, c2] call BIS_fnc_addRespawnPosition;}";
+						name="c2";
 						description="Squad Leader";
 						isPlayable=1;
 					};
@@ -6197,6 +6219,7 @@ class Mission
 			};
 			id=133;
 			type="CUP_C_V3S_Covered_TKC";
+			atlOffset=-0.018783569;
 		};
 		class Item16
 		{
@@ -6213,6 +6236,7 @@ class Mission
 			};
 			id=136;
 			type="CUP_C_UAZ_Open_TK_CIV";
+			atlOffset=0.055084229;
 		};
 		class Item17
 		{
@@ -6220,7 +6244,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9639.4385,70.446114,7361.4385};
-				angles[]={-0,0,6.282495};
+				angles[]={0,0,6.282495};
 			};
 			title="Player`s Spawn";
 			description="Ideally, the players` spawn points should be reasonably close to the checkpoint, so that the idea of them getting there even before the stop should still be feasible. I am open to suggestions";
@@ -9995,7 +10019,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9632.335,70.68605,7365.5044};
-				angles[]={6.282495,3.8039794,-0};
+				angles[]={6.282495,3.8039794,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10004,6 +10028,7 @@ class Mission
 			};
 			id=395;
 			type="Land_Campfire";
+			atlOffset=-0.00015258789;
 		};
 		class Item101
 		{
@@ -10085,7 +10110,7 @@ class Mission
 			};
 			id=401;
 			type="Barrel4";
-			atlOffset=7.6293945e-006;
+			atlOffset=2.2888184e-005;
 		};
 		class Item106
 		{
@@ -10231,7 +10256,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9633.2422,70.491821,7366.9722};
-				angles[]={-0,0,6.282495};
+				angles[]={0,0,6.282495};
 			};
 			side="Empty";
 			flags=4;
@@ -10388,7 +10413,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9632.8682,70.684402,7366.8105};
-				angles[]={6.282495,0,-0};
+				angles[]={6.282495,0,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10404,7 +10429,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9633.0596,70.491699,7366.606};
-				angles[]={6.282495,0,-0};
+				angles[]={6.282495,0,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10443,7 +10468,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9632.9912,70.491966,7366.9326};
-				angles[]={6.282495,0,-0};
+				angles[]={6.282495,0,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10521,7 +10546,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9633.1152,70.492805,7366.7417};
-				angles[]={6.282495,0,-0};
+				angles[]={6.282495,0,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10601,7 +10626,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9633.1865,70.492714,7366.6406};
-				angles[]={6.282495,0,-0};
+				angles[]={6.282495,0,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10617,7 +10642,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9633.0723,70.492973,7367.0073};
-				angles[]={-0,0,6.282495};
+				angles[]={0,0,6.282495};
 			};
 			side="Empty";
 			flags=4;
@@ -10626,6 +10651,16 @@ class Mission
 			};
 			id=459;
 			type="Land_Can_V3_F";
+		};
+		class Item128
+		{
+			dataType="Marker";
+			position[]={9646.9492,0,7363.667};
+			name="respawn_east";
+			text="Base Camp";
+			type="Faction_CUP_RU";
+			id=460;
+			atlOffset=-70.432846;
 		};
 	};
 	class Connections
