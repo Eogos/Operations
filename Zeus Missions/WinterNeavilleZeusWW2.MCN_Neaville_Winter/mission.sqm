@@ -8,18 +8,22 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=123;
+		nextID=124;
+	};
+	class MarkerIDProvider
+	{
+		nextID=1;
 	};
 	class LayerIndexProvider
 	{
-		nextID=4;
+		nextID=6;
 	};
 	class Camera
 	{
-		pos[]={393.4028,83.954102,4478.3101};
-		dir[]={0.49872681,-0.31242886,0.80862498};
-		up[]={0.16409783,0.94986439,0.26606235};
-		aside[]={0.85122377,1.0074946e-006,-0.52499801};
+		pos[]={409.6644,91.514648,4483.5361};
+		dir[]={0.21163008,-0.48515952,0.84855968};
+		up[]={0.11743695,0.87432081,0.47087508};
+		aside[]={0.97038221,9.8910823e-007,-0.24201074};
 	};
 };
 binarizationWanted=0;
@@ -46,16 +50,18 @@ addons[]=
 	"CUP_Misc3_Config",
 	"A3_Structures_F_System",
 	"fow_mortars_c",
-	"A3_Modules_F_Multiplayer",
 	"WW2_Objects_c_Structures_JNS_Snow_Objects_c",
 	"A3_Modules_F",
-	"WW2_Assets_c_Vehicles_Winter_c"
+	"WW2_Assets_c_Vehicles_Winter_c",
+	"A3_Ui_F",
+	"csa38ii_data",
+	"WW2_Core_c_IF_Gui_c"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=21;
+		items=24;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -176,6 +182,25 @@ class AddonsMetaData
 		{
 			className="WW2_Assets_c_Vehicles_Winter_c";
 			name="WW2_Assets_c_Vehicles_Winter_c";
+		};
+		class Item21
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item22
+		{
+			className="csa38ii_data";
+			name="csa38ii_data";
+			author="CSA38 Team";
+			url="http://www.moddb.com/mods/csa38-czechoslovak-army-1938";
+		};
+		class Item23
+		{
+			className="WW2_Core_c_IF_Gui_c";
+			name="WW2_Core_c_IF_Gui_c";
 		};
 	};
 };
@@ -10336,116 +10361,6 @@ class Mission
 		};
 		class Item27
 		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={416.54398,65.567932,4520.1899};
-				angles[]={6.2799835,0.86894995,0.070479512};
-			};
-			id=114;
-			type="ModuleRespawnPosition_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ModuleRespawnPosition_F_Marker";
-					expression="_this setVariable ['Marker',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="0";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ModuleRespawnPosition_F_Name";
-					expression="_this setVariable ['Name',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="HQ";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ModuleRespawnPosition_F_Side";
-					expression="_this setVariable ['Side',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="1";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ModuleRespawnPosition_F_ShowNotification";
-					expression="_this setVariable ['ShowNotification',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="1";
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ModuleRespawnPosition_F_Type";
-					expression="_this setVariable ['Type',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="0";
-						};
-					};
-				};
-				nAttributes=5;
-			};
-		};
-		class Item28
-		{
 			dataType="Object";
 			class PositionInfo
 			{
@@ -10460,7 +10375,7 @@ class Mission
 			id=115;
 			type="WW2_JNS_Snowman";
 		};
-		class Item29
+		class Item28
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -10532,7 +10447,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item30
+		class Item29
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -10604,7 +10519,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item31
+		class Item30
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -10676,7 +10591,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item32
+		class Item31
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -10748,7 +10663,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item33
+		class Item32
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10885,7 +10800,7 @@ class Mission
 				nAttributes=6;
 			};
 		};
-		class Item34
+		class Item33
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11002,6 +10917,16 @@ class Mission
 				};
 				nAttributes=5;
 			};
+		};
+		class Item34
+		{
+			dataType="Marker";
+			position[]={415.29401,0,4515.4189};
+			name="respawn_west";
+			text="HQ";
+			type="respawn_inf";
+			id=123;
+			atlOffset=-65.442322;
 		};
 	};
 };
