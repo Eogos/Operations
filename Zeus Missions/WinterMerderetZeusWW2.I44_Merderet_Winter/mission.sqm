@@ -5,21 +5,21 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=115;
+		nextID=126;
 	};
 	class LayerIndexProvider
 	{
-		nextID=4;
+		nextID=8;
 	};
 	class Camera
 	{
-		pos[]={160.8723,36.892174,2592.1924};
-		dir[]={-0.78942215,-0.50277251,0.35229596};
-		up[]={-0.45914072,0.86440635,0.20490064};
-		aside[]={0.40754983,4.4588523e-007,0.91323364};
+		pos[]={155.32471,26.830807,2597.3745};
+		dir[]={-0.89165264,-0.36215365,0.27204171};
+		up[]={-0.34643489,0.93208075,0.1056967};
+		aside[]={0.29185721,2.8987415e-008,0.95658821};
 	};
 };
 binarizationWanted=0;
@@ -41,21 +41,20 @@ addons[]=
 	"WW2_Objects_c_Misc_IF_EditorPreview_c",
 	"CUP_WarfareBuildings",
 	"CUP_StandaloneTerrains_Core_Faction",
-	"WW2_Assets_c_Vehicles_Wheeled_c_Zis5v",
-	"WW2_Assets_c_Vehicles_Wheeled_c_GMC",
-	"WW2_Assets_c_Vehicles_Extended_HUD_c",
-	"WW2_Assets_c_Vehicles_ModelConfig_c",
 	"WW2_Assets_c_Vehicles_Wheeled_c_OpelBlitz",
+	"WW2_Assets_c_Vehicles_Extended_HUD_c",
 	"CUP_Misc3_Config",
 	"A3_Structures_F_System",
 	"fow_mortars_c",
-	"A3_Modules_F_Multiplayer"
+	"A3_Modules_F_Multiplayer",
+	"WW2_Assets_c_Vehicles_Winter_c",
+	"CUP_CAMisc"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=22;
+		items=21;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -142,45 +141,40 @@ class AddonsMetaData
 		};
 		class Item14
 		{
-			className="WW2_Assets_c_Vehicles_Wheeled_c_Zis5v";
-			name="WW2_Assets_c_Vehicles_Wheeled_c_Zis5v";
+			className="WW2_Assets_c_Vehicles_Wheeled_c_OpelBlitz";
+			name="WW2_Assets_c_Vehicles_Wheeled_c_OpelBlitz";
 		};
 		class Item15
-		{
-			className="WW2_Assets_c_Vehicles_Wheeled_c_GMC";
-			name="WW2_Assets_c_Vehicles_Wheeled_c_GMC";
-		};
-		class Item16
 		{
 			className="WW2_Assets_c_Vehicles_Extended_HUD_c";
 			name="WW2_Assets_c_Vehicles_Extended_HUD_c";
 		};
-		class Item17
-		{
-			className="WW2_Assets_c_Vehicles_ModelConfig_c";
-			name="WW2_Assets_c_Vehicles_ModelConfig_c";
-		};
-		class Item18
-		{
-			className="WW2_Assets_c_Vehicles_Wheeled_c_OpelBlitz";
-			name="WW2_Assets_c_Vehicles_Wheeled_c_OpelBlitz";
-		};
-		class Item19
+		class Item16
 		{
 			className="CUP_Misc3_Config";
 			name="CUP_Misc3_Config";
 		};
-		class Item20
+		class Item17
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item21
+		class Item18
 		{
 			className="fow_mortars_c";
 			name="fow_mortars_c";
+		};
+		class Item19
+		{
+			className="WW2_Assets_c_Vehicles_Winter_c";
+			name="WW2_Assets_c_Vehicles_Winter_c";
+		};
+		class Item20
+		{
+			className="CUP_CAMisc";
+			name="CUP_CAMisc";
 		};
 	};
 };
@@ -204,17 +198,41 @@ class Mission
 		forecastLightnings=0.1;
 		wavesForced=1;
 		windForced=1;
-		year=1944;
+		year=2035;
 		month=12;
 		day=7;
-		hour=12;
-		minute=0;
+		hour=4;
+		minute=-15;
 		startFogDecay=0;
 		forecastFogDecay=0;
+		class CustomAttributes
+		{
+			name="Intel";
+			class Attribute0
+			{
+				property="Enh_disableGrass";
+				expression="if (((parseNumber _value) > 0) && !is3DEN) then {setTerrainGrid (parseNumber _value)}";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="-1";
+					};
+				};
+			};
+			nAttributes=1;
+		};
 	};
 	class Entities
 	{
-		items=30;
+		items=31;
 		class Item0
 		{
 			dataType="Layer";
@@ -9741,221 +9759,6 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={102.09009,10.04562,2634.1301};
-				angles[]={0,0.34149981,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="call{[west, mhq2] call BIS_fnc_addRespawnPosition;}";
-				name="mhq2";
-			};
-			id=90;
-			type="LIB_Zis5v_Med";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="Enh_onKilledEvent";
-					expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="false";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="Enh_onRespawnEvent";
-					expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="false";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""FirstAidKit"",""Medikit""],[50,5]],[[],[]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="Enh_onDamagedEvent";
-					expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="false";
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ace_isMedicalVehicle";
-					expression="_this setVariable [""ace_medical_medicClass"",_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				nAttributes=5;
-			};
-		};
-		class Item6
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={97.510841,9.5986395,2635.1992};
-				angles[]={0,0.32843351,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="call{[west, mhq3] call BIS_fnc_addRespawnPosition;}";
-				name="mhq3";
-			};
-			id=91;
-			type="LIB_US_GMC_Ambulance";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="Enh_onKilledEvent";
-					expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="false";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="Enh_onRespawnEvent";
-					expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="false";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""FirstAidKit"",""Medikit""],[50,5]],[[],[]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="Enh_onDamagedEvent";
-					expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="false";
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item7
-		{
-			dataType="Object";
-			class PositionInfo
-			{
 				position[]={108.02583,10.000086,2633.2854};
 				angles[]={0,0.30901146,0};
 			};
@@ -9965,12 +9768,93 @@ class Mission
 			{
 				init="call{[west, mhq1] call BIS_fnc_addRespawnPosition;}";
 				name="mhq1";
+				textures="feldgrau";
 			};
 			id=92;
 			type="LIB_OpelBlitz_Ambulance";
 			class CustomAttributes
 			{
 				class Attribute0
+				{
+					property="VehicleCustomization";
+					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['VehicleCustomization',_value]} else {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"ARRAY"
+											};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"ARRAY"
+											};
+										};
+										class value
+										{
+											items=2;
+											class Item0
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="ammo_hide";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute1
 				{
 					property="Enh_onKilledEvent";
 					expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
@@ -9989,7 +9873,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute1
+				class Attribute2
 				{
 					property="Enh_onRespawnEvent";
 					expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
@@ -10008,7 +9892,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute2
+				class Attribute3
 				{
 					property="ammoBox";
 					expression="[_this,_value] call bis_fnc_initAmmoBox;";
@@ -10027,7 +9911,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute3
+				class Attribute4
 				{
 					property="Enh_onDamagedEvent";
 					expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
@@ -10046,7 +9930,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute4
+				class Attribute5
 				{
 					property="ace_isMedicalVehicle";
 					expression="_this setVariable [""ace_medical_medicClass"",_value,true];";
@@ -10065,10 +9949,10 @@ class Mission
 						};
 					};
 				};
-				nAttributes=5;
+				nAttributes=6;
 			};
 		};
-		class Item8
+		class Item6
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10084,13 +9968,13 @@ class Mission
 			id=93;
 			type="PowGen_Big";
 		};
-		class Item9
+		class Item7
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={103.3688,7.675106,2600.1943};
-				angles[]={0,4.1146631,0};
+				position[]={103.369,7.5651059,2600.1941};
+				angles[]={0,4.1188722,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10099,8 +9983,32 @@ class Mission
 			};
 			id=94;
 			type="INS_WarfareBFieldhHospital";
+			atlOffset=-0.11000013;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="Enh_featureType";
+					expression="_this setFeatureType (parseNumber _value)";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item10
+		class Item8
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10115,8 +10023,9 @@ class Mission
 			};
 			id=95;
 			type="Land_ClutterCutter_large_F";
+			atlOffset=0.10000038;
 		};
-		class Item11
+		class Item9
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10132,7 +10041,7 @@ class Mission
 			id=96;
 			type="fow_ab_us_60mm_m2_HE";
 		};
-		class Item12
+		class Item10
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10149,7 +10058,7 @@ class Mission
 			type="fow_ab_us_60mm_m2_ILL";
 			atlOffset=3.0517578e-005;
 		};
-		class Item13
+		class Item11
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10165,7 +10074,7 @@ class Mission
 			id=98;
 			type="fow_ab_us_60mm_m2_SMOKE";
 		};
-		class Item14
+		class Item12
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10181,7 +10090,7 @@ class Mission
 			id=99;
 			type="fow_w_m2_mortar_adv_usmc";
 		};
-		class Item15
+		class Item13
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10197,7 +10106,7 @@ class Mission
 			id=100;
 			type="fow_ab_us_60mm_m2_HE";
 		};
-		class Item16
+		class Item14
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10213,7 +10122,7 @@ class Mission
 			id=101;
 			type="fow_ab_us_60mm_m2_HE";
 		};
-		class Item17
+		class Item15
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10229,7 +10138,7 @@ class Mission
 			id=102;
 			type="fow_ab_us_60mm_m2_ILL";
 		};
-		class Item18
+		class Item16
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10246,7 +10155,7 @@ class Mission
 			type="fow_ab_us_60mm_m2_HE";
 			atlOffset=3.0517578e-005;
 		};
-		class Item19
+		class Item17
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10262,7 +10171,7 @@ class Mission
 			id=104;
 			type="fow_ab_us_60mm_m2_SMOKE";
 		};
-		class Item20
+		class Item18
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10279,7 +10188,7 @@ class Mission
 			type="fow_ab_us_60mm_m2_HE";
 			atlOffset=0.013275146;
 		};
-		class Item21
+		class Item19
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10296,7 +10205,7 @@ class Mission
 			type="fow_ab_us_60mm_m2_ILL";
 			atlOffset=0.0036010742;
 		};
-		class Item22
+		class Item20
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10312,7 +10221,7 @@ class Mission
 			id=107;
 			type="fow_ab_us_60mm_m2_SMOKE";
 		};
-		class Item23
+		class Item21
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10328,7 +10237,7 @@ class Mission
 			id=108;
 			type="fow_w_m2_mortar_adv_usmc";
 		};
-		class Item24
+		class Item22
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10345,7 +10254,7 @@ class Mission
 			type="fow_ab_us_60mm_m2_HE";
 			atlOffset=0.013214111;
 		};
-		class Item25
+		class Item23
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10362,7 +10271,7 @@ class Mission
 			type="fow_ab_us_60mm_m2_HE";
 			atlOffset=0.013275146;
 		};
-		class Item26
+		class Item24
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10378,7 +10287,7 @@ class Mission
 			id=111;
 			type="fow_ab_us_60mm_m2_ILL";
 		};
-		class Item27
+		class Item25
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10395,7 +10304,7 @@ class Mission
 			type="fow_ab_us_60mm_m2_HE";
 			atlOffset=0.013275146;
 		};
-		class Item28
+		class Item26
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10412,7 +10321,7 @@ class Mission
 			type="fow_ab_us_60mm_m2_SMOKE";
 			atlOffset=0.0036010742;
 		};
-		class Item29
+		class Item27
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -10521,6 +10430,275 @@ class Mission
 				};
 				nAttributes=5;
 			};
+		};
+		class Item28
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={102.09,10.04562,2634.1299};
+				angles[]={0,0.34149113,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{[west, mhq2] call BIS_fnc_addRespawnPosition;}";
+				name="mhq2";
+			};
+			id=122;
+			type="LIB_Zis5v_med_w";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="Enh_onKilledEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="Enh_featureType";
+					expression="_this setFeatureType (parseNumber _value)";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="Enh_onRespawnEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit"",""Medikit""],[50,5]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="Enh_onDamagedEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ace_isMedicalVehicle";
+					expression="_this setVariable [""ace_medical_medicClass"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=6;
+			};
+		};
+		class Item29
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={97.510368,9.5986395,2635.1987};
+				angles[]={0,0.32843608,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{[west, mhq3] call BIS_fnc_addRespawnPosition;}";
+				name="mhq3";
+			};
+			id=123;
+			type="LIB_US_GMC_Ambulance_w";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="Enh_onKilledEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="Enh_featureType";
+					expression="_this setFeatureType (parseNumber _value)";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="Enh_onRespawnEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit"",""Medikit""],[50,5]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="Enh_onDamagedEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item30
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={103.2907,8.824707,2617.459};
+				angles[]={-0,5.192173,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=124;
+			type="snowman";
 		};
 	};
 };
