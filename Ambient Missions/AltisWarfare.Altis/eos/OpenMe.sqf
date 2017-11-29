@@ -26,3 +26,4 @@ null = [["EOSinf_1","EOSinf_2"],[3,1],[2,3,75],[0,0],[0],[0],[0,0],[0,0,350,EAST
 null = [["EOSmot_1","EOSmot_2"],[0,0],[0,0],[3,1,90],[2,60],[0],[1,0,90],[0,0,350,EAST,FALSE]] call EOS_Spawn;
 null = [["BAS_zone_1"],[0,1],[0,2],[0],[1,2],[0,0,EAST,TRUE],[0,2,120,TRUE,FALSE]] call Bastion_Spawn;
 null = [["EOSzone1"],[2,1],[2,2],[1,3],[1],[2],[1,2],[1,0,35,WEST,FALSE,FALSE]] call EOS_Spawn;
+null = [["b1","b2"],[15,1],[20,2],[10,3],[5],[0],[2,2],[1,0,1000,WEST,FALSE,FALSE]] call EOS_Spawn;
