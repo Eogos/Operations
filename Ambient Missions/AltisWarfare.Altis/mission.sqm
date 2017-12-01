@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=507;
+		nextID=551;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=35;
+		nextID=38;
 	};
 	class Camera
 	{
-		pos[]={26684.463,73.99575,24525.535};
-		dir[]={0.54374731,-0.34494817,0.7652421};
-		up[]={0.19986421,0.93822229,0.28129539};
-		aside[]={0.81538802,3.810841e-006,-0.57934266};
+		pos[]={26682.631,52.7994,24561.34};
+		dir[]={0.62404138,-0.36241066,0.69244081};
+		up[]={0.24272186,0.93154949,0.26933518};
+		aside[]={0.74305046,2.4189794e-006,-0.66962951};
 	};
 };
 binarizationWanted=0;
@@ -130,13 +130,14 @@ addons[]=
 	"A3_Armor_F_Gamma_MBT_01",
 	"acre_sys_intercom",
 	"A3_Armor_F_Beta_APC_Tracked_01",
-	"ace_repair"
+	"ace_repair",
+	"A3_Structures_F_Exp_Naval_Piers"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=84;
+		items=85;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -673,6 +674,13 @@ class AddonsMetaData
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
+		class Item84
+		{
+			className="A3_Structures_F_Exp";
+			name="Arma 3 Apex - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=580512;
@@ -732,7 +740,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=124;
+		items=126;
 		class Item0
 		{
 			dataType="Layer";
@@ -19809,13 +19817,13 @@ class Mission
 		class Item9
 		{
 			dataType="Marker";
-			position[]={26721.965,0,24636.648};
+			position[]={26722.984,0,24635.477};
 			name="VVS_car_1";
 			text="Car Factory";
 			type="b_motor_inf";
 			angle=136.916;
 			id=262;
-			atlOffset=-19.787216;
+			atlOffset=-19.818924;
 		};
 		class Item10
 		{
@@ -19860,13 +19868,13 @@ class Mission
 		class Item11
 		{
 			dataType="Marker";
-			position[]={26780.197,0,24679.098};
+			position[]={26785.105,0,24674.018};
 			name="VVS_air_1";
 			text="Air Factory";
 			type="b_plane";
 			angle=131.52;
 			id=264;
-			atlOffset=-19.775583;
+			atlOffset=-20.081875;
 		};
 		class Item12
 		{
@@ -19900,7 +19908,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="#hideLocally";
+					expression="_this setVariable [""#hideLocally"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item13
@@ -21577,7 +21604,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=-10;
+							value=-20;
 						};
 					};
 				};
@@ -21710,7 +21737,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -21824,7 +21851,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=1;
+							value=0;
 						};
 					};
 				};
@@ -21881,7 +21908,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=0;
+							value=-5;
 						};
 					};
 				};
@@ -21957,7 +21984,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=20;
+							value=35;
 						};
 					};
 				};
@@ -21976,7 +22003,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=1;
+							value=0;
 						};
 					};
 				};
@@ -24500,7 +24527,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=0;
+							value=5;
 						};
 					};
 				};
@@ -24538,7 +24565,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=5;
+							value=4;
 						};
 					};
 				};
@@ -24648,7 +24675,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="60";
+							value="30";
 						};
 					};
 				};
@@ -25137,7 +25164,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="60";
+							value="30";
 						};
 					};
 				};
@@ -25569,7 +25596,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="500";
+							value="200";
 						};
 					};
 				};
@@ -25906,7 +25933,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="3500";
+							value="5000";
 						};
 					};
 				};
@@ -27187,7 +27214,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="200";
+							value="100";
 						};
 					};
 				};
@@ -27429,7 +27456,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=6;
+							value=4;
 						};
 					};
 				};
@@ -27480,6 +27507,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={26908.061,24.318645,24573.369};
+				angles[]={0.035984326,5.3922758,0};
 			};
 			id=362;
 			type="ALiVE_SUP_TRANSPORT";
@@ -27500,7 +27528,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="RELAY ONE";
+							value="RELAY TWO";
 						};
 					};
 				};
@@ -27538,7 +27566,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="RHS_UH60M_ESSS2";
+							value="CUP_B_UH60M_US";
 						};
 					};
 				};
@@ -27576,7 +27604,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="";
+							value="this call ace_fastroping_fnc_equipFRIES;";
 						};
 					};
 				};
@@ -27608,7 +27636,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={26919.293,24.006592,24586.244};
-				angles[]={0.011995304,0,0.011995304};
+				angles[]={0.011995304,5.3608732,0.011995304};
 			};
 			id=369;
 			type="ALiVE_SUP_TRANSPORT";
@@ -27667,7 +27695,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="RHS_UH60M_ESSS2";
+							value="CUP_B_UH60M_US";
 						};
 					};
 				};
@@ -27705,7 +27733,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="";
+							value="this call ace_fastroping_fnc_equipFRIES;";
 						};
 					};
 				};
@@ -32653,7 +32681,7 @@ class Mission
 			};
 			id=500;
 			type="USMC_WarfareBUAVterminal";
-			atlOffset=0.0020008087;
+			atlOffset=0.0020027161;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -32701,8 +32729,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={27605.785,2.1978815,24571.139};
-						angles[]={0,0.77703804,0};
+						position[]={26514.262,0.78735191,24671.209};
+						angles[]={0,1.7910451,0};
 					};
 					side="West";
 					flags=7;
@@ -32710,8 +32738,8 @@ class Mission
 					{
 						init="call{this disableAI ""PATH""; this allowDamage false; this addAction[""Virtual Vehicle Spawner"",VVS_fnc_openVVS,[""VVS_ship_1"",""Ship""]];}";
 					};
-					id=505;
-					type="B_diver_F";
+					id=517;
+					type="B_officer_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -32767,7 +32795,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male02ENG";
+									value="Male04ENG";
 								};
 							};
 						};
@@ -32786,7 +32814,7 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.94999999;
+									value=0.95999998;
 								};
 							};
 						};
@@ -32852,12 +32880,47 @@ class Mission
 		class Item123
 		{
 			dataType="Marker";
-			position[]={27613.775,0,24545.539};
+			position[]={26503.691,0,24671.438};
 			name="VVS_ship_1";
 			text="Naval Factory";
 			type="b_naval";
+			angle=281.59219;
 			id=506;
-			atlOffset=3.9763477;
+			atlOffset=1.894331;
+		};
+		class Item124
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={26507.547,-18.944941,24674.703};
+				angles[]={0,4.9187455,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=546;
+			type="Land_PierWooden_02_16m_F";
+			atlOffset=-0.67154634;
+		};
+		class Item125
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={26497.305,-18.917662,24676.867};
+				angles[]={0,4.9197011,0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=550;
+			type="Land_PierWooden_02_ladder_F";
+			atlOffset=2.690886;
 		};
 	};
 	class Connections
