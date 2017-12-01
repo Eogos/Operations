@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=38;
+		nextID=41;
 	};
 	class Camera
 	{
@@ -737,6 +737,49 @@ class Mission
 		minute=0;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
+		class CustomAttributes
+		{
+			name="Intel";
+			class Attribute0
+			{
+				property="Enh_timeMultiplier";
+				expression="if (!is3DEN && isServer) then {setTimeMultiplier _value}";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"SCALAR"
+							};
+						};
+						value=4;
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="Enh_disableGrass";
+				expression="if (((parseNumber _value) > 0) && !is3DEN) then {setTerrainGrid (parseNumber _value)}";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="-1";
+					};
+				};
+			};
+			nAttributes=2;
+		};
 	};
 	class Entities
 	{
