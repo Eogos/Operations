@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=528;
+		nextID=531;
 	};
 	class LayerIndexProvider
 	{
-		nextID=18;
+		nextID=21;
 	};
 	class Camera
 	{
-		pos[]={4539.4512,140.7975,4049.7083};
-		dir[]={-0.53422928,-0.64843029,0.54250687};
-		up[]={-0.45501176,0.76122612,0.46206352};
-		aside[]={0.71257716,6.192713e-007,0.70170504};
+		pos[]={4501.9556,140.7975,4128.397};
+		dir[]={-0.40454465,-0.8224898,0.40003872};
+		up[]={-0.58484614,0.56876111,0.57833385};
+		aside[]={0.70319033,5.5937562e-007,0.71111155};
 	};
 };
 binarizationWanted=0;
@@ -116,13 +116,16 @@ addons[]=
 	"A3_Modules_F_Curator_Intel",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Static_F_Mortar_01",
-	"A3_Structures_F_Civ_InfoBoards"
+	"A3_Structures_F_Civ_InfoBoards",
+	"alive_main",
+	"alive_amb_civ_placement",
+	"alive_amb_civ_population"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=74;
+		items=77;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -599,6 +602,24 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item74
+		{
+			className="ALiVE_main";
+			name="alive_main";
+			author="ALiVE Mod Team";
+		};
+		class Item75
+		{
+			className="ALiVE_amb_civ_placement";
+			name="alive_amb_civ_placement";
+			author="ALiVE Mod Team";
+		};
+		class Item76
+		{
+			className="ALiVE_amb_civ_population";
+			name="alive_amb_civ_population";
+			author="ALiVE Mod Team";
+		};
 	};
 };
 randomSeed=14965928;
@@ -900,7 +921,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=323;
+		items=325;
 		class Item0
 		{
 			dataType="Logic";
@@ -43570,14 +43591,598 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={4449.0122,14.200691,4191.9819};
-				angles[]={6.183517,0,0.051952176};
+				position[]={4451.3848,16.637068,4195.1987};
+				angles[]={0.041309625,0,0.039979152};
 			};
-			name="SERVER";
-			init="call{null=[] execVM ""cos/cosInit.sqf"";}";
-			id=527;
-			type="Logic";
-			atlOffset=0.357234;
+			id=528;
+			type="ALiVE_require";
+			atlOffset=0.44516563;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ALiVE_require_ALiVE_GC_THRESHHOLD";
+					expression="_this setVariable ['ALiVE_GC_THRESHHOLD',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="100";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ALiVE_require_ALiVE_GC_INTERVAL";
+					expression="_this setVariable ['ALiVE_GC_INTERVAL',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="300";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ALiVE_require_ALiVE_DISABLEADMINACTIONS";
+					expression="_this setVariable ['ALiVE_DISABLEADMINACTIONS',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ALiVE_require_ALiVE_Versioning";
+					expression="_this setVariable ['ALiVE_Versioning',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="warning";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ALiVE_require_debug";
+					expression="_this setVariable ['debug',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ALiVE_require_ALiVE_PAUSEMODULES";
+					expression="_this setVariable ['ALiVE_PAUSEMODULES',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ALiVE_require_ALiVE_GC_INDIVIDUALTYPES";
+					expression="_this setVariable ['ALiVE_GC_INDIVIDUALTYPES',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ALiVE_require_ALiVE_TABLET_MODEL";
+					expression="_this setVariable ['ALiVE_TABLET_MODEL',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Tablet01";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ALiVE_require_ALiVE_DISABLEMARKERS";
+					expression="_this setVariable ['ALiVE_DISABLEMARKERS',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ALiVE_require_ALiVE_DISABLESAVE";
+					expression="_this setVariable ['ALiVE_DISABLESAVE',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ALiVE_require_ALiVE_AI_DISTRIBUTION";
+					expression="_this setVariable ['ALiVE_AI_DISTRIBUTION',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				nAttributes=11;
+			};
+		};
+		class Item323
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4453.4375,17.489025,4196.1128};
+			};
+			id=529;
+			type="ALiVE_amb_civ_placement";
+			atlOffset=0.35339928;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ALiVE_amb_civ_placement_taor";
+					expression="_this setVariable ['taor',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ALiVE_amb_civ_placement_sizeFilter";
+					expression="_this setVariable ['sizeFilter',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="160";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ALiVE_amb_civ_placement_blacklist";
+					expression="_this setVariable ['blacklist',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ALiVE_amb_civ_placement_debug";
+					expression="_this setVariable ['debug',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ALiVE_amb_civ_placement_ambientVehicleFaction";
+					expression="_this setVariable ['ambientVehicleFaction',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="CIV_F";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ALiVE_amb_civ_placement_faction";
+					expression="_this setVariable ['faction',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="CIV_F";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ALiVE_amb_civ_placement_placementMultiplier";
+					expression="_this setVariable ['placementMultiplier',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0.5";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ALiVE_amb_civ_placement_ambientVehicleAmount";
+					expression="_this setVariable ['ambientVehicleAmount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0.6";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ALiVE_amb_civ_placement_priorityFilter";
+					expression="_this setVariable ['priorityFilter',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="10";
+						};
+					};
+				};
+				nAttributes=9;
+			};
+		};
+		class Item324
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4453.999,15.234567,4193.0542};
+				angles[]={0.0066682254,0,0.039977662};
+			};
+			id=530;
+			type="ALiVE_amb_civ_population";
+			atlOffset=0.36057568;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ALiVE_amb_civ_population_ambientCivilianRoles";
+					expression="_this setVariable ['ambientCivilianRoles',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[""major"",""priest"",""politician""]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ALiVE_amb_civ_population_debug";
+					expression="_this setVariable ['debug',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ALiVE_amb_civ_population_hostilityEast";
+					expression="_this setVariable ['hostilityEast',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ALiVE_amb_civ_population_spawnTypeJetRadius";
+					expression="_this setVariable ['spawnTypeJetRadius',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ALiVE_amb_civ_population_hostilityWest";
+					expression="_this setVariable ['hostilityWest',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="30";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ALiVE_amb_civ_population_spawnTypeHeliRadius";
+					expression="_this setVariable ['spawnTypeHeliRadius',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="900";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ALiVE_amb_civ_population_activeLimiter";
+					expression="_this setVariable ['activeLimiter',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="25";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ALiVE_amb_civ_population_spawnRadius";
+					expression="_this setVariable ['spawnRadius',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="900";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ALiVE_amb_civ_population_hostilityIndep";
+					expression="_this setVariable ['hostilityIndep',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				nAttributes=9;
+			};
 		};
 	};
 	class Connections
