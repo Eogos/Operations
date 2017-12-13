@@ -5,30 +5,34 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=10;
+	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=40;
+		nextID=217;
 	};
 	class Camera
 	{
-		pos[]={1649.6682,31.237955,6124.8125};
-		dir[]={-0.66153055,-0.45468527,-0.59654349};
-		up[]={-0.33776495,0.89051294,-0.30457911};
-		aside[]={-0.6697771,1.3246608e-006,0.74274707};
+		pos[]={1635.7294,47.225277,6186.5674};
+		dir[]={-0.018119911,-0.44977951,-0.89309269};
+		up[]={-0.0091362363,0.89275193,-0.44987029};
+		aside[]={-0.99994648,-3.623054e-007,0.020298442};
 	};
 };
 binarizationWanted=0;
 addons[]=
 {
 	"A3_Structures_F_Training",
-	"fow_characters_c"
+	"fow_characters_c",
+	"fow_structures_p_c",
+	"fow_statics_c",
+	"fow_cannons_c",
+	"A3_Modules_F_Curator_Flares"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=2;
+		items=6;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -40,6 +44,28 @@ class AddonsMetaData
 		{
 			className="fow_characters_c";
 			name="fow_characters_c";
+		};
+		class Item2
+		{
+			className="fow_structures_p_c";
+			name="fow_structures_p_c";
+		};
+		class Item3
+		{
+			className="fow_statics_c";
+			name="fow_statics_c";
+		};
+		class Item4
+		{
+			className="fow_cannons_c";
+			name="fow_cannons_c";
+		};
+		class Item5
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -64,19 +90,42 @@ class Mission
 		forecastLightnings=0.1;
 		wavesForced=1;
 		windForced=1;
-		year=1942;
+		year=2035;
 		month=8;
 		day=7;
-		hour=10;
-		minute=0;
+		hour=18;
 		startFogBase=200;
 		forecastFogBase=200;
 		startFogDecay=0.0099999998;
 		forecastFogDecay=0.0099999998;
+		class CustomAttributes
+		{
+			name="Intel";
+			class Attribute0
+			{
+				property="Enh_disableGrass";
+				expression="if (((parseNumber _value) > 0) && !is3DEN) then {setTerrainGrid (parseNumber _value)}";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="-1";
+					};
+				};
+			};
+			nAttributes=1;
+		};
 	};
 	class Entities
 	{
-		items=19;
+		items=34;
 		class Item0
 		{
 			dataType="Object";
@@ -187,7 +236,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1620.9921,1.8732682,6104.7832};
+						position[]={1631.2507,1.8752805,6088.0073};
+						angles[]={0,1.1734815,0};
 					};
 					side="Independent";
 					flags=7;
@@ -197,14 +247,12 @@ class Mission
 					};
 					id=11;
 					type="fow_s_usmc_officer";
-					atlOffset=5.7220459e-006;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=10;
-			atlOffset=5.7220459e-006;
 		};
 		class Item7
 		{
@@ -348,12 +396,13 @@ class Mission
 				angles[]={0,5.2085876,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
 			id=35;
 			type="Dirthump_3_F";
-			atlOffset=0.51991057;
+			atlOffset=0.1512959;
 		};
 		class Item16
 		{
@@ -369,7 +418,7 @@ class Mission
 			};
 			id=36;
 			type="Dirthump_3_F";
-			atlOffset=1.0803847;
+			atlOffset=0.84651661;
 		};
 		class Item17
 		{
@@ -403,6 +452,283 @@ class Mission
 			id=38;
 			type="Dirthump_3_F";
 			atlOffset=-0.98448634;
+		};
+		class Item19
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1637.4725,1.4668517,6059.5659};
+				angles[]={-0,4.1652603,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=64;
+			type="fow_p_defenceposition_04_beach";
+		};
+		class Item20
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1629.171,1.1245844,6073.0542};
+				angles[]={0,4.2977686,6.2731848};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=66;
+			type="fow_p_defenceposition_05_beach";
+			atlOffset=0.019000053;
+		};
+		class Item21
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1638.6979,3.1647367,6059.998};
+				angles[]={0,1.1865911,-0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=67;
+			type="fow_w_m1919a6_deployed_middle_usmc_camo01";
+		};
+		class Item22
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1631.1606,1.1033828,6073.6934};
+				angles[]={-0,1.1168188,6.2731905};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=83;
+			type="fow_w_m1919a6_deployed_high_usmc_camo01";
+		};
+		class Item23
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1643.469,1.3857017,6052.3984};
+				angles[]={6.2581916,4.0267682,6.2731848};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=115;
+			type="fow_p_defenceposition_02";
+		};
+		class Item24
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1619.2247,2.1717701,6096.9243};
+				angles[]={0,4.0845361,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=120;
+			type="fow_p_defenceposition_03_beach";
+			atlOffset=0.18642402;
+		};
+		class Item25
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1608.183,2.4432459,6108.396};
+				angles[]={0,3.9649866,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=122;
+			type="fow_p_defenceposition_05_beach";
+			atlOffset=0.28500032;
+		};
+		class Item26
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1602.1053,1.5564969,6116.5938};
+				angles[]={6.2531939,3.44173,6.1884694};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=124;
+			type="fow_p_logbunker01";
+			atlOffset=-0.57824254;
+		};
+		class Item27
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1602.9622,2.6348729,6118.5269};
+				angles[]={6.2531939,0.3547838,6.1884694};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=136;
+			type="fow_w_m1919_tripod_usmc_camo01";
+		};
+		class Item28
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1615.7421,1.6697851,6160.6226};
+				angles[]={6.2581692,0.94709939,6.0251532};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=137;
+			type="Land_fow_wreck_type95_HaGo";
+			atlOffset=0.72762322;
+		};
+		class Item29
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1665.1392,0.32431996,6057.2163};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=149;
+			type="Land_BG42_KI61_01";
+			atlOffset=0.68464601;
+		};
+		class Item30
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1623.8934,2.8191156,6078.7563};
+				angles[]={6.2232571,0.49855566,6.183517};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=151;
+			type="fow_w_6Pounder_usmc";
+			atlOffset=-0.0090019703;
+		};
+		class Item31
+		{
+			dataType="Trigger";
+			position[]={1849.2826,5.6284657,6284.3408};
+			class Attributes
+			{
+				activationBy="WEST";
+				effectMusic="fow_Invasion";
+			};
+			id=159;
+			type="EmptyDetectorAreaR50";
+		};
+		class Item32
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1633.4117,0.56346506,6099.0049};
+				angles[]={0.074860021,0,5.9420633};
+			};
+			id=160;
+			type="ModuleFlare_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleFlare_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="F_40mm_White";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item33
+		{
+			dataType="Trigger";
+			position[]={1780.988,7.257061,6215.3271};
+			class Attributes
+			{
+				sizeA=25;
+				sizeB=25;
+				repeatable=1;
+				activationBy="WEST";
+			};
+			id=163;
+			type="EmptyDetectorAreaR50";
+			atlOffset=4.7683716e-007;
+		};
+	};
+	class Connections
+	{
+		class LinkIDProvider
+		{
+			nextID=1;
+		};
+		class Links
+		{
+			items=1;
+			class Item0
+			{
+				linkID=0;
+				item0=163;
+				item1=160;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
 		};
 	};
 };
