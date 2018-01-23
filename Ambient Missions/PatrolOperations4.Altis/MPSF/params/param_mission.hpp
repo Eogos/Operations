@@ -1,7 +1,7 @@
 class MPSFMissionLimit {
 	title = "Mission Limit on Operations";
 	values[] = {1,3,5,7,9,0};
-	default = 1;
+	default = 0;
 	texts[] = {"1 Op","3 Ops","5 Ops","7 Ops","9 Ops","Unlimited Ops"};
 	function = "MPSF_Param_fnc_setMissionLimit";
 };
@@ -21,16 +21,16 @@ class MPSFOperationType {
 	default = 0;
 };
 
-/* class MPSFBaseSelection {
+ class MPSFBaseSelection {
 	title = "Base of Operations";
 	values[] = {0,1,2,3};
 	texts[]={"Safe Base Bravo (SthEast)","Safe Base Charlie (NthEast)","Safe Base Delta (NthWst)","USS Freedom (Aircraft Carrier)"};
-	default = 1;
-}; */
+	default = 1,3;
+}; 
 
 class PO4_Mission_Limit {
 	title = "Tour of Duty Duration";
 	values[] = {0,1,3,5,7,9};
 	texts[] = {"Infinite","1 Operation","3 Ops","5 Ops","7 Ops","9 Ops"};
-	default = 3;
+	default = 0;
 };
