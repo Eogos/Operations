@@ -126,7 +126,7 @@ class CfgMissionTasks {
 };
 
 class CfgRespawnMP {
-	enabled = 1;
+	enabled = 0;
 	MHQLimit = 3;
 	MHQvehicles[] = {
 		"B_Truck_01_box_F","B_MRAP_01_F"
