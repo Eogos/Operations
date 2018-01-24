@@ -145,7 +145,7 @@ class CfgRespawnMP {
 };
 
 class CfgReviveMP {
-	enabled = 1;
+	enabled = 0;
 	enableSkipBleedout = 1;
 	RequireItems[] = {"FirstAidKit","MedKit"};
 	RequireItemsFullHeal[] = {"MedKit"};
