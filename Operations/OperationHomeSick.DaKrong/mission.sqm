@@ -8,22 +8,22 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1124;
+		nextID=1191;
 	};
 	class MarkerIDProvider
 	{
-		nextID=3;
+		nextID=8;
 	};
 	class LayerIndexProvider
 	{
-		nextID=9;
+		nextID=10;
 	};
 	class Camera
 	{
-		pos[]={1659.3307,18.510052,2172.804};
-		dir[]={0.48268893,-0.42419988,0.76631457};
-		up[]={0.22617511,0.90546989,0.35907066};
-		aside[]={0.84620363,6.3526386e-007,-0.53301382};
+		pos[]={3730.5808,108.60213,1342.6442};
+		dir[]={0.35056922,-0.32851276,0.87716538};
+		up[]={0.12199614,0.94437551,0.30524853};
+		aside[]={0.92869216,-1.5884289e-006,-0.37116629};
 	};
 };
 binarizationWanted=0;
@@ -62,13 +62,16 @@ addons[]=
 	"uns_bunkers",
 	"uns_boats_c",
 	"A3_Structures_F_Civ_Dead",
-	"UNS_Buildings"
+	"UNS_Buildings",
+	"uns_men_VC_regional",
+	"uns_men_VC_recon",
+	"uns_static_c"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=30;
+		items=33;
 		class Item0
 		{
 			className="uns_men_US_6SFG";
@@ -240,6 +243,21 @@ class AddonsMetaData
 		{
 			className="UNS_Buildings";
 			name="UNS_Buildings";
+		};
+		class Item30
+		{
+			className="uns_men_VC_regional";
+			name="uns_men_VC_regional";
+		};
+		class Item31
+		{
+			className="uns_men_VC_recon";
+			name="uns_men_VC_recon";
+		};
+		class Item32
+		{
+			className="uns_static_c";
+			name="uns_static_c";
 		};
 	};
 };
@@ -14860,7 +14878,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=59;
+		items=66;
 		class Item0
 		{
 			dataType="Group";
@@ -25700,6 +25718,168 @@ class Mission
 			};
 			id=1122;
 			atlOffset=1.8130035;
+		};
+		class Item59
+		{
+			dataType="Marker";
+			position[]={1209.384,7.7410002,4787.5249};
+			name="EBL_1";
+			text="Enigma Blacklist Marker";
+			markerType="RECTANGLE";
+			type="rectangle";
+			a=395.94699;
+			b=134.62199;
+			id=1124;
+			atlOffset=5.028007;
+		};
+		class Item60
+		{
+			dataType="Marker";
+			position[]={3672.3101,45.067001,1192.225};
+			name="EBL_2";
+			text="Enigma Blacklist Marker";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=131.85201;
+			b=126.662;
+			id=1125;
+			atlOffset=-73.060799;
+		};
+		class Item61
+		{
+			dataType="Marker";
+			position[]={1665.99,13.998,2177.136};
+			name="EBL_3";
+			text="Enigma Blacklist Marker";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=200.116;
+			b=131.69701;
+			id=1126;
+			atlOffset=15.802201;
+		};
+		class Item62
+		{
+			dataType="Marker";
+			position[]={934.38397,71.372002,2112.425};
+			name="EBL_4";
+			text="Enigma Blacklist Marker";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=82.557999;
+			b=115.911;
+			id=1128;
+			atlOffset=11.334068;
+		};
+		class Item63
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3749.604,101.19378,1359.6156};
+						angles[]={0.095413655,4.4846048,6.2517495};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=1184;
+					type="uns_men_VC_regional_Rmg";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3729.6533,100.05066,1362.506};
+						angles[]={0.17059456,2.0688272,0.18384117};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=1190;
+					type="uns_men_VC_recon_RF1";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=1184;
+						item1=1183;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=1190;
+						item1=1189;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=1182;
+		};
+		class Item64
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3749.6733,101.18717,1359.6902};
+				angles[]={0.095413655,4.4846048,6.2517495};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+			};
+			id=1183;
+			type="uns_pk_bunker_low_VC";
+		};
+		class Item65
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3730.0308,100.004,1362.834};
+				angles[]={0.17059456,2.0688272,0.18384117};
+			};
+			side="East";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1189;
+			type="uns_spiderhole_leanto_VC";
 		};
 	};
 	class Connections
