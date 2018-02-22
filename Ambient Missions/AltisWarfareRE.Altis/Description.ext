@@ -1,0 +1,166 @@
+author="Eogos";
+OnLoadName = "Altis Warfare";
+OnLoadMission = "This is War!"; //Text in the mission screen
+overviewText = "This is War!"; //Mission Overview in mission select screen
+onLoadIntro = "This is War!";
+onLoadIntroTime = 1; //Time & Date for intro loading 1/0
+onLoadMissionTime =1; //Time and Date for mission loading
+
+//Game Info
+class Header
+{
+	gameType = COOP; //Game Type:  COOP, DM, TDM, CTF, SC, CTI, RPG, Sandbox, Seize, Defend.
+	minplayers = 1;
+	maxplayers = 43;
+};
+
+//Respawn
+respawn = "BASE";  //NONE = No  Respawn, BIRD = Seagull, INSTANT = where you died, BASE = Marker called respawn_west/respawn_east, etc
+respawndelay = 5;  // Respawn Delay Timer
+respawnTemplatesWest[] = {"MenuPosition"};//respawn on module positions
+
+//Server
+enableDebugConsole = 1; // Enable Debug Console in game for Admins Only
+disabledAI = 1; // Disable AI from taking player slots
+disableChannels[] = {5,6}; //0 - Global, 1 - Side, 2 - Command, 3 - Group, 4 - Vehicle, 5 - Direct, 6 - System
+aiKills = 0; //disable AI score
+joinUnassigned = 1; //if set to 0, players join the side with the lowest number of people
+
+#include "VVS\menu.h"
+#include "bon_recruit_units\dialog\common.hpp"
+#include "bon_recruit_units\dialog\recruitment.hpp"
+
+class CfgFunctions
+{
+	#include "VVS\Functions.h"
+};
+
+class CfgSounds
+{
+	class spark1
+	{
+		name = "spark1";
+		sound[] = {"\sound\spark1.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class spark11
+	{
+		name = "spark11";
+		sound[] = {"\sound\spark11.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class spark2
+	{
+		name = "spark2";
+		sound[] = {"\sound\spark2.ogg", db+30, 1};
+		titles[] = {};
+	};		
+	class spark22
+	{
+		name = "spark22";
+		sound[] = {"\sound\spark22.ogg", db+30, 1};
+		titles[] = {};
+	};	
+	class spark3	
+	{
+		name = "spark3";
+		sound[] = {"\sound\spark3.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class spark4	
+	{
+		name = "spark4";
+		sound[] = {"\sound\spark4.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class spark5	
+	{
+		name = "spark5";
+		sound[] = {"\sound\spark5.ogg", db+30, 1};
+		titles[] = {};
+	};	
+	class metalic1	
+	{
+		name = "metalic1";
+		sound[] = {"\sound\metalic1.ogg", db+25, 1};
+		titles[] = {};
+	};
+	class metalic2	
+	{
+		name = "metalic2";
+		sound[] = {"\sound\metalic2.ogg", db+25, 1};
+		titles[] = {};
+	};
+	class metalic3	
+	{
+		name = "metalic3";
+		sound[] = {"\sound\metalic3.ogg", db+35, 1};
+		titles[] = {};
+	};
+	class metalic4	
+	{
+		name = "metalic4";
+		sound[] = {"\sound\metalic4.ogg", db+35, 1};
+		titles[] = {};
+	};
+	class metalic5	
+	{
+		name = "metalic5";
+		sound[] = {"\sound\metalic5.ogg", db+20, 1};
+		titles[] = {};
+	};
+	class metalic6
+	{
+		name = "metalic6";
+		sound[] = {"\sound\metalic6.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class metalic7
+	{
+		name = "metalic7";
+		sound[] = {"\sound\metalic7.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class sound_twin
+	{
+		name = "sound_twin";
+		sound[] = {"\sound\sound_twin.ogg", 1, 1};
+		titles[] = {};
+	};	
+	class vum
+	{
+		name = "vum";
+		sound[] = {"\sound\vum.ogg", db+10, 1};
+		titles[] = {};
+	};
+	class up_impact
+	{
+		name = "up_impact";
+		sound[] = {"\sound\up_impact.ogg", db+20, 1};
+		titles[] = {};
+	};
+	class ecou
+	{
+		name = "ecou";
+		sound[] = {"\sound\ecou.ogg", db+20, 1};
+		titles[] = {};
+	};		
+	class oscilatie
+	{
+		name = "oscilatie";
+		sound[] = {"\sound\oscilatie.ogg", db+15, 1};
+		titles[] = {};
+	};	
+	class eco_ray	
+	{
+		name = "eco_ray";
+		sound[] = {"\sound\eco_ray.ogg", db+3, 1};
+		titles[] = {};
+	};
+	class earthquakes	
+	{
+		name = "earthquakes";
+		sound[] = {"\sound\earthquakes.ogg", 1, 1};
+		titles[] = {};
+	};		
+};
