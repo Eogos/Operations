@@ -284,7 +284,7 @@ class HG_DefaultShop // HG_DefaultShop is just a placeholder for testing purpose
 			{"hlc_rifle_akmgl",1000,"true"},
 			{"hlc_rifle_aks74",1000,"true"},
 			{"hlc_rifle_aks74_GL",1250,"true"},
-			{"CUP_arifle_AKS_Gold",2250000,"true"}
+			{"CUP_arifle_AKS_Gold",2500000,"true"}
 		};
 	};
 	
