@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1837;
+		nextID=1839;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=78;
+		nextID=84;
 	};
 	class Camera
 	{
-		pos[]={5254.9932,254.81366,20969.871};
-		dir[]={-0.071958788,-0.9772715,0.20003475};
-		up[]={-0.33077088,0.21228445,0.91950536};
-		aside[]={0.94107777,4.5181951e-006,0.33853102};
+		pos[]={5153.4072,274.88507,20989.328};
+		dir[]={0.55517983,-0.82658273,-0.093777329};
+		up[]={0.81508106,0.5627166,-0.13768381};
+		aside[]={-0.16658092,3.0548254e-006,-0.98614907};
 	};
 };
 binarizationWanted=0;
@@ -154,13 +154,14 @@ addons[]=
 	"A3_Boat_F_Jets_Carrier_01",
 	"A3_Air_F_Heli_Heli_Transport_03",
 	"A3_Air_F_Jets_Plane_Fighter_01",
-	"A3_Modules_F_Multiplayer"
+	"A3_Modules_F_Multiplayer",
+	"A3_Structures_F_Ind_Cargo"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=102;
+		items=103;
 		class Item0
 		{
 			className="ace_mk6mortar";
@@ -815,6 +816,13 @@ class AddonsMetaData
 		{
 			className="A3_Air_F_Jets";
 			name="Arma 3 Jets - Aircraft";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item102
+		{
+			className="A3_Structures_F_Ind";
+			name="Arma 3 - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -15533,7 +15541,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=2;
+		items=3;
 		class Item0
 		{
 			dataType="Layer";
@@ -20136,7 +20144,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
-								init="call{this addAction [""Open BIS Arsenal"", {[""Open"",true] spawn BIS_fnc_arsenal}];" \n "[_box, true] call ace_arsenal_fnc_initBox;}";
+								init="call{this addAction [""Open BIS Arsenal"", {[""Open"",true] spawn BIS_fnc_arsenal}];" \n "}";
 							};
 							id=1432;
 							type="B_Slingload_01_Cargo_F";
@@ -47050,36 +47058,36 @@ class Mission
 					name="Modules";
 					class Entities
 					{
-						items=19;
+						items=20;
 						class Item0
 						{
 							dataType="Logic";
 							class PositionInfo
 							{
-								position[]={5259.2524,240.87117,20971.699};
-								angles[]={0.0053377044,0.58564711,0.041309625};
+								position[]={5259.252,240.87135,20971.699};
+								angles[]={0.0053407075,0.58564526,0.041311946};
 							};
 							name="HC";
 							isPlayable=1;
 							description="HC";
 							id=1673;
 							type="HeadlessClient_F";
-							atlOffset=0.0077972412;
+							atlOffset=0.0079956055;
 						};
 						class Item1
 						{
 							dataType="Logic";
 							class PositionInfo
 							{
-								position[]={5259.3237,240.9563,20970.213};
-								angles[]={0.0053377044,0.58564526,0.041309625};
+								position[]={5259.3242,240.95628,20970.213};
+								angles[]={0.0053407075,0.58564526,0.041311946};
 							};
 							name="HC2";
 							isPlayable=1;
 							description="HC2";
 							id=1674;
 							type="HeadlessClient_F";
-							atlOffset=0.082046509;
+							atlOffset=0.082000732;
 						};
 						class Item2
 						{
@@ -49121,13 +49129,27 @@ class Mission
 								nAttributes=4;
 							};
 						};
+						class Item19
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={5259.3975,240.87331,20970.963};
+								angles[]={0.0053377044,0.58564526,0.041309625};
+							};
+							name="HC3";
+							isPlayable=1;
+							description="HC";
+							id=1838;
+							type="HeadlessClient_F";
+						};
 					};
 					id=1672;
-					atlOffset=23.917007;
+					atlOffset=39.511688;
 				};
 			};
 			id=1773;
-			atlOffset=41.97728;
+			atlOffset=24.432663;
 		};
 		class Item1
 		{
@@ -49763,6 +49785,46 @@ class Mission
 			};
 			id=1775;
 			atlOffset=0.3888092;
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5193.0337,240.92778,20969.365};
+				angles[]={6.2285728,5.2641921,6.256525};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{[this, true] call ace_arsenal_fnc_initBox; this allowDamage false;}";
+			};
+			id=1837;
+			type="Land_CargoBox_V1_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="Enh_featureType";
+					expression="_this setFeatureType (parseNumber _value)";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections
