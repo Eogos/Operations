@@ -8,15 +8,15 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=977;
+		nextID=981;
 	};
 	class LayerIndexProvider
 	{
-		nextID=46;
+		nextID=57;
 	};
 	class Camera
 	{
-		pos[]={10967.133,150.60086,12853.965};
+		pos[]={10895.459,94.138634,12823.438};
 		dir[]={0.11656948,-0.96463597,-0.23659439};
 		up[]={0.42633522,0.26358524,-0.86530703};
 		aside[]={-0.89707106,7.5139542e-007,-0.44198492};
@@ -128,13 +128,14 @@ addons[]=
 	"alive_main",
 	"alive_amb_civ_placement",
 	"alive_amb_civ_population",
-	"alive_sys_logistics"
+	"alive_sys_logistics",
+	"A3_Structures_F_Ind_Cargo"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=89;
+		items=90;
 		class Item0
 		{
 			className="CUP_Weapons_AmmoBoxes";
@@ -704,6 +705,13 @@ class AddonsMetaData
 			className="ALiVE_SYS_LOGISTICS";
 			name="alive_sys_logistics";
 			author="ALiVE Mod Team";
+		};
+		class Item89
+		{
+			className="A3_Structures_F_Ind";
+			name="Arma 3 - Industrial Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -15420,7 +15428,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=7;
+		items=9;
 		class Item0
 		{
 			dataType="Object";
@@ -39561,6 +39569,80 @@ class Mission
 			};
 			id=589;
 			atlOffset=6.8511963;
+		};
+		class Item7
+		{
+			dataType="Layer";
+			name="Fob_4";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Layer";
+					name="Modules_2";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={10894.49,86.730507,12822.657};
+								angles[]={0.03491132,0.58564526,6.1306825};
+							};
+							name="HC3";
+							isPlayable=1;
+							description="HC";
+							id=979;
+							type="HeadlessClient_F";
+						};
+					};
+					id=978;
+				};
+			};
+			id=977;
+		};
+		class Item8
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10957.635,72.807938,12842.179};
+				angles[]={0.011451273,5.2641921,6.0686727};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{[this, true] call ace_arsenal_fnc_initBox; this allowDamage false;}";
+			};
+			id=980;
+			type="Land_CargoBox_V1_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="Enh_featureType";
+					expression="_this setFeatureType (parseNumber _value)";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections
